@@ -25,7 +25,6 @@
     <v-row class="DataBlock">
       <confirmed-cases-attributes-card />
       <confirmed-cases-number-card />
-      <inspection-persons-number-card />
       <tested-number-card />
       <consultation-desk-reports-number-card />
     </v-row>
