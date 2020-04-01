@@ -6,13 +6,13 @@
     <StaticCard>
       {{
         $t(
-          '当サイトは新型コロナウイルス感染症 (COVID-19) に関する最新情報を提供するために、東京都が開設したものです。'
+          '当サイトは新型コロナウイルス感染症 (COVID-19) に関する最新情報を提供するために、群馬県が開設したものです。'
         )
       }}<br />
       <br />
       {{
         $t(
-          '東京都による公式情報と客観的な数値をわかりやすく伝えることで、東京都にお住まいの方や、東京都内に拠点を持つ企業の方、東京都を訪れる方が、現状を把握して適切な対策を取れるようにすることを目的としています。'
+          '群馬県による公式情報と客観的な数値をわかりやすく伝えることで、群馬県にお住まいの方や、群馬県に拠点を持つ企業の方、群馬県を訪れる方が、現状を把握して適切な対策を取れるようにすることを目的としています。'
         )
       }}
     </StaticCard>
@@ -87,71 +87,11 @@
       </p>
     </StaticCard>
     <StaticCard>
-      <h3>{{ $t('Google Analyticsの利用について') }}</h3>
-      <p>
-        {{
-          $t(
-            '当サイトでは、サービス向上やサイトの改善のためにGoogle LLCの提供するアクセス分析のツールであるGoogle Analyticsを利用した計測を行っております。'
-          )
-        }}<br />
-        {{
-          $t(
-            'Google Analyticsは、当サイトが発行するクッキー (Cookie) を利用して、個人を特定する情報を含まずにWebサイトの利用データ（アクセス状況、トラフィック、閲覧環境など）を収集しております。クッキー (Cookie) の利用に関してはGoogleのプライバシーポリシーと規約に基づいております。'
-          )
-        }}<br />
-        {{
-          $t(
-            '取得したデータは Webサイト利用状況の分析、サイト運営者へのレポートの作成、その他のサービスの提供に関わる目的に限り、これを使用します。'
-          )
-        }}<br />
-        {{
-          $t(
-            'Google Analyticsの利用規約及びプライバシーポリシーに関する説明については、Google Analyticsのサイトをご覧ください。'
-          )
-        }}
-      </p>
-      <ul>
-        <li>
-          <a
-            :href="
-              $t(
-                'https://marketingplatform.google.com/about/analytics/terms/jp/'
-              )
-            "
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {{ $t('Google Analytics利用規約') }}
-          </a>
-        </li>
-        <li>
-          <a
-            :href="$t('https://policies.google.com/privacy?hl=ja')"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {{ $t('Googleのプライバシーポリシー') }}
-          </a>
-        </li>
-        <li>
-          <a
-            :href="
-              $t('https://support.google.com/analytics/answer/6004245?hl=ja')
-            "
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {{ $t('Google Analyticsに関する詳細情報') }}
-          </a>
-        </li>
-      </ul>
-    </StaticCard>
-    <StaticCard>
       <h3>{{ $t('免責事項') }}</h3>
       <p>
         {{
           $t(
-            '当サイトに掲載されている情報の正確性については万全を期していますが、東京都は利用者が当サイトの情報を用いて行う一切の行為について責任を負うものではありません。'
+            '当サイトに掲載されている情報の正確性については万全を期していますが、群馬県は利用者が当サイトの情報を用いて行う一切の行為について責任を負うものではありません。'
           )
         }}
       </p>
@@ -168,44 +108,6 @@
             '当サイトに掲載されている情報は、予告なしに変更又は削除することがあります。'
           )
         }}
-      </p>
-    </StaticCard>
-    <StaticCard>
-      <h3>{{ $t('データについて') }}</h3>
-      <i18n
-        tag="p"
-        path="本サイトで公表しているデータは、{catalogWebsite}より誰でも自由にダウンロードが可能です。（データは順次追加予定です）"
-      >
-        <template v-slot:catalogWebsite>
-          <a
-            href="https://portal.data.metro.tokyo.lg.jp/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {{ $t('東京都オープンデータカタログサイト') }}
-          </a>
-        </template>
-      </i18n>
-    </StaticCard>
-    <StaticCard>
-      <h3>{{ $t('ソースコードについて') }}</h3>
-      <p>
-        {{
-          $t(
-            '当サイトのソースコードはMITライセンスで公開されており、誰でも自由に利用することができます。'
-          )
-        }}
-        <i18n path="詳しくは、{githubRepo}をご確認ください。">
-          <template v-slot:githubRepo>
-            <a
-              href="https://github.com/tokyo-metropolitan-gov/covid19"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {{ $t('GitHub リポジトリ') }}
-            </a>
-          </template>
-        </i18n>
       </p>
     </StaticCard>
   </div>
