@@ -49,6 +49,8 @@
       </nav>
 
       <footer class="SideNavigation-Footer">
+        Powered by <a href="https://mixhost.jp/" target="_blank">mixhost</a>
+        <br />
         <small class="SideNavigation-Copyright">
           2020 Gunma Prefectural Government
         </small>
