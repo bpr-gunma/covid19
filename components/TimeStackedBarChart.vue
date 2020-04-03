@@ -290,7 +290,7 @@ const options: ThisTypedComponentOptionsWithRecordProps<
         responsive: true,
         maintainAspectRatio: false,
         legend: {
-          display: true,
+          display: false,
           onHover: (e: HTMLElementEvent<HTMLElement>): void => {
             e.currentTarget.style.cursor = 'pointer'
           },
