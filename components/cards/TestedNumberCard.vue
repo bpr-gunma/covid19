@@ -11,6 +11,9 @@
       :data-labels="inspectionsDataLabels"
     >
       <!-- 件.tested = 検査数 -->
+      <template v-if="$i18n.locale !== 'ja-basic'" v-slot:additionalNotes>
+        {{ $t('※ 2/29は2/15～2/29の累計、3/15は3/1～3/15の累計') }}
+      </template>
     </time-stacked-bar-chart>
   </v-col>
 </template>
