@@ -110,6 +110,29 @@
         }}
       </p>
     </StaticCard>
+    <StaticCard>
+      <h3>{{ $t('ソースコードについて') }}</h3>
+      <p>
+        <i18n path="本サイトのソースコードは、東京都の「{stopcovid19Tokyo}」で使われているものをMITライセンスの元で再使用しています。このソースコードは誰でも自由に利用することができます。詳しくは、{githubRepo}をご確認ください。">
+          <a
+            href="https://stopcovid19.metro.tokyo.lg.jp/"
+            target="_blank"
+            rel="noopener"
+            place="stopcovid19Tokyo"
+          >
+            {{ $t('都内の最新感染動向') }}
+          </a>
+          <a
+            href="https://github.com/bpr-gunma/covid19"
+            target="_blank"
+            rel="noopener"
+            place="githubRepo"
+          >
+            {{ $t('GitHub リポジトリ') }}
+          </a>
+        </i18n>
+      </p>
+    </StaticCard>
   </div>
 </template>
 
