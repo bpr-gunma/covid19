@@ -1,6 +1,15 @@
 <template>
   <data-view :title="title" :title-id="titleId" :date="date">
     <template v-slot:button>
+      <ul :class="$style.GraphDesc">
+        <li>
+          {{
+            $t(
+              '（注）速報値として公開するものであり、後日確定データとして修正される場合あり'
+            )
+          }}
+        </li>
+      </ul>
       <data-selector
         v-model="dataKind"
         :target-id="chartId"
