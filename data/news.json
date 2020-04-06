@@ -1,13 +1,14 @@
 {
     "newsItems": [
         {
-            "date": "2020\/04\/04",
-            "url": "https:\/\/www.bousai.metro.tokyo.lg.jp\/taisaku\/saigai\/1007261\/1007604.html",
-            "text": "新型コロナウイルス感染症に関する知事コメント "
+            "date": "2020\/04\/06",
+            "url": "https:\/\/www.pref.gunma.jp\/07\/z87g_00016.html",
+            "text": "新型コロナウイルス感染症患者の発生状況"
         },
         {
-            "date": "2020\/04\/04",
-            "text": "新型コロナウイルス感染症でこれから入院される方へ "
+            "date": "2020\/04\/06",
+            "url": "https:\/\/www.pref.gunma.jp\/07\/z87g_00030.html",
+            "text": "新型コロナウイルス感染症に係る記者会見動画"
         }
     ]
 }
