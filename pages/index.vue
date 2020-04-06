@@ -16,23 +16,11 @@
       </div>
     </div>
     <whats-new class="mb-4" :items="newsItems" />
-    <static-info
-      class="mb-4"
-      :url="localePath('/flow')"
-      :text="$t('自分や家族の症状に不安や心配があればまずは電話相談をどうぞ')"
-      :btn-text="$t('相談の手順を見る')"
-    />
     <v-row class="DataBlock">
-      <confirmed-cases-details-card />
-      <tested-cases-details-card />
       <confirmed-cases-attributes-card />
       <confirmed-cases-number-card />
-      <inspection-persons-number-card />
       <tested-number-card />
-      <telephone-advisory-reports-number-card />
       <consultation-desk-reports-number-card />
-      <metro-card />
-      <agency-card />
     </v-row>
     <v-divider />
   </div>
@@ -79,7 +67,7 @@ export default Vue.extend({
       Data,
       headerItem: {
         icon: 'mdi-chart-timeline-variant',
-        title: this.$t('都内の最新感染動向')
+        title: this.$t('県内の最新感染動向')
       },
       newsItems: News.newsItems
     }
@@ -92,7 +80,7 @@ export default Vue.extend({
   },
   head(): MetaInfo {
     return {
-      title: this.$t('都内の最新感染動向') as string
+      title: this.$t('県内の最新感染動向') as string
     }
   }
 })

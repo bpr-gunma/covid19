@@ -35,102 +35,8 @@
         </div>
 
         <div v-if="this.$route.query.embed != 'true'" class="Footer-Right">
-          <button class="DataView-Share-Opener" @click="toggleShareMenu">
-            <svg
-              width="14"
-              height="16"
-              viewBox="0 0 14 16"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              role="img"
-              :aria-label="$t('{title}のグラフをシェア', { title })"
-            >
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M7.59999 3.5H9.5L7 0.5L4.5 3.5H6.39999V11H7.59999V3.5ZM8.5 5.75H11.5C11.9142 5.75 12.25 6.08579 12.25 6.5V13.5C12.25 13.9142 11.9142 14.25 11.5 14.25H2.5C2.08579 14.25 1.75 13.9142 1.75 13.5V6.5C1.75 6.08579 2.08579 5.75 2.5 5.75H5.5V4.5H2.5C1.39543 4.5 0.5 5.39543 0.5 6.5V13.5C0.5 14.6046 1.39543 15.5 2.5 15.5H11.5C12.6046 15.5 13.5 14.6046 13.5 13.5V6.5C13.5 5.39543 12.6046 4.5 11.5 4.5H8.5V5.75Z"
-                fill="#808080"
-              />
-            </svg>
-          </button>
-          <div
-            v-if="displayShare"
-            class="DataView-Share-Buttons py-2"
-            @click="stopClosingShareMenu"
-          >
-            <div class="Close-Button">
-              <v-icon :aria-label="$t('閉じる')" @click="closeShareMenu">
-                mdi-close
-              </v-icon>
-            </div>
-
-            <h4>{{ $t('埋め込み用コード') }}</h4>
-
-            <div class="EmbedCode">
-              <v-icon
-                v-if="isCopyAvailable()"
-                class="EmbedCode-Copy"
-                :aria-label="$t('クリップボードにコピー')"
-                @click="copyEmbedCode"
-              >
-                far fa-clipboard
-              </v-icon>
-              {{ graphEmbedValue }}
-            </div>
-
-            <div class="Buttons">
-              <button
-                :aria-label="$t('LINEで{title}のグラフをシェア', { title })"
-                @click="line"
-              >
-                <picture>
-                  <source
-                    srcset="/line.webp"
-                    type="image/webp"
-                    class="icon-resize line"
-                  />
-                  <img src="/line.png" alt="LINE" class="icon-resize line" />
-                </picture>
-              </button>
-
-              <button
-                :aria-label="$t('Twitterで{title}のグラフをシェア', { title })"
-                @click="twitter"
-              >
-                <picture>
-                  <source
-                    srcset="/twitter.webp"
-                    type="image/webp"
-                    class="icon-resize twitter"
-                  />
-                  <img
-                    src="/twitter.png"
-                    alt="Twitter"
-                    class="icon-resize twitter"
-                  />
-                </picture>
-              </button>
-
-              <button
-                :aria-label="$t('facebookで{title}のグラフをシェア', { title })"
-                @click="facebook"
-              >
-                <picture>
-                  <source
-                    srcset="/facebook.webp"
-                    type="image/webp"
-                    class="icon-resize facebook"
-                  />
-                  <img
-                    src="/facebook.png"
-                    alt="facebook"
-                    class="icon-resize facebook"
-                  />
-                </picture>
-              </button>
-            </div>
-          </div>
         </div>
+        
       </div>
     </div>
 
@@ -239,29 +145,10 @@ export default Vue.extend({
       return permalink
     },
     twitter() {
-      const url =
-        'https://twitter.com/intent/tweet?text=' +
-        this.title +
-        ' / ' +
-        this.$t('東京都') +
-        this.$t('新型コロナウイルス感染症') +
-        this.$t('対策サイト') +
-        '&url=' +
-        this.permalink(true) +
-        '&' +
-        'hashtags=StopCovid19JP'
-      window.open(url)
     },
     facebook() {
-      const url =
-        'https://www.facebook.com/sharer.php?u=' + this.permalink(true)
-      window.open(url)
     },
     line() {
-      const url =
-        'https://social-plugins.line.me/lineit/share?url=' +
-        this.permalink(true)
-      window.open(url)
     }
   }
 })
