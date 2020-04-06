@@ -8,7 +8,19 @@
       :date="Data.querents.date"
       :unit="$t('件.reports')"
       :url="'https://catalog.data.metro.tokyo.lg.jp/dataset/t000010d0000000070'"
-    />
+    >
+      <template v-slot:description>
+        <ul>
+          <li>
+            {{
+              $t(
+                '（注）速報値として公開するものであり、後日確定データとして修正される場合あり'
+              )
+            }}
+          </li>
+        </ul>
+      </template>
+    </time-bar-chart>
     <!-- 件.reports = 窓口相談件数 -->
   </v-col>
 </template>
