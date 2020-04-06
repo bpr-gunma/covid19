@@ -1,4 +1,4 @@
-export const single: string = '#006400'
-export const double: string[] = ['#006400', '#1B75BC']
-export const triple: string[] = ['#00441B', '#006400', '#1B75BC']
-export const quadruple: string[] = ['#00441B', '#006400', '#1B75BC', '#505B00']
+export const single: string = '#4624a2'
+export const double: string[] = ['#4624a2', '#1B75BC']
+export const triple: string[] = ['#3a1e87', '#4624a2', '#1B75BC']
+export const quadruple: string[] = ['#3a1e87', '#4624a2', '#1B75BC', '#6c45d6']

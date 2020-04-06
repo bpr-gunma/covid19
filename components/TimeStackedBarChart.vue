@@ -1,21 +1,6 @@
 <template>
   <data-view :title="title" :title-id="titleId" :date="date">
     <template v-slot:button>
-      <ul :class="$style.GraphDesc">
-        <li>
-          {{ $t('（注）医療機関が保険適用で行った検査は含まれていない') }}
-        </li>
-        <li>
-          {{ $t('（注）同一の対象者について複数の検体を検査する場合あり') }}
-        </li>
-        <li>
-          {{
-            $t(
-              '（注）速報値として公開するものであり、後日確定データとして修正される場合あり'
-            )
-          }}
-        </li>
-      </ul>
       <data-selector
         v-model="dataKind"
         :target-id="chartId"
@@ -305,7 +290,7 @@ const options: ThisTypedComponentOptionsWithRecordProps<
         responsive: true,
         maintainAspectRatio: false,
         legend: {
-          display: true,
+          display: false,
           onHover: (e: HTMLElementEvent<HTMLElement>): void => {
             e.currentTarget.style.cursor = 'pointer'
           },

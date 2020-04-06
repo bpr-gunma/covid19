@@ -6,16 +6,13 @@
       :chart-id="'time-stacked-bar-chart-inspections'"
       :chart-data="inspectionsGraph"
       :date="Data.inspections_summary.date"
-      :items="inspectionsItems"
       :labels="inspectionsLabels"
       :unit="$t('件.tested')"
       :data-labels="inspectionsDataLabels"
     >
       <!-- 件.tested = 検査数 -->
       <template v-if="$i18n.locale !== 'ja-basic'" v-slot:additionalNotes>
-        {{ $t('※1: 疑い例・接触者調査') }}
-        <br />
-        {{ $t('※2: チャーター便・クルーズ船') }}
+        {{ $t('※ 2/29は2/15～2/29の累計、3/15は3/1～3/15の累計') }}
       </template>
     </time-stacked-bar-chart>
   </v-col>
@@ -32,15 +29,15 @@ export default {
   data() {
     // 検査実施日別状況
     const inspectionsGraph = [
-      Data.inspections_summary.data['都内'],
+      Data.inspections_summary.data['県内'],
       Data.inspections_summary.data['その他']
     ]
     const inspectionsItems = [
-      this.$t('都内発生（※1）'),
+      this.$t('県内発生（※1）'),
       this.$t('その他（※2）')
     ]
     const inspectionsLabels = Data.inspections_summary.labels
-    const inspectionsDataLabels = [this.$t('都内'), this.$t('その他.graph')]
+    const inspectionsDataLabels = [this.$t('県内'), this.$t('その他.graph')]
 
     const data = {
       Data,
