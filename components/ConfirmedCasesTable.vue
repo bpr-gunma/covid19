@@ -1,20 +1,44 @@
 <template>
   <ul :class="$style.container">
-    <li :class="[$style.box, $style.tall, $style.parent, $style.confirmed]">
+    <li :class="[$style.box, $style.tall, $style.confirmed]">
       <div :class="$style.pillar">
         <div :class="$style.content">
           <span>
-            {{ $t('陽性者数') }}
-            <br />({{ $t('累計') }})
+            {{ $t('陰性') }}
           </span>
           <span>
-            <strong>{{ 陽性者数 }}</strong>
+            <strong>{{ 陰性 }}</strong>
+            <span :class="$style.unit">{{ $t('人') }}</span>
+          </span>
+        </div>
+      </div>
+    </li>
+    <li :class="[$style.box, $style.tall, $style.parent, $style.gun-positive]">
+      <div :class="$style.pillar">
+        <div :class="$style.content">
+          <span>
+            {{ $t('陽性') }}
+            <br />({{ $t('県内感染者') }})
+          </span>
+          <span>
+            <strong>{{ 陽性県内感染者 }}</strong>
             <span :class="$style.unit">{{ $t('人') }}</span>
           </span>
         </div>
       </div>
       <ul :class="$style.group">
-        <li :class="[$style.box, $style.parent, $style.hospitalized]">
+        <li :class="[$style.box, $style.gun-recovered]">
+          <div :class="$style.pillar">
+            <div :class="$style.content">
+              <span>{{ $t('退院') }}</span>
+              <span>
+                <strong>{{ 退院 }}</strong>
+                <span :class="$style.unit">{{ $t('人') }}</span>
+              </span>
+            </div>
+          </div>
+        </li>
+        <li :class="[$style.box, $style.gun-hospitalized]">
           <div :class="$style.pillar">
             <div :class="$style.content">
               <span>{{ $t('入院中') }}</span>
@@ -24,50 +48,13 @@
               </span>
             </div>
           </div>
-          <ul :class="$style.group">
-            <li :class="[$style.box, $style.short, $style.minor]">
-              <div :class="$style.pillar">
-                <div :class="$style.content">
-                  <!-- eslint-disable vue/no-v-html-->
-                  <span v-html="$t('軽症・<br />中等症')" />
-                  <!-- eslint-enable vue/no-v-html-->
-                  <span>
-                    <strong>{{ 軽症中等症 }}</strong>
-                    <span :class="$style.unit">{{ $t('人') }}</span>
-                  </span>
-                </div>
-              </div>
-            </li>
-            <li :class="[$style.box, $style.short, $style.severe]">
-              <div :class="$style.pillar">
-                <div :class="$style.content">
-                  <span>{{ $t('重症') }}</span>
-                  <span>
-                    <strong>{{ 重症 }}</strong>
-                    <span :class="$style.unit">{{ $t('人') }}</span>
-                  </span>
-                </div>
-              </div>
-            </li>
-          </ul>
         </li>
-        <li :class="[$style.box, $style.deceased]">
+        <li :class="[$style.box, $style.gun-deceased]">
           <div :class="$style.pillar">
             <div :class="$style.content">
               <span>{{ $t('死亡') }}</span>
               <span>
                 <strong>{{ 死亡 }}</strong>
-                <span :class="$style.unit">{{ $t('人') }}</span>
-              </span>
-            </div>
-          </div>
-        </li>
-        <li :class="[$style.box, $style.recovered]">
-          <div :class="$style.pillar">
-            <div :class="$style.content">
-              <span>{{ $t('退院') }}</span>
-              <span>
-                <strong>{{ 退院 }}</strong>
                 <span :class="$style.unit">{{ $t('人') }}</span>
               </span>
             </div>
@@ -84,11 +71,19 @@ import Vue from 'vue'
 /* eslint-disable vue/prop-name-casing */
 export default Vue.extend({
   props: {
-    検査実施人数: {
+    総PCR検査件数: {
       type: Number,
       required: true
     },
-    陽性者数: {
+    陰性: {
+      type: Number,
+      required: true
+    },
+    陽性県内感染者: {
+      type: Number,
+      required: true
+    },
+    退院: {
       type: Number,
       required: true
     },
@@ -96,19 +91,7 @@ export default Vue.extend({
       type: Number,
       required: true
     },
-    軽症中等症: {
-      type: Number,
-      required: true
-    },
-    重症: {
-      type: Number,
-      required: true
-    },
     死亡: {
-      type: Number,
-      required: true
-    },
-    退院: {
       type: Number,
       required: true
     }
@@ -215,45 +198,38 @@ $default-boxdiff: 35px;
     width: 100%;
 
     > .pillar {
-      // [6列] 1/6
-      width: calc((100% + #{$default-bdw} * 2) / 6 - #{$default-bdw} * 3);
+      // [5列] 1/5
+      width: calc((100% + #{$default-bdw} * 2) / 5 - #{$default-bdw} * 3);
     }
-
     > .group {
-      // [6列] 5/6
-      width: calc((100% + #{$default-bdw} * 2) / 6 * 5 + #{$default-bdw});
+      // [5列] 4/5
+      width: calc((100% + #{$default-bdw} * 2) / 5 * 4 + #{$default-bdw});
     }
   }
 
-  &.hospitalized {
+  &.gun-positive {
     margin-left: $default-bdw;
-    // [5列] 3/5
-    width: calc(100% / 5 * 3 - #{$default-bdw});
+    // [4列] 4/4
+    width: calc(100% - #{$default-bdw});
 
     > .pillar {
-      // [3列] 1/3
-      width: calc((100% + #{$default-bdw} * 2) / 3 - #{$default-bdw} * 3);
+      // [4列] 1/4
+      width: calc((100% + #{$default-bdw} * 2) / 4 - #{$default-bdw} * 3);
     }
-
     > .group {
-      // [3列] 2/3
-      width: calc((100% + #{$default-bdw} * 2) / 3 * 2 + #{$default-bdw});
+      // [4列] 3/4
+      width: calc((100% + #{$default-bdw} * 2) / 4 * 3 + #{$default-bdw});
     }
   }
 
-  &.minor,
-  &.severe {
+  &.gun-recovered,
+  &.gun-hospitalized,
+  &.gun-deceased {
     margin-left: $default-bdw;
-    // [2列] 1/2
-    width: calc(100% / 2 - #{$default-bdw});
+    // [3列] 1/3
+    width: calc(100% / 3 - #{$default-bdw});
   }
 
-  &.deceased,
-  &.recovered {
-    margin-left: $default-bdw;
-    // [5列] 1/5
-    width: calc(100% / 5 - #{$default-bdw});
-  }
 }
 
 .content {
@@ -338,44 +314,39 @@ $default-boxdiff: 35px;
     &.confirmed {
       > .pillar {
         width: calc(
-          (100% + #{px2vw($bdw, $vw)} * 2) / 6 - #{px2vw($bdw, $vw)} * 3
+          (100% + #{px2vw($bdw, $vw)} * 2) / 5 - #{px2vw($bdw, $vw)} * 3
         );
       }
 
       > .group {
         width: calc(
-          (100% + #{px2vw($bdw, $vw)} * 2) / 6 * 5 + #{px2vw($bdw, $vw)}
+          (100% + #{px2vw($bdw, $vw)} * 2) / 5 * 4 + #{px2vw($bdw, $vw)}
         );
       }
     }
 
-    &.hospitalized {
+    &.gun-positive {
       margin-left: px2vw($bdw, $vw);
-      width: calc(100% / 5 * 3 - #{px2vw($bdw, $vw)});
+      width: calc(100% - #{px2vw($bdw, $vw)});
 
       > .pillar {
         width: calc(
-          (100% + #{px2vw($bdw, $vw)} * 2) / 3 - #{px2vw($bdw, $vw)} * 3
+          (100% + #{px2vw($bdw, $vw)} * 2) / 4 - #{px2vw($bdw, $vw)} * 3
         );
       }
 
       > .group {
         width: calc(
-          (100% + #{px2vw($bdw, $vw)} * 2) / 3 * 2 + #{px2vw($bdw, $vw)}
+          (100% + #{px2vw($bdw, $vw)} * 2) / 4 * 3 + #{px2vw($bdw, $vw)}
         );
       }
     }
 
-    &.minor,
-    &.severe {
+    &.gun-recovered,
+    &.gun-hospitalized,
+    &.gun-deceased {
       margin-left: px2vw($bdw, $vw);
-      width: calc(100% / 2 - #{px2vw($bdw, $vw)});
-    }
-
-    &.deceased,
-    &.recovered {
-      margin-left: px2vw($bdw, $vw);
-      width: calc(100% / 5 - #{px2vw($bdw, $vw)});
+      width: calc(100% / 3 - #{px2vw($bdw, $vw)});
     }
   }
 }
