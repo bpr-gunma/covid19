@@ -1402,29 +1402,34 @@
         ]
     },
     "main_summary": {
-        "date": "2020\/04\/11 07:00",
-        "attr": "総PCR検査件数",
-        "value": 860,
+        "attr": "検査実施人数",
+        "value": 5821,
         "children": [
             {
-                "attr": "陰性",
-                "value": 841
-            },
-            {
-                "attr": "陽性（県内感染者）",
-                "value": 21,
+                "attr": "陽性患者数",
+                "value": 1705,
                 "children": [
                     {
-                        "attr": "退院",
-                        "value": 1
+                        "attr": "入院中",
+                        "value": 1613,
+                        "children": [
+                            {
+                                "attr": "軽症・中等症",
+                                "value": 1582
+                            },
+                            {
+                                "attr": "重症",
+                                "value": 31
+                            }
+                        ]
                     },
                     {
-                        "attr": "入院中",
-                        "value": 18
+                        "attr": "退院",
+                        "value": 52
                     },
                     {
                         "attr": "死亡",
-                        "value": 1
+                        "value": 40
                     }
                 ]
             }
