@@ -1402,36 +1402,28 @@
         ]
     },
     "main_summary": {
-        "attr": "検査実施人数",
-        "value": 5821,
+        "attr": "陽性（県内感染者）",
+        "value": 90,
         "children": [
             {
-                "attr": "陽性患者数",
-                "value": 1705,
-                "children": [
-                    {
-                        "attr": "入院中",
-                        "value": 1613,
-                        "children": [
-                            {
-                                "attr": "軽症・中等症",
-                                "value": 1582
-                            },
-                            {
-                                "attr": "重症",
-                                "value": 31
-                            }
-                        ]
-                    },
-                    {
-                        "attr": "退院",
-                        "value": 52
-                    },
-                    {
-                        "attr": "死亡",
-                        "value": 40
-                    }
-                ]
+                "attr": "感染症病床から退院",
+                "value": 8
+            },
+            {
+                "attr": "入院中",
+                "value": 57
+            },
+            {
+                "attr": "入院調整中",
+                "value": 22
+            },
+            {
+                "attr": "県外病院へ転院",
+                "value": 1
+            },
+            {
+                "attr": "死亡",
+                "value": 2
             }
         ]
     },

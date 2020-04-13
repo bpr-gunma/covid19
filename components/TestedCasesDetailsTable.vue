@@ -1,5 +1,6 @@
 <template>
   <ul :class="$style.container">
+  
     <li :class="[$style.box, $style.tall, $style.tested]">
       <div :class="[$style.pillar]">
         <div :class="$style.content">
@@ -16,7 +17,9 @@
         </div>
       </div>
     </li>
+  
     <li :class="[$style.box, $style.tall, $style.parent, $style.cases]">
+
       <div :class="$style.title">
         {{ $t('検査実施件数') }}
         ({{ $t('累計') }})
@@ -30,7 +33,9 @@
           </span>
         </div>
       </div>
+
       <ul :class="$style.group">
+
         <li :class="[$style.box, $style.inside]">
           <div :class="$style.pillar">
             <div :class="$style.content">
@@ -43,24 +48,23 @@
           </div>
         </li>
 
-
       </ul>
     </li>
 
-        <li :class="[$style.box, $style.others]">
-          <div :class="$style.pillar">
-            <div :class="$style.content">
-              <span>{{ $t('その他.graph') }}</span>
-              <span :class="$style.small">{{
-                $t('（チャーター機・クルーズ船等）')
-              }}</span>
-              <span>
-                <strong>{{ その他件数.toLocaleString() }}</strong>
-                <span :class="$style.unit">{{ $t('件.tested') }}</span>
-              </span>
-            </div>
-          </div>
-        </li>
+    <li :class="[$style.box, $style.others]">
+      <div :class="$style.pillar">
+        <div :class="$style.content">
+          <span>{{ $t('その他.graph') }}</span>
+          <span :class="$style.small">{{
+            $t('（チャーター機・クルーズ船等）')
+          }}</span>
+          <span>
+            <strong>{{ その他件数.toLocaleString() }}</strong>
+            <span :class="$style.unit">{{ $t('件.tested') }}</span>
+          </span>
+        </div>
+      </div>
+    </li>
 
   </ul>
 </template>
@@ -222,7 +226,7 @@ $default-boxh: 150px;
     align-items: stretch;
     margin-left: $default-bdw;
     // [4列] 3/4
-    width: calc((100% - #{$default-bdw} * 3) / 3 * 2 + #{$default-bdw} * 2);
+    width: calc((100% - #{$default-bdw} * 3) / 4 * 2 + #{$default-bdw} * 2);
 
     > .title {
       display: flex;
@@ -260,7 +264,8 @@ $default-boxh: 150px;
   &.others {
     margin-left: $default-bdw;
     // [2列] 1/2
-    width: calc(100% / 3 - #{$default-bdw});
+    //width: calc(100% / 4 - #{$default-bdw});
+    width: calc((100% - #{$default-bdw} * 3) / 4);
   }
 }
 
@@ -321,9 +326,8 @@ $default-boxh: 150px;
 
     &.cases {
       margin-left: px2vw($bdw, $vw);
-      width: calc(
-        (100% - #{px2vw($bdw, $vw)} * 3) / 4 * 3 + #{px2vw($bdw, $vw)} * 2
-      );
+      // [4列] 3/4
+      width: calc((100% - #{px2vw($bdw, $vw)} * 3) / 4 * 2 + #{px2vw($bdw, $vw)} * 2);
 
       > .title {
         margin-top: -1px;
@@ -332,23 +336,26 @@ $default-boxh: 150px;
       }
 
       > .pillar {
-        width: calc(
-          (100% + #{px2vw($bdw, $vw)} * 2) / 3 - #{px2vw($bdw, $vw)} * 3
-        );
+        // [3列] 1/3
+        width: calc((100% + #{px2vw($bdw, $vw)} * 2) / 2 - #{px2vw($bdw, $vw)} * 3);
       }
 
       > .group {
-        width: calc(
-          (100% + #{px2vw($bdw, $vw)} * 2) / 3 * 2 + #{px2vw($bdw, $vw)}
-        );
+        width: calc((100% + #{px2vw($bdw, $vw)} * 2) / 2 + #{px2vw($bdw, $vw)});
       }
     }
 
-    &.inside,
+    &.inside {
+      margin-left: px2vw($bdw, $vw);
+      width: calc(100% - #{px2vw($bdw, $vw)});
+    }
+
     &.others {
       margin-left: px2vw($bdw, $vw);
-      width: calc(100% / 2 - #{px2vw($bdw, $vw)});
+      //width: calc(100% / 4 - #{px2vw($bdw, $vw)});
+      width: calc((100% - #{px2vw($bdw, $vw)} * 3) / 4);
     }
+
   }
 }
 
