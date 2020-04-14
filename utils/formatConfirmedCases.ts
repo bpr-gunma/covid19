@@ -1,26 +1,32 @@
 type DataType = {
-  attr: '陽性（県内感染者）'
+  attr: '総PCR検査件数'
   value: number
   children: [
     {
-      attr: '感染症病床から退院'
+      attr: '陽性（県内感染者）'
       value: number
-    },
-    {
-      attr: '入院中'
-      value: number
-    },
-    {
-      attr: '入院調整中'
-      value: number
-    },
-    {
-      attr: '県外病院へ転院'
-      value: number
-    },
-    {
-      attr: '死亡'
-      value: number
+      children: [
+        {
+          attr: '退院'
+          value: number
+        },
+        {
+          attr: '入院中'
+          value: number
+        },
+        {
+          attr: '入院調整中'
+          value: number
+        },
+        {
+          attr: '県外病院へ転院'
+          value: number
+        },
+        {
+          attr: '死亡'
+          value: number
+        }
+      ]
     }
   ]
 }
@@ -41,12 +47,12 @@ type ConfirmedCasesType = {
  */
 export default (data: DataType) => {
   const formattedData: ConfirmedCasesType = {
-    陽性県内感染者: data.value,
-    感染症病床から退院: data.children[0].value,
-    入院中: data.children[1].value,
-    入院調整中: data.children[2].value,
-    県外病院へ転院: data.children[3].value,
-    死亡: data.children[4].value,
+    陽性県内感染者: data.children[0].value,
+    感染症病床から退院: data.children[0].children[0].value,
+    入院中: data.children[0].children[1].value,
+    入院調整中: data.children[0].children[2].value,
+    県外病院へ転院: data.children[0].children[3].value,
+    死亡: data.children[0].children[4].value,
   }
   return formattedData
 }
