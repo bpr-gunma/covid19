@@ -5,11 +5,11 @@
       <div :class="$style.pillar">
         <div :class="$style.content">
           <span>
-            {{ $t('陽性者数') }}
-            <br />({{ $t('累計') }})
+            {{ $t('陽性') }}
+            <br />({{ $t('県内感染者') }})
           </span>
           <span>
-            <strong>{{ 陽性者数.toLocaleString() }}</strong>
+            <strong>{{ 陽性県内感染者.toLocaleString() }}</strong>
             <span :class="$style.unit">{{ $t('人') }}</span>
           </span>
         </div>
@@ -20,16 +20,16 @@
         <li :class="[$style.box, $style.recovered]">
           <div :class="$style.pillar">
             <div :class="$style.content">
-              <span>{{ $t('退院') }}</span>
+              <span>{{ $t('感染症病床から退院') }}</span>
               <span>
-                <strong>{{ 退院.toLocaleString() }}</strong>
+                <strong>{{ 感染症病床から退院.toLocaleString() }}</strong>
                 <span :class="$style.unit">{{ $t('人') }}</span>
               </span>
             </div>
           </div>
         </li>
 
-        <li :class="[$style.box, $style.parent, $style.hospitalized]">
+        <li :class="[$style.box, $style.hospitalized]">
           <div :class="$style.pillar">
             <div :class="$style.content">
               <span>{{ $t('入院中') }}</span>
@@ -39,34 +39,31 @@
               </span>
             </div>
           </div>
+        </li>
 
-          <ul :class="$style.group">
+        <li :class="[$style.box, $style.minor]">
+          <div :class="$style.pillar">
+            <div :class="$style.content">
+              <span v-html="$t('入院調整中')" />
+              <span>
+                <strong>{{ 入院調整中.toLocaleString() }}</strong>
+                <span :class="$style.unit">{{ $t('人') }}</span>
+              </span>
+            </div>
+          </div>
+        </li>
 
-            <li :class="[$style.box, $style.short, $style.minor]">
-              <div :class="$style.pillar">
-                <div :class="$style.content">
-                  <!-- eslint-disable vue/no-v-html-->
-                  <span v-html="$t('軽症・<br />中等症')" />
-                  <!-- eslint-enable vue/no-v-html-->
-                  <span>
-                    <strong>{{ 軽症中等症.toLocaleString() }}</strong>
-                    <span :class="$style.unit">{{ $t('人') }}</span>
-                  </span>
-                </div>
-              </div>
-            </li>
-
-            <li :class="[$style.box, $style.short, $style.severe]">
-              <div :class="$style.pillar">
-                <div :class="$style.content">
-                  <span>{{ $t('重症') }}</span>
-                  <span>
-                    <strong>{{ 重症.toLocaleString() }}</strong>
-                    <span :class="$style.unit">{{ $t('人') }}</span>
-                  </span>
-                </div>
-              </div>
-            </li>
+        <li :class="[$style.box, $style.severe]">
+          <div :class="$style.pillar">
+            <div :class="$style.content">
+              <span>{{ $t('県外病院へ転院') }}</span>
+              <span>
+                <strong>{{ 県外病院へ転院.toLocaleString() }}</strong>
+                <span :class="$style.unit">{{ $t('人') }}</span>
+              </span>
+            </div>
+          </div>
+        </li>
 
         <li :class="[$style.box, $style.deceased]">
           <div :class="$style.pillar">
@@ -80,9 +77,6 @@
           </div>
         </li>
 
-          </ul>
-        </li>
-
       </ul>
     </li>
   </ul>
@@ -94,11 +88,11 @@ import Vue from 'vue'
 /* eslint-disable vue/prop-name-casing */
 export default Vue.extend({
   props: {
-    検査実施人数: {
+    陽性県内感染者: {
       type: Number,
       required: true
     },
-    陽性者数: {
+    感染症病床から退院: {
       type: Number,
       required: true
     },
@@ -106,11 +100,11 @@ export default Vue.extend({
       type: Number,
       required: true
     },
-    軽症中等症: {
+    入院調整中: {
       type: Number,
       required: true
     },
-    重症: {
+    県外病院へ転院: {
       type: Number,
       required: true
     },
@@ -118,10 +112,6 @@ export default Vue.extend({
       type: Number,
       required: true
     },
-    退院: {
-      type: Number,
-      required: true
-    }
   },
   methods: {
     /** 桁数に応じて位置の調整をする */
@@ -235,36 +225,16 @@ $default-boxdiff: 35px;
     }
   }
 
-  &.hospitalized {
-    margin-left: $default-bdw;
-    // [5列] 3/5
-    width: calc(100% / 5 * 4 - #{$default-bdw});
-
-    > .pillar {
-      // [3列] 1/3
-      width: calc((100% + #{$default-bdw} * 2) / 4 - #{$default-bdw} * 3);
-    }
-
-    > .group {
-      // [3列] 2/3
-      width: calc((100% + #{$default-bdw} * 2) / 4 * 3 + #{$default-bdw});
-    }
-  }
-
+  &.recovered,
+  &.hospitalized,
   &.minor,
   &.severe,
   &.deceased {
     margin-left: $default-bdw;
     // [2列] 1/2
-    width: calc(100% / 3 - #{$default-bdw});
-  }
-
-
-  &.recovered {
-    margin-left: $default-bdw;
-    // [5列] 1/5
     width: calc(100% / 5 - #{$default-bdw});
   }
+
 }
 
 .content {
@@ -346,48 +316,32 @@ $default-boxdiff: 35px;
       }
     }
 
+
+
+
     &.confirmed {
       > .pillar {
-        width: calc(
-          (100% + #{px2vw($bdw, $vw)} * 2) / 6 - #{px2vw($bdw, $vw)} * 3
-        );
+        // [6列] 1/6
+        width: calc((100% + #{px2vw($bdw, $vw)} * 2) / 6 - #{px2vw($bdw, $vw)} * 3);
       }
 
       > .group {
-        width: calc(
-          (100% + #{px2vw($bdw, $vw)} * 2) / 6 * 5 + #{px2vw($bdw, $vw)}
-        );
+        // [6列] 5/6
+        width: calc((100% + #{px2vw($bdw, $vw)} * 2) / 6 * 5 + #{px2vw($bdw, $vw)});
       }
     }
 
-    &.hospitalized {
-      margin-left: px2vw($bdw, $vw);
-      width: calc(100% / 5 * 3 - #{px2vw($bdw, $vw)});
-
-      > .pillar {
-        width: calc(
-          (100% + #{px2vw($bdw, $vw)} * 2) / 3 - #{px2vw($bdw, $vw)} * 3
-        );
-      }
-
-      > .group {
-        width: calc(
-          (100% + #{px2vw($bdw, $vw)} * 2) / 3 * 2 + #{px2vw($bdw, $vw)}
-        );
-      }
-    }
-
+    &.recovered,
+    &.hospitalized,
     &.minor,
-    &.severe {
+    &.severe,
+    &.deceased {
       margin-left: px2vw($bdw, $vw);
-      width: calc(100% / 2 - #{px2vw($bdw, $vw)});
-    }
-
-    &.deceased,
-    &.recovered {
-      margin-left: px2vw($bdw, $vw);
+      // [2列] 1/2
       width: calc(100% / 5 - #{px2vw($bdw, $vw)});
     }
+
+
   }
 }
 
