@@ -2388,25 +2388,25 @@
         ]
     },
     "main_summary": {
-        "date": "2020\/04\/16 09:00",
+        "date": "2020\/04\/17 09:00",
         "attr": "総PCR検査件数",
-        "value": 1886,
+        "value": 1938,
         "children": [
             {
                 "attr": "陽性（県内感染者）",
-                "value": 106,
+                "value": 112,
                 "children": [
                     {
                         "attr": "退院",
-                        "value": 13
+                        "value": 14
                     },
                     {
                         "attr": "入院中",
-                        "value": 79
+                        "value": 91
                     },
                     {
                         "attr": "入院調整中",
-                        "value": 9
+                        "value": 2
                     },
                     {
                         "attr": "県外病院へ転院",
@@ -2420,5 +2420,5 @@
             }
         ]
     },
-    "lastUpdate": "2020\/04\/17 07:45"
+    "lastUpdate": "2020\/04\/17 09:00"
 }
