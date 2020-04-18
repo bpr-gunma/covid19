@@ -2,7 +2,7 @@
   <v-app class="app-print">
     <div v-if="loading" class="loader">
       <img src="/logo.png" :alt="$t('群馬県')" />
-      <scale-loader color="#00A040" />
+      <scale-loader color="#4624a2" />
     </div>
     <v-container v-else>
       <v-row align="center" class="PrintMeta">
@@ -10,7 +10,6 @@
           <div class="PrintMeta-HeadingWrapper">
             <div class="PrintMeta-Logo">
               <img src="/logo.png" :alt="$t('群馬県')" />
-              <scale-loader color="#00A040" />
             </div>
             <h1 class="PrintMeta-Heading">
               {{ $t('新型コロナウイルス感染症') }}<br />{{ $t('対策サイト') }}
