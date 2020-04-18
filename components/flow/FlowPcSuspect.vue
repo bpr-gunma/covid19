@@ -50,8 +50,8 @@
     </div>
 
     <div :class="[$style.SubtleBox, $style.Box2, $style.Center]">
-      <div :class="$style.LargerText">
-        {{ $t('新型コロナコールセンター') }}
+      <div :class="$style.MediumText">
+        {{ $t('新型コロナ感染症コールセンター') }}
       </div>
       <div :class="$style.SmallerText">
         {{ $t('午前9時から午後9時（土日祝含む）') }}
@@ -214,6 +214,10 @@
   font-weight: bold;
 }
 
+.MediumText {
+  font-size: medium;
+  font-weight: bold;
+}
 .Center {
   text-align: center;
 }
