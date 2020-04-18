@@ -21,7 +21,7 @@
 
     <div :class="$style.callcenter">
       <p :class="$style.fzLarge">
-        {{ $t('新型コロナウイルス感染症コールセンター') }}
+        {{ $t('新型コロナ感染症コールセンター') }}
       </p>
       <p :class="$style.open">
         {{ $t('午前9時から午後9時（土日祝含む）') }}

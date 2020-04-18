@@ -51,7 +51,7 @@
 
     <div :class="[$style.SubtleBox, $style.Box2, $style.Center]">
       <div :class="$style.LargerText">
-        {{ $t('新型コロナウイルス感染症コールセンター') }}
+        {{ $t('新型コロナ感染症コールセンター') }}
       </div>
       <div :class="$style.SmallerText">
         {{ $t('午前9時から午後9時（土日祝含む）') }}
