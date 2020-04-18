@@ -32,11 +32,11 @@
             ]"
           >
             <a
-              href="https://www.fukushihoken.metro.tokyo.lg.jp/iryo/kansen/coronasodan.html"
+              href="https://www.pref.gunma.jp/02/d29g_00243.html#hokenjo"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <span>{{ $t('各保健所の電話番号は福祉保健局HPへ') }}</span>
+              <span>{{ $t('各保健所の電話番号は保健予防課HPへ') }}</span>
               <v-icon size="18">
                 mdi-open-in-new
               </v-icon>
@@ -64,14 +64,14 @@
             'mt-1'
           ]"
         >
-          <a :class="$style.AdvisoryTelephone" href="tel:0353204592">
+          <a :class="$style.AdvisoryTelephone" href="tel:0272231111">
             <img
               :class="$style.AdvisoryTelephoneIcon"
               src="/flow/phone-24px.svg"
               aria-hidden="true"
               :alt="$t('電話番号')"
             />
-            03-5320-4592
+            027-223-1111
           </a>
         </div>
         <div v-if="!['ja', 'ja-basic'].includes($i18n.locale)" class="pt-8">
