@@ -71,7 +71,7 @@
               aria-hidden="true"
               :alt="$t('電話番号')"
             />
-            03-5320-4592
+            027-223-1111
           </a>
         </div>
         <div v-if="!['ja', 'ja-basic'].includes($i18n.locale)" class="pt-8">
