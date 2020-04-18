@@ -218,6 +218,7 @@
   font-size: medium;
   font-weight: bold;
 }
+
 .Center {
   text-align: center;
 }
