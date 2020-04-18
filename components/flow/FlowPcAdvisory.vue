@@ -134,7 +134,7 @@
     text-align: left;
 
     a {
-      color: green-2;
+      color: $green-2;
       text-decoration: none;
 
       &:hover {
