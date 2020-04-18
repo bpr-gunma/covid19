@@ -58,14 +58,14 @@
       </div>
 
       <div :class="$style.Tel">
-        <a :class="$style.TelLink" href="tel:0570550571">
+        <a :class="$style.TelLink" href="tel:0570082820">
           <img
             :class="$style.TelLinkIcon"
             src="/flow/phone-24px.svg"
             aria-hidden="true"
             :alt="$t('電話番号')"
           />
-          0570-550571
+          0570-082-820
         </a>
       </div>
     </div>
