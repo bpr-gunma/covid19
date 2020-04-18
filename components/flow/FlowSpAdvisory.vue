@@ -16,11 +16,11 @@
         </dt>
         <dd :class="$style.link">
           <a
-            href="https://www.fukushihoken.metro.tokyo.lg.jp/iryo/kansen/coronasodan.html"
+            href="https://www.pref.gunma.jp/02/d29g_00243.html#hokenjo"
             target="_blank"
             rel="noopener noreferrer"
           >
-            {{ $t('各保健所の電話番号は福祉保健局HPへ') }}
+            {{ $t('各保健所の電話番号は保健予防課HPへ') }}
             <v-icon size="16">
               mdi-open-in-new
             </v-icon>
@@ -48,7 +48,7 @@
             <span :class="$style.icon">
               <PhoneIcon alt="Phone" />
             </span>
-            <a href="tel:0353204592">03-5320-4592</a>
+            <a href="tel:0272231111">027-223-1111</a>
           </div>
           <div
             v-if="!['ja', 'ja-basic'].includes($i18n.locale)"
