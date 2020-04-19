@@ -2,21 +2,21 @@
   <div :class="$style.container">
     <div :class="[$style.heading, $style.multi]">
       <span :class="[$style.item, $style.fzMedium]">
-        <span :class="$style.icon">
+ <!--       <span :class="$style.icon">
           <DirectionsWalkIcon aria-hidden="true" />
         </span>
         {{ $t('ご高齢な方') }}
-      </span>
+      </span>-->
       <span :class="[$style.item, $style.fzMedium]">
-        <span :class="$style.icon">
+<!--        <span :class="$style.icon">
           <AccessibleIcon aria-hidden="true" />
-        </span>
+        </span>-->
         {{ $t('基礎疾患のある方') }}
       </span>
       <span :class="[$style.item, $style.fzMedium]">
-        <span :class="$style.icon">
+<!--        <span :class="$style.icon">
           <PregnantWomanIcon aria-hidden="true" />
-        </span>
+        </span>-->
         {{ $t('妊娠中の方') }}
       </span>
     </div>
