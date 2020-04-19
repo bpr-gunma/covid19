@@ -4,9 +4,9 @@
       <span :class="[$style.item, $style.fzMedium]">
  <!--       <span :class="$style.icon">
           <DirectionsWalkIcon aria-hidden="true" />
-        </span>
+        </span>-->
         {{ $t('ご高齢な方') }}
-      </span>-->
+      </span>
       <span :class="[$style.item, $style.fzMedium]">
 <!--        <span :class="$style.icon">
           <AccessibleIcon aria-hidden="true" />
