@@ -5,7 +5,7 @@
       <page-header :class="$style.text">
         {{ $t('新型コロナウイルス感染症が心配なときに') }}
       </page-header>
-<!--      <printer-button :wrapper-class="$style.printerButton" to="/print/flow" /> -->
+      <printer-button :wrapper-class="$style.printerButton" to="/print/flow" />
     </div>
     <div :class="$style.container">
       <h3 :class="$style.heading">
@@ -108,9 +108,9 @@
               <dt>平日（日中）：</dt>
               <dd>
                 <a
-                  href="https://www.pref.gunma.jp/02/d29g_00243.html#hokenjo"
+                  href="https://www.fukushihoken.metro.tokyo.lg.jp/iryo/kansen/coronasodan.html"
                 >
-                  {{ $t('各保健所の電話番号は保健予防課HP') }}
+                  {{ $t('各保健所の電話番号は福祉保健局HP') }}
                   <v-icon
                     :class="$style.iconExternal"
                     :aria-label="this.$t('別タブで開く')"
@@ -130,13 +130,13 @@
                 <span :class="$style.telBeforeText">{{
                   $t('午後5時から翌朝午前9時/土日祝 終日')
                 }}</span>
-                <a :class="$style.tel" href="tel:027-223-1111">
+                <a :class="$style.tel" href="tel:03-5320-4592">
                   <img
                     src="/flow/responsive/phone_white.svg"
                     alt=""
                     aria-hidden="true"
                   />
-                  027-223-1111</a
+                  03-5320-4592</a
                 >
               </dd>
             </div>
@@ -154,13 +154,13 @@
           <dl :class="$style.contact">
             <dt>{{ $t('午前9時から午後9時（土日祝含む）') }}</dt>
             <dd>
-              <a :class="$style.tel" href="tel:0570-082-820">
+              <a :class="$style.tel" href="tel:0570-550571">
                 <img
                   src="/flow/responsive/phone_white.svg"
                   alt=""
                   aria-hidden="true"
                 />
-                0570-082-820</a
+                0570-550571</a
               >
             </dd>
           </dl>
@@ -185,13 +185,13 @@
           <dl :class="$style.contact">
             <dt>{{ $t('午前9時から午後9時（土日祝含む）') }}</dt>
             <dd>
-              <a :class="$style.tel" href="tel:0570-082-820">
+              <a :class="$style.tel" href="tel:0570-550571">
                 <img
                   src="/flow/responsive/phone_white.svg"
                   alt=""
                   aria-hidden="true"
                 />
-                0570-082-820</a
+                0570-550571</a
               >
             </dd>
           </dl>
@@ -225,7 +225,7 @@
         <h4 :class="[$style.headingLv2]">
           {{
             $t(
-              '医師により検査が必要だと判断されPCR検査（県衛生環境研究所等）を受けた結果'
+              '医師により検査が必要だと判断されPCR検査（東京都健康安全研究センター等）を受けた結果'
             )
           }}
         </h4>
@@ -259,11 +259,11 @@
     </div>
     <div :class="$style.detail">
       <a
-        href="https://www.pref.gunma.jp/02/d29g_00243.html"
+        href="https://www.fukushihoken.metro.tokyo.lg.jp/iryo/kansen/coronasodan.html"
         target="_blank"
         :class="$style.button"
         rel="noopener noreferrer"
-        >{{ $t('詳細を見る（群馬県健康福祉部保健予防課）') }}
+        >{{ $t('詳細を見る（東京都福祉保健局）') }}
         <v-icon :class="$style.icon" size="20">
           mdi-open-in-new
         </v-icon>
