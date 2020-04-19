@@ -5,6 +5,7 @@
       <page-header :class="$style.text">
         {{ $t('新型コロナウイルス感染症が心配なときに') }}
       </page-header>
+<!--      <printer-button :wrapper-class="$style.printerButton" to="/print/flow" /> -->
     </div>
     <div :class="$style.container">
       <h3 :class="$style.heading">
