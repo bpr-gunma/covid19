@@ -2,9 +2,9 @@
   <div :class="$style.FlowCard">
     <h3>{{ $t('新型コロナウイルス感染症にかかる相談窓口について') }}</h3>
     <div :class="[$style.Outer, $style.OuterUpper]">
-      <div :class="[$style.CardBlock, $style.Days]">
+      <div :class="[$style.CardBlock, $style.Past]">
         <div :class="[$style.CardBlockInner]">
-          <flow-pc-days />
+          <flow-pc-past />
           <img
             :class="$style.CardBlockIcon"
             src="/flow/flow_arrow.svg"
@@ -13,9 +13,9 @@
           />
         </div>
       </div>
-      <div :class="[$style.CardBlock, $style.Past]">
+      <div :class="[$style.CardBlock, $style.Days]">
         <div :class="[$style.CardBlockInner]">
-          <flow-pc-past />
+          <flow-pc-days />
           <img
             :class="$style.CardBlockIcon"
             src="/flow/flow_arrow.svg"
@@ -128,8 +128,8 @@ import FlowPcHospitalized from './FlowPcHospitalized.vue'
 
 export default {
   components: {
-    FlowPcDays,
     FlowPcPast,
+    FlowPcDays,
     FlowPcSuspect,
     FlowPcAdvisory,
     FlowPcAdvisory2,
@@ -307,12 +307,14 @@ export default {
 
 .Past {
   grid-column: 1 / 2;
-  grid-row: 1 / 2;
+//  grid-row: 1 / 2;
+  grid-row: 2 / 3;
 }
 
 .Days {
   grid-column: 1 / 2;
-  grid-row: 2 / 3;
+//  grid-row: 2 / 3;
+  grid-row: 1 / 2;
 }
 
 .Suspect {
