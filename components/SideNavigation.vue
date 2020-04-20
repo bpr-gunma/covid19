@@ -93,14 +93,13 @@ export default Vue.extend({
         },
         {
           icon: 'CovidIcon',
-          title: this.$t('新型コロナウイルス感染症について'),
-          link: 'https://www.pref.gunma.jp/02/d29g_00243.html',
-          divider: true
+          title: this.$t('新型コロナウイルス感染症が心配なときに'),
+          link: this.localePath('/flow')
         },
         {
           title: this.$t('知事メッセージ'),
           link:
-            'https://www.pref.gunma.jp/02/z87g_00008.html'
+            'https://www.pref.gunma.jp/07/z87g_00028.html'
         },
         {
           title: this.$t('記者会見動画'),
