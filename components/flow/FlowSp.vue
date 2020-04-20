@@ -4,10 +4,10 @@
       {{ $t('新型コロナウイルス感染症にかかる相談窓口について') }}
     </h3>
     <div :class="$style.FlowCard">
-      <flow-sp-past />
+      <flow-sp-general />
     </div>
     <div :class="$style.FlowCard">
-      <flow-sp-general />
+      <flow-sp-past />
     </div>
     <div :class="$style.FlowCard">
       <flow-sp-elder />
