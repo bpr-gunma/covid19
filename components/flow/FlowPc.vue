@@ -2,20 +2,9 @@
   <div :class="$style.FlowCard">
     <h3>{{ $t('新型コロナウイルス感染症にかかる相談窓口について') }}</h3>
     <div :class="[$style.Outer, $style.OuterUpper]">
-<!--      <div :class="[$style.CardBlock, $style.Past]">
+      <div :class="[$style.CardBlock, $style.Past]">
         <div :class="[$style.CardBlockInner]">
           <flow-pc-past />
-          <img
-            :class="$style.CardBlockIcon"
-            src="/flow/flow_arrow.svg"
-            aria-hidden="true"
-            alt=" "
-          />
-        </div>
-      </div>-->
-      <div :class="[$style.CardBlock, $style.CardBlockSuspect, $style.Suspect]">
-        <div :class="[$style.CardBlockInner]">
-          <flow-pc-suspect />
           <img
             :class="$style.CardBlockIcon"
             src="/flow/flow_arrow.svg"
@@ -35,6 +24,17 @@
           />
         </div>
       </div>
+      <div :class="[$style.CardBlock, $style.CardBlockSuspect, $style.Suspect]">
+        <div :class="[$style.CardBlockInner]">
+          <flow-pc-suspect />
+          <img
+            :class="$style.CardBlockIcon"
+            src="/flow/flow_arrow.svg"
+            aria-hidden="true"
+            alt=" "
+          />
+        </div>
+      </div>
       <div :class="$style.Advisory">
         <flow-pc-advisory />
         <img
@@ -44,9 +44,9 @@
           alt=" "
         />
       </div>
-<!--      <div :class="$style.Advisory2">
+      <div :class="$style.Advisory2">
         <flow-pc-advisory2 />
-      </div>-->
+      </div>
     </div>
 <!--    <h3>
       <i18n
@@ -116,11 +116,11 @@
 </template>
 
 <script>
-//import FlowPcPast from './FlowPcPast.vue'
-import FlowPcSuspect from './FlowPcSuspect.vue'
+import FlowPcPast from './FlowPcPast.vue'
 import FlowPcDays from './FlowPcDays.vue'
+import FlowPcSuspect from './FlowPcSuspect.vue'
 import FlowPcAdvisory from './FlowPcAdvisory.vue'
-//import FlowPcAdvisory2 from './FlowPcAdvisory2.vue'
+import FlowPcAdvisory2 from './FlowPcAdvisory2.vue'
 //import FlowPcRequired from './FlowPcRequired.vue'
 //import FlowPcPcr from './FlowPcPcr.vue'
 //import FlowPcNotRequired from './FlowPcNotRequired.vue'
@@ -130,9 +130,9 @@ export default {
   components: {
     FlowPcPast,
     FlowPcDays,
-//    FlowPcSuspect,
+    FlowPcSuspect,
     FlowPcAdvisory,
-//    FlowPcAdvisory2
+    FlowPcAdvisory2
 //    FlowPcRequired,
 //    FlowPcPcr,
 //    FlowPcNotRequired,
@@ -173,8 +173,8 @@ export default {
     grid-gap: $grid-gap;
     grid-template-columns: 70% 30%;
     -ms-grid-columns: 70% 12px 30%;
-    grid-template-rows: repeat(2, auto);
-    -ms-grid-rows: auto 12px auto;
+    grid-template-rows: repeat(3, auto);
+    -ms-grid-rows: auto 12px auto 12px auto;
     // HACK: IEでGridの順番がうまくいかない対応
     // https://github.com/tokyo-metropolitan-gov/covid19/issues/1313
     & > *:nth-child(1) {
@@ -186,24 +186,24 @@ export default {
       -ms-grid-column: 1;
       -ms-grid-row: 3;
     }
-/*
+
     & > *:nth-child(3) {
       -ms-grid-column: 1;
       -ms-grid-row: 5;
     }
-*/
-    & > *:nth-child(3) {
+
+    & > *:nth-child(4) {
       -ms-grid-column: 3;
       -ms-grid-row: 1;
       -ms-grid-row-span: 3;
     }
-/*
-    & > *:nth-child(4) {
+
+    & > *:nth-child(5) {
       -ms-grid-column: 3;
       -ms-grid-row: 5;
     }
-*/
-    margin-bottom: 36px;
+
+//    margin-bottom: 36px;
   }
 /*
   &Lower {
@@ -306,24 +306,20 @@ export default {
   }
 */
 }
-/*
+
 .Past {
   grid-column: 1 / 2;
-//  grid-row: 1 / 2;
-  grid-row: 2 / 3;
+  grid-row: 3 / 4;
 }
-*/
 
 .Days {
   grid-column: 1 / 2;
   grid-row: 2 / 3;
-//  grid-row: 1 / 2;
 }
 
 .Suspect {
   grid-column: 1 / 2;
   grid-row: 1 / 2;
-//  grid-row: 3 / 4;
 }
 
 .Advisory {
@@ -338,12 +334,12 @@ export default {
     z-index: 1;
   }
 }
-/*
+
 .Advisory2 {
   grid-column: 2 / 3;
   grid-row: 3 / 4;
 }
-
+/*
 .Required {
   grid-column: 1 / 2;
   grid-row: 1 / 2;
