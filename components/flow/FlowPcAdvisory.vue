@@ -4,18 +4,8 @@
       <div :class="$style.AdvisoryContents">
         <div>
           <span :class="$style.AdvisoryContentsTitle">{{
-            $t('新型コロナ受診相談窓口（日本語のみ）')
+            $t('新型コロナ感染症コールセンター（日本語のみ）')
           }}</span>
-        </div>
-        <div :class="[$style.AdvisoryContentsColsSentense, 'mt-4']">
-          {{ $t('帰国者・接触者 電話相談センター') }}
-        </div>
-        <div>
-          <div :class="[$style.AdvisoryBoxContainer, $style.AdvisoryWhiteBox]">
-            <span :class="$style.AdvisoryWhiteBoxSentense">
-              {{ $t('24時間対応') }}
-            </span>
-          </div>
         </div>
       </div>
 
@@ -24,27 +14,26 @@
           <div :class="$style.AdvisoryContentsTitle2">
             {{ $t('平日（日中）') }}
           </div>
-          <div
-            :class="[
-              $style.AdvisoryLink,
-              $style.AdvisoryBlockCentering,
-              'mt-4'
-            ]"
-          >
-            <a
-              href="https://www.pref.gunma.jp/02/d29g_00243.html#hokenjo"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <span>{{ $t('各保健所の電話番号は保健予防課HPへ') }}</span>
-              <v-icon size="18">
-                mdi-open-in-new
-              </v-icon>
-            </a>
-          </div>
+          <span>{{ $t('午後5時から翌朝午前9時') }}</span>
+        </div>
+        <div
+          :class="[
+            $style.AdvisoryTelephoneArea,
+            $style.AdvisoryBlockCentering,
+            'mt-1'
+          ]"
+        >
+          <a :class="$style.AdvisoryTelephone" href="tel:0570082820">
+            <img
+              :class="$style.AdvisoryTelephoneIcon"
+              src="/flow/phone-24px.svg"
+              aria-hidden="true"
+              :alt="$t('電話番号')"
+            />
+            0570-082-820
+          </a>
         </div>
       </div>
-
       <div :class="$style.AdvisoryContents">
         <div class="pt-8">
           <div :class="$style.AdvisoryContentsTitle2">

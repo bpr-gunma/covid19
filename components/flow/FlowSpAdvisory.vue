@@ -1,27 +1,30 @@
 <template>
   <div :class="$style.container">
     <h4 id="consult" :class="[$style.heading, $style.fzXLarge]">
-      {{ $t('新型コロナ感染症コールセンター（日本語のみ）') }}
+      {{ $t('新型コロナ受診相談窓口（日本語のみ）') }}
+      <small :class="[$style.break, $style.fzRegular, $style.mt5]">{{
+        $t('帰国者・接触者 電話相談センター')
+      }}</small>
     </h4>
+    <p :class="[$style.open, $style.fzMedium]">
+      <span>{{ $t('24時間対応') }}</span>
+    </p>
     <dl>
       <div :class="$style.daytime">
         <dt :class="[$style.title, $style.fzMedium]">
-          <ul :class="[$style.night]">
-            <li>
-              <span :class="[$style.fzMedium, $style.break, $style.mb10]">
-                {{ $t('平日（日中）') }}
-              </span>
-              {{ $t('午前9時から午後9時（土日祝含む）') }}
-            </li>
-          </ul>
+          {{ $t('平日（日中）') }}
         </dt>
-        <dd>
-          <div :class="[$style.phone, $style.fzNumeric]">
-            <span :class="$style.icon">
-              <PhoneIcon alt="Phone" />
-            </span>
-            <a href="tel:0570082820">0570-082-820</a>
-          </div>
+        <dd :class="$style.link">
+          <a
+            href="https://www.pref.gunma.jp/02/d29g_00243.html#hokenjo"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {{ $t('各保健所の電話番号は保健予防課HPへ') }}
+            <v-icon size="16">
+              mdi-open-in-new
+            </v-icon>
+          </a>
         </dd>
       </div>
       <div>
@@ -46,6 +49,14 @@
               <PhoneIcon alt="Phone" />
             </span>
             <a href="tel:0272231111">027-223-1111</a>
+          </div>
+          <div
+            v-if="!['ja', 'ja-basic'].includes($i18n.locale)"
+            :class="[$style.phone, $style.fzNumeric]"
+          >
+            <span :class="[$style.fzMedium, $style.break, $style.mb10]">
+              {{ $t('ひまわり') }}
+            </span>
           </div>
         </dd>
       </div>
