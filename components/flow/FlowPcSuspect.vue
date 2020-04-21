@@ -50,9 +50,9 @@
     </div>
 
     <div :class="[$style.SubtleBox, $style.Box2, $style.Center]">
-      <div :class="$style.ContentText">
+      <div :class="$style.ContentText, $style.Left">
         {{ $t('かかりつけ医にご相談ください。') }}<br />
-        {{ $t('かかりつけ医がいない方は、「新型コロナ感染症コールセンター」にご相談ください。') }}
+        {{ $t('かかりつけ医がいない方は、「新型コロナ感染症コールセンター」にご相談ください。') }}<br />
       </div>
       <div :class="$style.MediumText">
         {{ $t('新型コロナ感染症コールセンター') }}
@@ -160,7 +160,7 @@
   position: relative;
   flex-grow: 0;
   flex-shrink: 0;
-  width: 60%;
+  width: 55%;
   flex-direction: row;
 
   &Icon {
@@ -177,7 +177,7 @@
 .Box2 {
   flex-grow: 0;
   flex-shrink: 0;
-  width: 38%;
+  width: 43%;
   flex-direction: column;
   justify-content: center;
 
@@ -197,7 +197,7 @@
 }
 
 .RowItemsHeader {
-  font-size: smaller;
+//  font-size: medium;
 
   &Icon {
     display: block;
@@ -231,6 +231,9 @@
   text-align: center;
 }
 
+.Left {
+  text-align: left;
+}
 .SmallerText {
   font-size: smaller;
 }
