@@ -37,12 +37,12 @@
       </div>
       <div :class="$style.Advisory">
         <flow-pc-advisory />
-        <img
+<!--        <img
           :class="$style.AdvisoryIcon"
           src="/flow/flow_arrow.svg"
           aria-hidden="true"
           alt=" "
-        />
+        />-->
       </div>
 <!--      <div :class="$style.Advisory2">
         <flow-pc-advisory2 />
