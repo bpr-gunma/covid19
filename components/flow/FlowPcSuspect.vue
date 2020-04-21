@@ -160,7 +160,7 @@
   position: relative;
   flex-grow: 0;
   flex-shrink: 0;
-  width: 50%;
+  width: 55%;
   flex-direction: row;
 
   &Icon {
@@ -177,7 +177,7 @@
 .Box2 {
   flex-grow: 0;
   flex-shrink: 0;
-  width: 48%;
+  width: 43%;
   flex-direction: column;
   justify-content: center;
 
@@ -227,7 +227,7 @@
 
 .ContentText {
   font-size: medium;
-  margin: 20px;
+  padding: 20px;
 }
 
 .Center {
