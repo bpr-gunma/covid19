@@ -61,7 +61,7 @@
         </template>
       </i18n>
     </h3>
-    <div :class="[$style.Outer, $style.OuterLower]">
+<!--    <div :class="[$style.Outer, $style.OuterLower]">
       <div
         :class="[$style.CardBlock, $style.CardBlockRequired, $style.Required]"
       >
@@ -111,7 +111,7 @@
           '※保険適用となる検査は、当面の間、院内感染防止等の観点から、「帰国者・接触者外来」等の医療機関で実施'
         )
       }}
-    </p>
+    </p>-->
   </div>
 </template>
 
@@ -121,10 +121,10 @@ import FlowPcDays from './FlowPcDays.vue'
 import FlowPcSuspect from './FlowPcSuspect.vue'
 import FlowPcAdvisory from './FlowPcAdvisory.vue'
 import FlowPcAdvisory2 from './FlowPcAdvisory2.vue'
-import FlowPcRequired from './FlowPcRequired.vue'
-import FlowPcPcr from './FlowPcPcr.vue'
-import FlowPcNotRequired from './FlowPcNotRequired.vue'
-import FlowPcHospitalized from './FlowPcHospitalized.vue'
+//import FlowPcRequired from './FlowPcRequired.vue'
+//import FlowPcPcr from './FlowPcPcr.vue'
+//import FlowPcNotRequired from './FlowPcNotRequired.vue'
+//import FlowPcHospitalized from './FlowPcHospitalized.vue'
 
 export default {
   components: {
@@ -132,11 +132,11 @@ export default {
     FlowPcDays,
     FlowPcSuspect,
     FlowPcAdvisory,
-    FlowPcAdvisory2,
-    FlowPcRequired,
-    FlowPcPcr,
-    FlowPcNotRequired,
-    FlowPcHospitalized
+    FlowPcAdvisory2
+//    FlowPcRequired,
+//    FlowPcPcr,
+//    FlowPcNotRequired,
+//    FlowPcHospitalized
   }
 }
 </script>
@@ -205,7 +205,7 @@ export default {
 
     margin-bottom: 36px;
   }
-
+/*
   &Lower {
     grid-gap: $grid-gap;
     grid-template-columns: repeat(2, calc(50% - 6px));
@@ -237,7 +237,7 @@ export default {
     }
   }
 }
-
+*/
 .Title {
   @include font-size(28);
 
@@ -269,7 +269,7 @@ export default {
       bottom: 40%;
     }
   }
-
+/*
   &Required {
     .CardBlockIcon:nth-of-type(1) {
       top: auto;
@@ -304,7 +304,7 @@ export default {
     }
   }
 }
-
+*/
 .Past {
   grid-column: 1 / 2;
 //  grid-row: 1 / 2;
@@ -339,7 +339,7 @@ export default {
   grid-column: 2 / 3;
   grid-row: 3 / 4;
 }
-
+/*
 .Required {
   grid-column: 1 / 2;
   grid-row: 1 / 2;
@@ -363,4 +363,5 @@ export default {
 .Note {
   margin: 16px 0;
 }
+*/
 </style>
