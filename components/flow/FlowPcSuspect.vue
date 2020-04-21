@@ -226,8 +226,8 @@
 }
 
 .ContentText {
-  font-size: medium;
-  padding: 20px;
+  font-size: larger;
+  padding: 14px;
 }
 
 .Center {
