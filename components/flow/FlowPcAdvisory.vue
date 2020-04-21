@@ -9,7 +9,7 @@
         </div>
       </div>
       <div :class="$style.AdvisoryContents">
-        <div class="py-8">
+        <div class="pt-8">
           <div :class="$style.AdvisoryContentsTitle2">
             {{ $t('平日（日中）') }}
           </div>
@@ -102,7 +102,7 @@
     }
 
     &Title {
-      font-size: 20px;
+      font-size: 24px;
       line-height: 28px;
       margin: 18px auto;
     }
