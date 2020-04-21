@@ -17,7 +17,7 @@
         </div>
         <div class="mt-1">
           <span :class="$style.AdvisoryContentsSubTitle">
-            {{ $t('（土日祝含む）') }}
+            {{ $t('土日祝含む') }}
           </span>
         </div>
         <div
@@ -90,7 +90,6 @@
     border-radius: 4px;
     height: 100%;
     padding: 30px 20px 20px 20px;
-    margin-bottom: 10px;
     text-align: center;
   }
 
@@ -104,7 +103,7 @@
     &Title {
       font-size: 24px;
       line-height: 28px;
-      margin: 18px auto;
+      margin: 14px auto;
     }
 
     &Title2 {
@@ -172,7 +171,7 @@
     border-radius: 4px;
     text-align: center;
     padding: 20px 10px;
-    margin: 24px auto;
+    margin: 20px auto;
   }
 
   &WhiteBox {
