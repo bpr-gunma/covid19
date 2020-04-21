@@ -260,7 +260,7 @@ export default {
 
   &Icon {
     position: absolute;
-    bottom: 10%;
+    bottom: 50%;
     right: -30px;
     z-index: 1;
   }
