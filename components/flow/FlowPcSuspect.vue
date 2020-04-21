@@ -160,7 +160,7 @@
   position: relative;
   flex-grow: 0;
   flex-shrink: 0;
-  width: 60%;
+  width: 55%;
   flex-direction: row;
 
   &Icon {
@@ -177,7 +177,7 @@
 .Box2 {
   flex-grow: 0;
   flex-shrink: 0;
-  width: 38%;
+  width: 43%;
   flex-direction: column;
   justify-content: center;
 
@@ -197,7 +197,9 @@
 }
 
 .RowItemsHeader {
+  color: $green-1;
   font-size: medium;
+  font-weight: bold;
 
   &Icon {
     display: block;
