@@ -180,6 +180,9 @@
       margin-top: 20px;
 
       &General {
+        color: $green-1;
+        font-weight: bold;
+
         &Icon {
           display: block;
           margin: auto;
@@ -195,6 +198,7 @@
 
         &Item {
           color: $green-1;
+          font-weight: bold;
           display: flex;
           align-items: center;
 
