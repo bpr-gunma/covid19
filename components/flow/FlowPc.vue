@@ -236,8 +236,9 @@ export default {
       -ms-grid-row: 5;
     }
   }
-}
 */
+}
+
 .Title {
   @include font-size(28);
 
@@ -303,8 +304,9 @@ export default {
       transform: rotateZ(30deg);
     }
   }
-}
 */
+}
+
 .Past {
   grid-column: 1 / 2;
 //  grid-row: 1 / 2;
