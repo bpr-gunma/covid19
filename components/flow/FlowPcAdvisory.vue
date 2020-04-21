@@ -13,7 +13,12 @@
           <div :class="$style.AdvisoryContentsTitle2">
             {{ $t('平日（日中）') }}
           </div>
-          <span>{{ $t('午前9時から午後9時（土日祝含む）') }}</span>
+          <span>{{ $t('午前9時から午後9時') }}</span>
+        </div>
+        <div class="mt-1">
+          <span :class="$style.AdvisoryContentsSubTitle">
+            {{ $t('（土日祝含む）') }}
+          </span>
         </div>
         <div
           :class="[
@@ -97,8 +102,9 @@
     }
 
     &Title {
-      font-size: 24px;
+      font-size: 20px;
       line-height: 28px;
+      margin: 18px auto;
     }
 
     &Title2 {
@@ -140,8 +146,9 @@
   &Telephone {
     display: flex;
     align-items: center;
-    font-size: 27px;
+    font-size: 24px;
     font-weight: bold;
+    margin: 18px auto;
 
     &:link,
     &:visited,
