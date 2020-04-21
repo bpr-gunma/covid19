@@ -52,7 +52,9 @@
     <div :class="[$style.SubtleBox, $style.Box2, $style.Center]">
       <div :class="[$style.ContentText, , $style.Left]">
         {{ $t('かかりつけ医にご相談ください。') }}<br />
-        {{ $t('かかりつけ医がいない方は、「新型コロナ感染症コールセンター」にご相談ください。') }}<br />
+        <p>
+          {{ $t('かかりつけ医がいない方は、「新型コロナ感染症コールセンター」にご相談ください。') }}
+        </p>
       </div>
       <div :class="$style.MediumText">
         {{ $t('新型コロナ感染症コールセンター') }}
