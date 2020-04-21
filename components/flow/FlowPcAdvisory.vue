@@ -4,17 +4,16 @@
       <div :class="$style.AdvisoryContents">
         <div>
           <span :class="$style.AdvisoryContentsTitle">{{
-            $t('新型コロナ感染症コールセンター（日本語のみ）')
+            $t('新型コロナ感染症コールセンター')
           }}</span>
         </div>
       </div>
-
       <div :class="$style.AdvisoryContents">
         <div class="py-8">
           <div :class="$style.AdvisoryContentsTitle2">
             {{ $t('平日（日中）') }}
           </div>
-          <span>{{ $t('午後5時から翌朝午前9時') }}</span>
+          <span>{{ $t('午前9時から午後9時（土日祝含む）') }}</span>
         </div>
         <div
           :class="[
@@ -33,7 +32,9 @@
             0570-082-820
           </a>
         </div>
-      </div>
+        <div v-if="!['ja', 'ja-basic'].includes($i18n.locale)" class="pt-8">
+          <span>{{ $t('ひまわり') }}</span>
+        </div>      </div>
       <div :class="$style.AdvisoryContents">
         <div class="pt-8">
           <div :class="$style.AdvisoryContentsTitle2">
@@ -96,7 +97,7 @@
     }
 
     &Title {
-      font-size: 26px;
+      font-size: 24px;
       line-height: 28px;
     }
 
