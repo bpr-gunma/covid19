@@ -194,6 +194,7 @@
         list-style: none;
 
         &Item {
+          color: $green-1;
           display: flex;
           align-items: center;
 
