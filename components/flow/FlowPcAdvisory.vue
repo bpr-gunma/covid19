@@ -4,64 +4,49 @@
       <div :class="$style.AdvisoryContents">
         <div>
           <span :class="$style.AdvisoryContentsTitle">{{
-            $t('新型コロナ受診相談窓口（日本語のみ）')
+            $t('新型コロナ感染症コールセンター')
           }}</span>
         </div>
-        <div :class="[$style.AdvisoryContentsColsSentense, 'mt-4']">
-          {{ $t('帰国者・接触者 電話相談センター') }}
-        </div>
-        <div>
-          <div :class="[$style.AdvisoryBoxContainer, $style.AdvisoryWhiteBox]">
-            <span :class="$style.AdvisoryWhiteBoxSentense">
-              {{ $t('24時間対応') }}
-            </span>
-          </div>
-        </div>
       </div>
-
       <div :class="$style.AdvisoryContents">
-        <div class="py-8">
+        <div class="pt-4">
           <div :class="$style.AdvisoryContentsTitle2">
             {{ $t('平日（日中）') }}
           </div>
-          <div
-            :class="[
-              $style.AdvisoryLink,
-              $style.AdvisoryBlockCentering,
-              'mt-4'
-            ]"
-          >
-            <a
-              href="https://www.pref.gunma.jp/02/d29g_00243.html#hokenjo"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <span>{{ $t('各保健所の電話番号は保健予防課HPへ') }}</span>
-              <v-icon size="18">
-                mdi-open-in-new
-              </v-icon>
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <div :class="$style.AdvisoryContents">
-        <div class="pt-8">
-          <div :class="$style.AdvisoryContentsTitle2">
-            {{ $t('平日（夜間）') }}
-          </div>
-          <span>{{ $t('午後5時から翌朝午前9時') }}</span>
-        </div>
-        <div class="mt-1">
-          <span :class="$style.AdvisoryContentsSubTitle">
-            {{ $t('土日祝 終日') }}
-          </span>
+          <span>{{ $t('午前9時から午後9時') }}</span><br />
+          <span>{{ $t('土日祝 含む') }}</span>
         </div>
         <div
           :class="[
             $style.AdvisoryTelephoneArea,
-            $style.AdvisoryBlockCentering,
-            'mt-1'
+            $style.AdvisoryBlockCentering
+          ]"
+        >
+          <a :class="$style.AdvisoryTelephone" href="tel:0570082820">
+            <img
+              :class="$style.AdvisoryTelephoneIcon"
+              src="/flow/phone-24px.svg"
+              aria-hidden="true"
+              :alt="$t('電話番号')"
+            />
+            0570-082-820
+          </a>
+        </div>
+        <div v-if="!['ja', 'ja-basic'].includes($i18n.locale)" class="pt-8">
+          <span>{{ $t('ひまわり') }}</span>
+        </div>      </div>
+      <div :class="$style.AdvisoryContents">
+        <div class="pt-4">
+          <div :class="$style.AdvisoryContentsTitle2">
+            {{ $t('平日（夜間）') }}
+          </div>
+          <span>{{ $t('午後5時から翌朝午前9時') }}</span><br />
+          <span>{{ $t('土日祝 終日') }}</span>
+        </div>
+        <div
+          :class="[
+            $style.AdvisoryTelephoneArea,
+            $style.AdvisoryBlockCentering
           ]"
         >
           <a :class="$style.AdvisoryTelephone" href="tel:0272231111">
@@ -95,20 +80,20 @@
     border-radius: 4px;
     height: 100%;
     padding: 30px 20px 20px 20px;
-    margin-bottom: 10px;
     text-align: center;
   }
 
   &Contents {
     font-weight: bold;
 
-    &:not(:first-child) {
-      border-top: 0.5px solid $gray-4;
-    }
+//    &:not(:first-child) {
+//      border-top: 0.5px solid $gray-4;
+//    }
 
     &Title {
-      font-size: 26px;
+      font-size: 24px;
       line-height: 28px;
+      margin: 14px auto;
     }
 
     &Title2 {
@@ -150,8 +135,9 @@
   &Telephone {
     display: flex;
     align-items: center;
-    font-size: 27px;
+    font-size: 24px;
     font-weight: bold;
+    margin: 18px auto;
 
     &:link,
     &:visited,
@@ -175,7 +161,7 @@
     border-radius: 4px;
     text-align: center;
     padding: 20px 10px;
-    margin: 24px auto;
+    margin: 20px auto;
   }
 
   &WhiteBox {
