@@ -9,22 +9,17 @@
         </div>
       </div>
       <div :class="$style.AdvisoryContents">
-        <div class="pt-8">
+        <div class="pt-4">
           <div :class="$style.AdvisoryContentsTitle2">
             {{ $t('平日（日中）') }}
           </div>
           <span>{{ $t('午前9時から午後9時') }}</span>
-        </div>
-        <div class="mt-1">
-          <span :class="$style.AdvisoryContentsSubTitle">
-            {{ $t('土日祝含む') }}
-          </span>
+          <span>{{ $t('土日祝 含む') }}</span>
         </div>
         <div
           :class="[
             $style.AdvisoryTelephoneArea,
-            $style.AdvisoryBlockCentering,
-            'mt-1'
+            $style.AdvisoryBlockCentering
           ]"
         >
           <a :class="$style.AdvisoryTelephone" href="tel:0570082820">
@@ -41,22 +36,17 @@
           <span>{{ $t('ひまわり') }}</span>
         </div>      </div>
       <div :class="$style.AdvisoryContents">
-        <div class="pt-8">
+        <div class="pt-4">
           <div :class="$style.AdvisoryContentsTitle2">
             {{ $t('平日（夜間）') }}
           </div>
           <span>{{ $t('午後5時から翌朝午前9時') }}</span>
-        </div>
-        <div class="mt-1">
-          <span :class="$style.AdvisoryContentsSubTitle">
-            {{ $t('土日祝 終日') }}
-          </span>
+          <span>{{ $t('土日祝 終日') }}</span>
         </div>
         <div
           :class="[
             $style.AdvisoryTelephoneArea,
-            $style.AdvisoryBlockCentering,
-            'mt-1'
+            $style.AdvisoryBlockCentering
           ]"
         >
           <a :class="$style.AdvisoryTelephone" href="tel:0272231111">
@@ -96,9 +86,9 @@
   &Contents {
     font-weight: bold;
 
-    &:not(:first-child) {
-      border-top: 0.5px solid $gray-4;
-    }
+//    &:not(:first-child) {
+//      border-top: 0.5px solid $gray-4;
+//    }
 
     &Title {
       font-size: 24px;
