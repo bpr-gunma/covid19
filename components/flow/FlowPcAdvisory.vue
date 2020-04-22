@@ -34,7 +34,9 @@
         </div>
         <div v-if="!['ja', 'ja-basic'].includes($i18n.locale)" class="pt-8">
           <span>{{ $t('ひまわり') }}</span>
-        </div>      </div>
+        </div>
+      </div>
+      <hr />
       <div :class="$style.AdvisoryContents">
         <div class="pt-4">
           <div :class="$style.AdvisoryContentsTitle2">
