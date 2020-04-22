@@ -117,7 +117,7 @@
   }
 
   &Line {
-    border-width: 5px;
+    border-width: 1px 0px 0px 0px;
     border-style: dotted;
     border-color: $green-1;
   }
