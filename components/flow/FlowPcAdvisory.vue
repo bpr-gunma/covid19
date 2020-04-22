@@ -36,7 +36,7 @@
           <span>{{ $t('ひまわり') }}</span>
         </div>
       </div>
-      <hr />
+      <hr :class="$style.AdvisoryLine"/>
       <div :class="$style.AdvisoryContents">
         <div class="pt-4">
           <div :class="$style.AdvisoryContentsTitle2">
@@ -114,6 +114,12 @@
   &BlockCentering {
     display: flex;
     justify-content: center;
+  }
+
+  &Line {
+    border-width: 5px;
+    border-style: dotted;
+    border-color: $green-1;
   }
 
   &Link {
