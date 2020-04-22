@@ -93,8 +93,8 @@
 //    }
 
     &Title {
-      font-size: 24px;
-      line-height: 28px;
+      font-size: 20px;
+      line-height: 22px;
       margin: 14px auto;
     }
 
