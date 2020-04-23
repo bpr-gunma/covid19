@@ -48,7 +48,7 @@
         </div>
       </div>
     </div>
-    <div :class="[$style.SubtleBox, $style.Box2]">
+    <div :class="[$style.SubtleBox2, $style.Box2]">
       <div :class="$style.Left">
         <div :class="[$style.InnerBox, $style.ContentText]">
           {{ $t('かかりつけ医にご相談ください。') }}
@@ -135,6 +135,15 @@
 }
 
 .SubtleBox {
+  @include card-container();
+
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0.5em;
+}
+
+.SubtleBox2 {
 //  @include card-container();
 
   display: flex;
@@ -149,7 +158,7 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  padding: em;
+  padding: 2em;
 }
 
 .Box1 {
