@@ -50,12 +50,12 @@
     </div>
     <div :class="[$style.SubtleBox, $style.Box2]">
       <div :class="$style.Left">
-        <div :class="[$style.SubtleBox, $style.ContentText]">
+        <div :class="[$style.InnerBox, $style.ContentText]">
           {{ $t('かかりつけ医にご相談ください。') }}
         </div>
       </div>
       <div :class="$style.Left">
-        <div :class="[$style.SubtleBox, $style.ContentText]">
+        <div :class="[$style.InnerBox, $style.ContentText]">
           {{ $t('かかりつけ医がいない方は、「新型コロナ感染症コールセンター」にご相談ください。') }}
         </div>
       </div>
@@ -135,12 +135,21 @@
 }
 
 .SubtleBox {
+//  @include card-container();
+
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+//  padding: 0.5em;
+}
+
+.InnerBox {
   @include card-container();
 
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  padding: 0.5em;
+  padding: em;
 }
 
 .Box1 {
