@@ -48,30 +48,17 @@
         </div>
       </div>
     </div>
-
-    <div :class="[$style.SubtleBox, $style.Box2, $style.Center]">
-      <div :class="[$style.ContentText, , $style.Left]">
-        {{ $t('かかりつけ医にご相談ください。') }}<br />
-        {{ $t('かかりつけ医がいない方は、「新型コロナ感染症コールセンター」にご相談ください。') }}<br /><br />
+    <div>
+      <div :class="[$style.SubtleBox, $style.Box2, $style.Left]">
+        <div :class="$style.ContentText">
+          {{ $t('かかりつけ医にご相談ください。') }}
+        </div>
       </div>
-<!--      <div :class="$style.MediumText">
-        {{ $t('新型コロナ感染症コールセンター') }}
+      <div :class="[$style.SubtleBox, $style.Box2, $style.Left]">
+        <div :class="$style.ContentText">
+          {{ $t('かかりつけ医がいない方は、「新型コロナ感染症コールセンター」にご相談ください。') }}
+        </div>
       </div>
-      <div :class="$style.SmallerText">
-        {{ $t('午前9時から午後9時（土日祝含む）') }}
-      </div>
-
-      <div :class="$style.Tel">
-        <a :class="$style.TelLink" href="tel:0570082820">
-          <img
-            :class="$style.TelLinkIcon"
-            src="/flow/phone-24px.svg"
-            aria-hidden="true"
-            :alt="$t('電話番号')"
-          />
-          0570-082-820
-        </a>
-      </div>-->
     </div>
   </div>
 </template>
