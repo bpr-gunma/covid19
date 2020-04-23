@@ -155,10 +155,10 @@
 .InnerBox {
   @include card-container();
 
-  display: flex;
-  justify-content: space-evenly;
+//  display: flex;
+//  justify-content: space-evenly;
   align-items: center;
-  padding: 2em;
+  padding: 1em;
 }
 
 .Box1 {
@@ -187,7 +187,7 @@
   justify-content: center;
 
   div {
-    margin: 0.5em;
+    margin: 0;
   }
 }
 
