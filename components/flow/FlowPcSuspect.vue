@@ -147,7 +147,7 @@
 //  @include card-container();
 
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
 //  padding: 0.5em;
 }
