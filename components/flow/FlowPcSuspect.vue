@@ -50,12 +50,12 @@
     </div>
     <div :class="[$style.SubtleBox, $style.Box2]">
       <div :class="$style.Left">
-        <div :class="$style.ContentText">
+        <div :class="[$style.SubtleBox, $style.ContentText]">
           {{ $t('かかりつけ医にご相談ください。') }}
         </div>
       </div>
       <div :class="$style.Left">
-        <div :class="$style.ContentText">
+        <div :class="[$style.SubtleBox, $style.ContentText]">
           {{ $t('かかりつけ医がいない方は、「新型コロナ感染症コールセンター」にご相談ください。') }}
         </div>
       </div>
