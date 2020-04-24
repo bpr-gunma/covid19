@@ -7,7 +7,12 @@
         aria-hidden="true"
         alt=" "
       />
-      <div :class="$style.RowItems">
+      <img
+        :class="$style.Box2Icon2"
+        src="/flow/flow_arrow.svg"
+        aria-hidden="true"
+        alt=" "
+      />      <div :class="$style.RowItems">
         <div :class="$style.RowItemsHeader">
           <img
             :class="$style.RowItemsHeaderIcon"
@@ -150,7 +155,7 @@
 //  justify-content: space-between;
   align-items: center;
   margin: 0;
-//  padding: 0.5em;
+  padding: 0;
 }
 
 .InnerBox {
@@ -171,7 +176,7 @@
 
   &Icon {
     position: absolute;
-    bottom: 40%;
+    bottom: 70%;
     right: -30px;
     z-index: 1;
     display: block;
@@ -190,6 +195,16 @@
   div {
     margin: 0;
     padding: 1em;
+  }
+
+  &Icon {
+    position: absolute;
+    bottom: 30%;
+    right: -30px;
+    z-index: 1;
+    display: block;
+    width: 46px;
+    height: 46px;
   }
 }
 
