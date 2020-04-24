@@ -188,7 +188,7 @@
     position: absolute;
     bottom: 75%;
     right: -30px;
-    z-index: 1;
+    z-index: 2;
     display: block;
     width: 46px;
     height: 46px;
@@ -203,7 +203,8 @@
   justify-content: center;
 
   div {
-    margin: 0;
+    margin-left: calc(((100vw - 100%) / 2) * -1);
+    margin-right: calc(((100vw - 100%) / 2) * -1);
     padding: 1em;
   }
 }
