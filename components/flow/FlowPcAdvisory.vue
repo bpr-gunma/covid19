@@ -68,8 +68,17 @@
         <div :class="$style.AdvisoryCenter">
           <div :class="$style.AdvisoryCenterTitle">前橋市、高崎市に在住の人は保健所へ相談</div>
           <div :class="$style.AdvisoryCenterContents">
-            ここに文章
-          </div>
+            <div :class="AdvisoryCenterContentsHelth">前橋市保健所</div>
+            <div :class="AdvisoryCenterContentsTime">【平日：午前8時30分～午後5時15分】</div>
+            <div :class="AdvisoryCenterContentsTel"> ☎ 027-220-1151</div>
+            <div :class="AdvisoryCenterContentsTime">【夜間、土、日、祝日】</div>
+            <div :class="AdvisoryCenterContentsTel">☎ 027-224-1111</div>
+            <div :class="AdvisoryCenterContentsHelth">高崎市保健所</div>
+            <div :class="AdvisoryCenterContentsTime">【平日：午前8時30分～午後9時】</div>
+            <div :class="AdvisoryCenterContentsTel">☎ 027-381-6112</div>
+            <div :class="AdvisoryCenterContentsTime">【夜間、土、日、祝日】</div>
+            <div :class="AdvisoryCenterContentsTel">☎ 027-381-6123</div>
+        </div>
       </div>
     </div>
   </div>
@@ -191,24 +200,36 @@
   }
 
   &Center {
-    margin: 2em 0;
+    margin: 1em 0;
     background: #FFF;
-    border: solid 3px #3a1e87;
+    border: solid 3px $green-1;
     border-radius: 8px;
     color: #000;
 
     &Title {
-        font-size: 1.2em;
-        background: #3a1e87;
-        padding: 4px;
-        text-align: center;
-        color: #FFF;
-        font-weight: bold;
-        letter-spacing: 0.05em;
+      font-size: 1em;
+      background: $green-1;
+      padding: 4px;
+      text-align: center;
+      color: #FFF;
+      font-weight: bold;
+      letter-spacing: 0.05em;
     }
     
     &Contents {
-        border-radius: 0px 0px 8px 8px;
+      font-size: 0.8em;
+      border-radius: 0px 0px 8px 8px;
+
+      &Center {
+        margin: 0px 10px;
+        font-weight: bold;
+      }
+      &Time {
+        margin: 0px 10px;
+      }
+      &Tel {
+        margin: 0px 20px;
+      } 
     }
   }
 }
