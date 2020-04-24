@@ -2,11 +2,11 @@
   <div :class="$style.FlowCard">
     <h3>{{ $t('新型コロナウイルス感染症にかかる相談窓口について') }}</h3>
     <div :class="[$style.Outer, $style.OuterUpper]">
-      <div :class="[$style.CardBlock, $style.CardBlockSuspect, $style.Suspect]">
+      <div :class="[$style.CardBlock, $style.Suspect]">
         <div :class="[$style.CardBlockInner]">
           <flow-pc-suspect />
           <img
-            :class="$style.CardBlockIcon"
+            :class="$style.CardBlockIcon1"
             src="/flow/flow_arrow.svg"
             aria-hidden="true"
             alt=" "
@@ -17,7 +17,7 @@
         <div :class="[$style.CardBlockInner]">
           <flow-pc-days />
           <img
-            :class="$style.CardBlockIcon"
+            :class="$style.CardBlockIcon2"
             src="/flow/flow_arrow.svg"
             aria-hidden="true"
             alt=" "
@@ -118,18 +118,26 @@ export default {
     position: relative;
   }
 
-  &Icon {
+  &Icon1 {
     position: absolute;
     bottom: 50%;
     right: -30px;
     z-index: 1;
   }
 
-  &Suspect {
-    .CardBlockIcon {
-      bottom: 22%;
-    }
+  &Icon2 {
+    position: absolute;
+    bottom: 15%;
+    right: -30px;
+    transform: rotateZ(30deg);
+    z-index: 1;
   }
+
+//  &Suspect {
+//    .CardBlockIcon {
+//      bottom: 22%;
+//    }
+//  }
 }
 
 .Days {
