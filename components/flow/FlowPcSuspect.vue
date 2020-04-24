@@ -146,9 +146,10 @@
 .SubtleBox2 {
 //  @include card-container();
 
-  display: flex;
-  justify-content: space-between;
+//  display: flex;
+//  justify-content: space-between;
   align-items: center;
+  margin: 0;
 //  padding: 0.5em;
 }
 
@@ -188,7 +189,7 @@
 
   div {
     margin: 0;
-    padding: 1.5em;
+    padding: 1em;
   }
 }
 
