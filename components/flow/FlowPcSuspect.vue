@@ -165,7 +165,7 @@
 //  display: flex;
 //  justify-content: space-evenly;
   align-items: center;
-  padding: 1em;
+  padding: 3em;
 }
 
 .Box1 {
