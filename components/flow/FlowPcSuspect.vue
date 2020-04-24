@@ -55,15 +55,11 @@
       </div>
     </div>
     <div :class="[$style.SubtleBox2, $style.Box2]">
-      <div :class="$style.Left">
-        <div :class="[$style.InnerBox, $style.ContentText]">
-          {{ $t('かかりつけ医にご相談ください。') }}
-        </div>
+      <div :class="$style.ContentBox">
+        {{ $t('かかりつけ医にご相談ください。') }}
       </div>
-      <div :class="$style.Left">
-        <div :class="[$style.InnerBox, $style.ContentText]">
-          {{ $t('かかりつけ医がいない方は、「新型コロナ感染症コールセンター」にご相談ください。') }}
-        </div>
+      <div :class="$style.ContentBox">
+        {{ $t('かかりつけ医がいない方は、「新型コロナ感染症コールセンター」にご相談ください。') }}
       </div>
     </div>
   </div>
@@ -130,13 +126,16 @@
 //  padding: 0.5em;
 }
 
-.InnerBox {
+.ContentBox {
   @include card-container();
 
 //  display: flex;
 //  justify-content: space-evenly;
 //  align-items: stretch;
-  padding: 1em;
+  font-size: larger;
+  text-align: left;
+  padding: 8px;
+//  padding: 1em;
 }
 
 .Box1 {
@@ -173,11 +172,6 @@
   width: 43%;
   flex-direction: column;
   justify-content: center;
-
-  div {
-    margin: 0;
-    padding: 1em;
-  }
 }
 
 .RowItems {
@@ -219,18 +213,10 @@
   font-weight: bold;
 }
 
-.ContentText {
-  font-size: larger;
-  padding: 8px;
-}
-
 .Center {
   text-align: center;
 }
 
-.Left {
-  text-align: left;
-}
 .SmallerText {
   font-size: smaller;
 }
