@@ -249,7 +249,7 @@
     &Title {
 //     font-size: 1em;
       background: $green-1;
-      padding: 4px;
+      padding: 4px 10px;
       text-align: left;
       color: $white;
       font-weight: bold;
@@ -272,11 +272,11 @@
       }
       &Tel {
         display: inline-flex;
+        text-align: center;
 //        margin: 0px 20px;
 
         &Number {
           display: flex;
-          text-align: center;
           align-items: center;
 //          font-size: 24px;
 //          font-weight: bold;
