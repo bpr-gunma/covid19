@@ -134,8 +134,7 @@
 //  align-items: stretch;
   font-size: larger;
   text-align: left;
-  padding: 8px;
-//  padding: 1em;
+  padding: 1em;
 }
 
 .Box1 {
