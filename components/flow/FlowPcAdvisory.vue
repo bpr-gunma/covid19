@@ -200,7 +200,7 @@
   }
 
   &Center {
-    margin: 1em 0;
+    margin: 0;
     background: #FFF;
     border: solid 3px $green-1;
     border-radius: 8px;
@@ -218,16 +218,17 @@
     
     &Contents {
 //      font-size: 0.8em;
+      padding: 5px;
       text-align: left;
       border-radius: 0px 0px 8px 8px;
 
       &Helth {
-        margin: 0px 10px;
+//        margin: 0px 10px;
         font-weight: bold;
       }
       &Time {
         font-size: 0.8em;
-        margin: 0px 10px;
+//        margin: 0px 10px;
       }
       &Tel {
         margin: 0px 20px;
