@@ -1,6 +1,6 @@
 <template>
   <div :class="$style.FlowCard">
-    <h3>{{ $t('新型コロナウイルス感染症にかかる相談窓口について') }}</h3>
+    <h3>{{ $t('新型コロナウイルス感染症にかかる相談窓口についてa') }}</h3>
     <div :class="[$style.Outer, $style.OuterUpper]">
       <div :class="[$style.CardBlock, $style.CardBlockSuspect, $style.Suspect]">
         <div :class="[$style.CardBlockInner]">
@@ -95,11 +95,6 @@ export default {
       -ms-grid-column: 3;
       -ms-grid-row: 1;
       -ms-grid-row-span: 3;
-    }
-
-    & > *:nth-child(4) {
-      -ms-grid-column: 3;
-      -ms-grid-row: 5;
     }
   }
 }
