@@ -207,20 +207,21 @@
     color: #000;
 
     &Title {
-      font-size: 1em;
+//     font-size: 1em;
       background: $green-1;
       padding: 4px;
-      text-align: center;
+      text-align: left;
       color: #FFF;
       font-weight: bold;
       letter-spacing: 0.05em;
     }
     
     &Contents {
-      font-size: 0.8em;
+//      font-size: 0.8em;
+      text-align: left;
       border-radius: 0px 0px 8px 8px;
 
-      &Center {
+      &Helth {
         margin: 0px 10px;
         font-weight: bold;
       }
