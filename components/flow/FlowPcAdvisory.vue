@@ -79,15 +79,45 @@
                   :alt="$t('電話番号')"
                 />
                 027-220-1151
-              </a>              
+              </a>
             </div>
             <div :class="$style.AdvisoryCenterContentsTime">【夜間、土、日、祝日】</div>
-            <div :class="$style.AdvisoryCenterContentsTel">☎ 027-224-1111</div>
+            <div :class="$style.AdvisoryCenterContentsTel">
+              <a :class="$style.AdvisoryCenterContentsTelNumber" href="tel:0272241111">
+                <img
+                  :class="$style.AdvisoryCenterContentsTelNumberIcon"
+                  src="/flow/phone-24px.svg"
+                  aria-hidden="true"
+                  :alt="$t('電話番号')"
+                />
+                027-224-1111
+              </a>
+            </div>
             <div :class="$style.AdvisoryCenterContentsHelth">高崎市保健所</div>
             <div :class="$style.AdvisoryCenterContentsTime">【平日：午前8時30分～午後9時】</div>
-            <div :class="$style.AdvisoryCenterContentsTel">☎ 027-381-6112</div>
+            <div :class="$style.AdvisoryCenterContentsTel">
+              <a :class="$style.AdvisoryCenterContentsTelNumber" href="tel:0273816112">
+                <img
+                  :class="$style.AdvisoryCenterContentsTelNumberIcon"
+                  src="/flow/phone-24px.svg"
+                  aria-hidden="true"
+                  :alt="$t('電話番号')"
+                />
+                027-381-6112
+              </a>
+            </div>
             <div :class="$style.AdvisoryCenterContentsTime">【夜間、土、日、祝日】</div>
-            <div :class="$style.AdvisoryCenterContentsTel">☎ 027-381-6123</div>
+            <div :class="$style.AdvisoryCenterContentsTel">
+              <a :class="$style.AdvisoryCenterContentsTelNumber" href="tel:0273816123">
+                <img
+                  :class="$style.AdvisoryCenterContentsTelNumberIcon"
+                  src="/flow/phone-24px.svg"
+                  aria-hidden="true"
+                  :alt="$t('電話番号')"
+                />
+                027-381-6123
+              </a>
+            </div>
         </div>
       </div>
     </div>
@@ -210,11 +240,11 @@
   }
 
   &Center {
-    margin: 0;
+    margin-top: 10px;
     background: #FFF;
     border: solid 3px $green-1;
     border-radius: 8px;
-    color: #000;
+    color: $gray-2;
 
     &Title {
 //     font-size: 1em;
@@ -248,7 +278,7 @@
           align-items: center;
 //          font-size: 24px;
 //          font-weight: bold;
-//          margin: 18px auto;
+          margin: 0 auto;
 
           &:link,
           &:visited,
