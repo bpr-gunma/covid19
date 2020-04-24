@@ -117,24 +117,18 @@
 }
 
 .SubtleBox2 {
-//  @include card-container();
-
   display: flex;
-//  justify-content: space-between;
+  justify-content: space-between;
   align-items: stretch;
   margin: 0;
-//  padding: 0.5em;
 }
 
 .ContentBox {
   @include card-container();
 
-//  display: flex;
-//  justify-content: space-evenly;
-//  align-items: stretch;
   font-size: larger;
   text-align: left;
-  padding: 1em;
+  padding: 0.8em 1.2em;
 }
 
 .Box1 {
