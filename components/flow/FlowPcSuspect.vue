@@ -177,7 +177,7 @@
 
   &Icon1 {
     position: absolute;
-    bottom: 25%;
+    bottom: 30%;
     right: -30px;
     z-index: 1;
     display: block;
@@ -187,7 +187,7 @@
   
   &Icon2 {
     position: absolute;
-    bottom: 75%;
+    bottom: 80%;
     right: -30px;
     z-index: 2;
     display: block;
@@ -200,10 +200,12 @@
   flex-grow: 0;
   flex-shrink: 0;
   width: 43%;
+  height: 100%;
   flex-direction: column;
   justify-content: center;
 
   div {
+    height: 100%;
     margin: 0;
     padding: 1em;
   }
