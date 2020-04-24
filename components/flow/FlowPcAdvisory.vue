@@ -68,16 +68,16 @@
         <div :class="$style.AdvisoryCenter">
           <div :class="$style.AdvisoryCenterTitle">前橋市、高崎市に在住の人は保健所へ相談</div>
           <div :class="$style.AdvisoryCenterContents">
-            <div :class="AdvisoryCenterContentsHelth">前橋市保健所</div>
-            <div :class="AdvisoryCenterContentsTime">【平日：午前8時30分～午後5時15分】</div>
-            <div :class="AdvisoryCenterContentsTel"> ☎ 027-220-1151</div>
-            <div :class="AdvisoryCenterContentsTime">【夜間、土、日、祝日】</div>
-            <div :class="AdvisoryCenterContentsTel">☎ 027-224-1111</div>
-            <div :class="AdvisoryCenterContentsHelth">高崎市保健所</div>
-            <div :class="AdvisoryCenterContentsTime">【平日：午前8時30分～午後9時】</div>
-            <div :class="AdvisoryCenterContentsTel">☎ 027-381-6112</div>
-            <div :class="AdvisoryCenterContentsTime">【夜間、土、日、祝日】</div>
-            <div :class="AdvisoryCenterContentsTel">☎ 027-381-6123</div>
+            <div :class="$style.AdvisoryCenterContentsHelth">前橋市保健所</div>
+            <div :class="$style.AdvisoryCenterContentsTime">【平日：午前8時30分～午後5時15分】</div>
+            <div :class="$style.AdvisoryCenterContentsTel"> ☎ 027-220-1151</div>
+            <div :class="$style.AdvisoryCenterContentsTime">【夜間、土、日、祝日】</div>
+            <div :class="$style.AdvisoryCenterContentsTel">☎ 027-224-1111</div>
+            <div :class="$style.AdvisoryCenterContentsHelth">高崎市保健所</div>
+            <div :class="$style.AdvisoryCenterContentsTime">【平日：午前8時30分～午後9時】</div>
+            <div :class="$style.AdvisoryCenterContentsTel">☎ 027-381-6112</div>
+            <div :class="$style.AdvisoryCenterContentsTime">【夜間、土、日、祝日】</div>
+            <div :class="$style.AdvisoryCenterContentsTel">☎ 027-381-6123</div>
         </div>
       </div>
     </div>
@@ -226,6 +226,7 @@
         font-weight: bold;
       }
       &Time {
+        font-size: 0.8em;
         margin: 0px 10px;
       }
       &Tel {
