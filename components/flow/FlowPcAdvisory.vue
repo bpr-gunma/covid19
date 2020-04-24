@@ -70,7 +70,17 @@
           <div :class="$style.AdvisoryCenterContents">
             <div :class="$style.AdvisoryCenterContentsHelth">前橋市保健所</div>
             <div :class="$style.AdvisoryCenterContentsTime">【平日：午前8時30分～午後5時15分】</div>
-            <div :class="$style.AdvisoryCenterContentsTel"> ☎ 027-220-1151</div>
+            <div :class="$style.AdvisoryCenterContentsTel">
+              <a :class="$style.AdvisoryCenterContentsTelNumber" href="tel:0272201151">
+                <img
+                  :class="$style.AdvisoryCenterContentsTelNumberIcon"
+                  src="/flow/phone-24px.svg"
+                  aria-hidden="true"
+                  :alt="$t('電話番号')"
+                />
+                027-220-1151
+              </a>              
+            </div>
             <div :class="$style.AdvisoryCenterContentsTime">【夜間、土、日、祝日】</div>
             <div :class="$style.AdvisoryCenterContentsTel">☎ 027-224-1111</div>
             <div :class="$style.AdvisoryCenterContentsHelth">高崎市保健所</div>
@@ -157,10 +167,10 @@
 
   &Telephone {
     display: flex;
-    align-items: center;
-    font-size: 24px;
-    font-weight: bold;
-    margin: 18px auto;
+//    align-items: center;
+//    font-size: 24px;
+//    font-weight: bold;
+//    margin: 12px auto;
 
     &:link,
     &:visited,
@@ -174,9 +184,9 @@
 
     &Icon {
       display: inline-block;
-      margin-right: 5px;
-      width: 26px;
-      height: 26px;
+      margin-right: 3px;
+      width: 18px;
+      height: 18px;
     }
   }
 
@@ -232,6 +242,31 @@
       }
       &Tel {
         margin: 0px 20px;
+
+        &Number {
+          display: flex;
+          align-items: center;
+          font-size: 24px;
+          font-weight: bold;
+          margin: 18px auto;
+
+          &:link,
+          &:visited,
+          &:hover,
+          &:active,
+          &:focus {
+            color: inherit;
+            text-decoration: none;
+            outline: 1px dotted $gray-3;
+          }
+
+          &Icon {
+            display: inline-block;
+            margin-right: 5px;
+            width: 26px;
+            height: 26px;
+          }
+        }
       } 
     }
   }
