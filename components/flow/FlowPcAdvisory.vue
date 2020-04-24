@@ -271,6 +271,7 @@
 //        margin: 0px 10px;
       }
       &Tel {
+        display: inline-flex;
         margin: 0px 20px;
 
         &Number {
@@ -292,7 +293,7 @@
 
           &Icon {
             display: inline-block;
-            margin-right: 3px;
+            margin-right: 4px;
             width: 15px;
             height: 15px;
           }
