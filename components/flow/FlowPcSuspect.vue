@@ -8,11 +8,12 @@
         alt=" "
       />
       <img
-        :class="$style.Box2Icon2"
+        :class="$style.Box1Icon2"
         src="/flow/flow_arrow.svg"
         aria-hidden="true"
         alt=" "
-      />      <div :class="$style.RowItems">
+      />
+      <div :class="$style.RowItems">
         <div :class="$style.RowItemsHeader">
           <img
             :class="$style.RowItemsHeaderIcon"
@@ -203,8 +204,7 @@
   justify-content: center;
 
   div {
-    margin-left: calc(((100vw - 100%) / 2) * -1);
-    margin-right: calc(((100vw - 100%) / 2) * -1);
+    margin: 0;
     padding: 1em;
   }
 }
