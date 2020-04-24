@@ -177,7 +177,7 @@
 
   &Icon1 {
     position: absolute;
-    bottom: 20%;
+    bottom: 22%;
     right: -30px;
     z-index: 1;
     display: block;
@@ -187,7 +187,7 @@
   
   &Icon2 {
     position: absolute;
-    bottom: 70%;
+    bottom: 72%;
     right: -30px;
     z-index: 2;
     display: block;

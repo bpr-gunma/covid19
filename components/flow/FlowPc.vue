@@ -130,14 +130,14 @@ export default {
 
   &Icon {
     position: absolute;
-    bottom: 70%;
+    bottom: 50%;
     right: -30px;
     z-index: 1;
   }
 
   &Suspect {
     .CardBlockIcon {
-      bottom: 40%;
+      bottom: 72%;
     }
   }
 }
