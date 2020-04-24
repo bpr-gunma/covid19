@@ -77,35 +77,6 @@
   justify-content: space-between;
 }
 
-.Tel {
-  @include largerThan($medium) {
-    font-size: larger;
-  }
-}
-
-.TelLink {
-  display: flex;
-  align-items: center;
-  font-weight: bold;
-
-  &:link,
-  &:visited,
-  &:hover,
-  &:active,
-  &:focus {
-    color: inherit;
-    text-decoration: none;
-    outline: 1px dotted $gray-3;
-  }
-
-  &Icon {
-    display: inline-block;
-    margin-right: 5px;
-    width: 26px;
-    height: 26px;
-  }
-}
-
 .CheckBox {
   position: relative;
   border: 2px solid $green-1;
@@ -164,8 +135,8 @@
 
 //  display: flex;
 //  justify-content: space-evenly;
-  align-items: center;
-  padding: 3em;
+  align-items: stretch;
+  padding: 1.5em;
 }
 
 .Box1 {
