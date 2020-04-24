@@ -184,9 +184,9 @@
 
     &Icon {
       display: inline-block;
-      margin-right: 3px;
-      width: 18px;
-      height: 18px;
+      margin-right: 5px;
+      width: 26px;
+      height: 26px;
     }
   }
 
@@ -210,7 +210,7 @@
   }
 
   &Center {
-    margin-top: 10px;
+    margin: 0;
     background: #FFF;
     border: solid 3px $green-1;
     border-radius: 8px;
@@ -245,7 +245,7 @@
 
         &Number {
           display: flex;
-//          align-items: center;
+          align-items: center;
 //          font-size: 24px;
 //          font-weight: bold;
 //          margin: 18px auto;
@@ -262,9 +262,9 @@
 
           &Icon {
             display: inline-block;
-            margin-right: 5px;
-            width: 26px;
-            height: 26px;
+            margin-right: 3px;
+            width: 15px;
+            height: 15px;
           }
         }
       } 
