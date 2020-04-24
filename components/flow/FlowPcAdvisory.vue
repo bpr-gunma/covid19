@@ -65,6 +65,12 @@
           <span>{{ $t('ひまわり') }}</span>
         </div>
       </div>
+        <div :class="$style.AdvisoryCenter">
+          <div :class="$style.AdvisoryCenterTitle">前橋市、高崎市に在住の人は保健所へ相談</div>
+          <div :class="$style.AdvisoryCenterContents">
+            ここに文章
+          </div>
+      </div>
     </div>
   </div>
 </template>
@@ -181,6 +187,28 @@
       color: $green-1;
       font-size: 18px;
       font-weight: bold;
+    }
+  }
+
+  &Center {
+    margin: 2em 0;
+    background: #FFF;
+    border: solid 3px #3a1e87;
+    border-radius: 8px;
+    color: #000;
+
+    &Title {
+        font-size: 1.2em;
+        background: #3a1e87;
+        padding: 4px;
+        text-align: center;
+        color: #FFF;
+        font-weight: bold;
+        letter-spacing: 0.05em;
+    }
+    
+    &Contents {
+        border-radius: 0px 0px 8px 8px;
     }
   }
 }
