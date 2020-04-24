@@ -188,6 +188,7 @@
 
   div {
     margin: 0;
+    padding: 0.5em;
   }
 }
 
