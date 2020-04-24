@@ -137,7 +137,7 @@ export default {
 
   &Suspect {
     .CardBlockIcon {
-      bottom: 72%;
+      bottom: 22%;
     }
   }
 }
