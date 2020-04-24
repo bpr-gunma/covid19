@@ -2,7 +2,7 @@
   <div :class="$style.FlowComponent">
     <div :class="[$style.SubtleBox, $style.Box1]">
       <img
-        :class="$style.Box1Icon"
+        :class="$style.Box1Icon1"
         src="/flow/flow_arrow.svg"
         aria-hidden="true"
         alt=" "
@@ -155,7 +155,7 @@
 //  justify-content: space-between;
   align-items: center;
   margin: 0;
-  padding: 0;
+//  padding: 0.5em;
 }
 
 .InnerBox {
@@ -174,9 +174,19 @@
   width: 55%;
   flex-direction: row;
 
-  &Icon {
+  &Icon1 {
     position: absolute;
-    bottom: 70%;
+    bottom: 25%;
+    right: -30px;
+    z-index: 1;
+    display: block;
+    width: 46px;
+    height: 46px;
+  }
+  
+  &Icon2 {
+    position: absolute;
+    bottom: 75%;
     right: -30px;
     z-index: 1;
     display: block;
@@ -195,16 +205,6 @@
   div {
     margin: 0;
     padding: 1em;
-  }
-
-  &Icon {
-    position: absolute;
-    bottom: 30%;
-    right: -30px;
-    z-index: 1;
-    display: block;
-    width: 46px;
-    height: 46px;
   }
 }
 
