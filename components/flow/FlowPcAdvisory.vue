@@ -167,10 +167,10 @@
 
   &Telephone {
     display: flex;
-//    align-items: center;
-//    font-size: 24px;
-//    font-weight: bold;
-//    margin: 12px auto;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 12px auto;
 
     &:link,
     &:visited,
@@ -210,7 +210,7 @@
   }
 
   &Center {
-    margin: 0;
+    margin-top: 10px;
     background: #FFF;
     border: solid 3px $green-1;
     border-radius: 8px;
@@ -245,10 +245,10 @@
 
         &Number {
           display: flex;
-          align-items: center;
-          font-size: 24px;
-          font-weight: bold;
-          margin: 18px auto;
+//          align-items: center;
+//          font-size: 24px;
+//          font-weight: bold;
+//          margin: 18px auto;
 
           &:link,
           &:visited,
