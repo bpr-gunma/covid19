@@ -125,7 +125,7 @@
 
   display: flex;
 //  justify-content: space-between;
-  align-items: center;
+  align-items: stretch;
   margin: 0;
 //  padding: 0.5em;
 }
@@ -135,8 +135,8 @@
 
 //  display: flex;
 //  justify-content: space-evenly;
-  align-items: stretch;
-  padding: 1.5em;
+//  align-items: stretch;
+  padding: 1em;
 }
 
 .Box1 {
