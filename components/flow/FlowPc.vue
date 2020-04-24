@@ -127,9 +127,9 @@ export default {
 
   &Icon2 {
     position: absolute;
-    bottom: 15%;
+    bottom: 80%;
     right: -30px;
-    transform: rotateZ(30deg);
+    transform: rotateZ(-30deg);
     z-index: 1;
   }
 
