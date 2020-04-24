@@ -66,7 +66,7 @@
         </div>
       </div>
         <div :class="$style.AdvisoryCenter">
-          <div :class="$style.AdvisoryCenterTitle">前橋市、高崎市に在住の人は保健所へ相談</div>
+          <div :class="$style.AdvisoryCenterTitle">前橋市、高崎市に在住の方は保健所へ相談</div>
           <div :class="$style.AdvisoryCenterContents">
             <div :class="$style.AdvisoryCenterContentsHelth">前橋市保健所</div>
             <div :class="$style.AdvisoryCenterContentsTime">【平日：午前8時30分～午後5時15分】</div>
