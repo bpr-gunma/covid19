@@ -19,30 +19,19 @@
       </li>
     </ul>
 
-    <div :class="$style.callcenter">
-      <p :class="$style.fzLarge">
-        {{ $t('新型コロナコールセンター') }}
-      </p>
-      <p :class="$style.open">
-        {{ $t('午前9時から午後9時（土日祝含む）') }}
-      </p>
-      <p :class="[$style.phone, $style.fzNumeric]">
-        <span :class="$style.icon">
-          <PhoneIcon alt="Phone" />
-        </span>
-        <a href="tel:0570082820">0570-082-820</a>
-      </p>
+    <div :class="[$style.rect, $style.solution]">
+      <p>{{ $t('かかりつけ医にご相談ください。') }}</p>
     </div>
-
-    <a
-      v-scroll-to="{
-        el: '#consult',
-        onDone: onDoneScroll
-      }"
-      href="#consult"
-      :class="[$style.button, $style.clickable]"
-    >
-      <span :class="$style.text">{{ $t('専門的な助言が必要な場合') }}</span>
+    <div :class="$style.callcenter">
+      <a
+        v-scroll-to="{
+          el: '#consult',
+          onDone: onDoneScroll
+        }"
+        href="#consult"
+        :class="[$style.button, $style.clickable]"
+      >
+      <span :class="$style.text">{{ $t('かかりつけ医がいない方は、新型コロナ感染症コールセンターへ') }}</span>
       <ArrowForwardIcon :class="$style.icon" />
     </a>
   </div>
@@ -76,6 +65,30 @@ export default {
     }
   }
 }
+
+.rect {
+  min-height: px2vw(188);
+  padding: px2vw(20) px2vw(10);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  flex: 0 0 48%;
+  border-radius: px2vw(6);
+  font-size: px2vw(24);
+  text-decoration: none !important;
+  color: inherit !important;
+  text-align: center;
+  font-weight: bold;
+
+  &.solution {
+    border: px2vw(3) solid $gray-4;
+    // icon
+    padding-top: px2vw((46 + 20 * 2));
+    position: relative;
+  }
+}
+
 // suspect
 .callcenter {
   margin-top: px2vw(25);
