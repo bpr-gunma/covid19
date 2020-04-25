@@ -78,10 +78,10 @@ export default {
 // suspect
 .callcenter {
   text-align: left;
+}
 
-  > .button {
-    height: px2vw(106);
-  }
+.button {
+  height: px2vw(110);
 }
 
 @include largerThan($small) {
@@ -110,10 +110,10 @@ export default {
   // suspect
   .callcenter {
     text-align: left;
+  }
 
-    > .button {
-      height: px2vw(106, $vw);
-    }
+  .button {
+    height: px2vw(110, $vw);
   }
 }
 </style>
