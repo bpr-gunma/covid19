@@ -42,7 +42,7 @@
       href="#consult"
       :class="[$style.button, $style.clickable]"
     >
-      <span :class="$style.text">{{ $t('専門的な助言が必要な場合') }}</span>
+      <span :class="$style.text">{{ $t('かかりつけ医がいない方は、新型コロナ感染症コールセンターへ') }}</span>
       <ArrowForwardIcon :class="$style.icon" />
     </a>
   </div>
@@ -84,6 +84,11 @@ export default {
   .open {
     margin-top: px2vw(10);
   }
+}
+
+.button {
+//  text-align: left;
+  height: px2vw(200);
 }
 
 @include largerThan($small) {
