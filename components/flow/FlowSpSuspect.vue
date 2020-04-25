@@ -79,8 +79,12 @@ export default {
 .callcenter {
   margin-top: px2vw(25);
   text-align: left;
-  padding-top: px2vw(20);
-  padding-bottom: px2vw(20);
+
+  > .text {
+      display: inline-block;
+      padding-top: px2vw(20);
+      padding-bottom: px2vw(20);
+  }
 }
 
 @include largerThan($small) {
@@ -109,9 +113,13 @@ export default {
   // suspect
   .callcenter {
     margin-top: px2vw(25, $vw);
-    padding-top: px2vw(20, $vw);
-    padding-bottom: px2vw(20, $vw);
     text-align: left;
+
+    > .text {
+      display: inline-block;
+      padding-top: px2vw(20, $vw);
+      padding-bottom: px2vw(20, $vw);
+    }
   }
 }
 </style>
