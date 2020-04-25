@@ -73,10 +73,10 @@ export default {
   text-align: center;
 }
 
-.button {
-  text-align: left;
-  height: px2vw(110);
-}
+//.button {
+//  text-align: left;
+//  height: px2vw(110);
+//}
 
 @include largerThan($small) {
   $vw: 960;
@@ -106,8 +106,8 @@ export default {
     text-align: left;
   }
 
-  .button {
-    height: px2vw(110, $vw);
-  }
+//  .button {
+//    height: px2vw(110, $vw);
+//  }
 }
 </style>
