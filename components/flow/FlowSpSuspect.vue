@@ -68,7 +68,7 @@ export default {
 }
 
 .solution {
-  margin-top: px2vw(25);
+  margin-top: px2vw(30);
   padding: px2vw(20) px2vw(10);
   border-radius: px2vw(6);
   border: px2vw(3) solid $gray-2;
@@ -77,13 +77,10 @@ export default {
 
 // suspect
 .callcenter {
-  margin-top: px2vw(25);
   text-align: left;
 
-  > .text {
-      display: block;
-      padding-top: px2vw(20);
-      padding-bottom: px2vw(20);
+  > .button {
+    padding: 0 px2vw(40) 0 px2vw(46);
   }
 }
 
@@ -103,7 +100,7 @@ export default {
   }
 
   .solution {
-    margin-top: px2vw(25, $vw);
+    margin-top: px2vw(30, $vw);
     padding: px2vw(20, $vw) px2vw(10, $vw);
     border-radius: px2vw(6, $vw);
     border: px2vw(2, $vw) solid $gray-2;
@@ -112,13 +109,10 @@ export default {
 
   // suspect
   .callcenter {
-    margin-top: px2vw(25, $vw);
     text-align: left;
 
-    > .text {
-      display: inline-block;
-      padding-top: px2vw(20, $vw);
-      padding-bottom: px2vw(20, $vw);
+    > .button {
+      padding: 0 px2vw(40, $vw) 0 px2vw(46, $vw);
     }
   }
 }
