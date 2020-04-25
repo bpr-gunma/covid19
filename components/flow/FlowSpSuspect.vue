@@ -22,19 +22,17 @@
     <div :class="$style.solution">
       <p>{{ $t('かかりつけ医にご相談ください。') }}</p>
     </div>
-    <div :class="$style.callcenter">
-      <a
-        v-scroll-to="{
-          el: '#consult',
-          onDone: onDoneScroll
-        }"
-        href="#consult"
-        :class="[$style.button, $style.clickable]"
-      >
-        <span :class="$style.text">{{ $t('かかりつけ医がいない方は、新型コロナ感染症コールセンターへa') }}</span>
-        <ArrowForwardIcon :class="$style.icon" />
-      </a>
-    </div>
+    <a
+      v-scroll-to="{
+        el: '#consult',
+        onDone: onDoneScroll
+      }"
+      href="#consult"
+      :class="[$style.button, $style.clickable]"
+    >
+      <span :class="$style.text">{{ $t('かかりつけ医がいない方は、新型コロナ感染症コールセンターへb') }}</span>
+      <ArrowForwardIcon :class="$style.icon" />
+    </a>
   </div>
 </template>
 
@@ -75,14 +73,10 @@ export default {
   text-align: center;
 }
 
-// suspect
-.callcenter {
+.button {
   text-align: left;
+  height: px2vw(110);
 }
-
-//.button {
-//  height: px2vw(110);
-//}
 
 @include largerThan($small) {
   $vw: 960;
@@ -112,8 +106,8 @@ export default {
     text-align: left;
   }
 
-//  .button {
-//    height: px2vw(110, $vw);
-//  }
+  .button {
+    height: px2vw(110, $vw);
+  }
 }
 </style>
