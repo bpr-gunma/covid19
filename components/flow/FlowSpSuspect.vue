@@ -92,8 +92,8 @@ export default {
   height: px2vw(116);
 
   .icon {
-    width: px2vw(100);
-    height: px2vw(100);
+    width: px2vw(90);
+    height: px2vw(90);
   }
 }
 
@@ -126,8 +126,8 @@ export default {
     height: px2vw(116, $vw);
 
     .icon {
-      width: px2vw(100, $vw);
-      height: px2vw(100, $vw);
+      width: px2vw(90, $vw);
+      height: px2vw(90, $vw);
     }
   }
 }
