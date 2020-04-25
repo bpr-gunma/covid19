@@ -77,8 +77,8 @@ export default {
     grid-gap: $grid-gap;
     grid-template-columns: 70% 30%;
     -ms-grid-columns: 70% 12px 30%;
-    grid-template-rows: repeat(2, 100%);
-    -ms-grid-rows: 100% 12px 100%;
+    grid-template-rows: auto 1fr;
+    -ms-grid-rows: auto 12px 1fr;
 //    grid-template-rows: repeat(2, auto);
 //    -ms-grid-rows: auto 12px auto;
     // HACK: IEでGridの順番がうまくいかない対応
@@ -134,12 +134,6 @@ export default {
     transform: rotateZ(-30deg);
     z-index: 1;
   }
-
-//  &Suspect {
-//    .CardBlockIcon {
-//      bottom: 22%;
-//    }
-//  }
 }
 
 .Days {
