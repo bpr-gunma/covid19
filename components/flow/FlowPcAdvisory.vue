@@ -272,11 +272,11 @@
       }
       &Tel {
         display: inline-flex;
+        justify-content: center;
 //        margin: 0px 20px;
 
         &Number {
           display: flex;
-          justify-content: center;
           align-items: center;
 //          font-size: 24px;
 //          font-weight: bold;
