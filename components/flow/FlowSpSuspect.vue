@@ -19,7 +19,7 @@
       </li>
     </ul>
 
-    <div :class="[$style.rect, $style.solution]">
+    <div :class="$style.solution">
       <p>{{ $t('かかりつけ医にご相談ください。') }}</p>
     </div>
     <div :class="$style.callcenter">
@@ -93,6 +93,7 @@ export default {
 // suspect
 .callcenter {
   margin-top: px2vw(25);
+  padding: px2vw(20) px2vw(10);
   text-align: left;
 }
 
