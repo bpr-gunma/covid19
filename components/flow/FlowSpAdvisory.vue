@@ -8,7 +8,7 @@
         <dt>
           <ul :class="[$style.night]">
             <li>
-              <span :class="[$style.fzMedium, $style.break, $style.mb10]">
+              <span :class="[$style.fzMedium, $style.break, $style.mb5]">
                 {{ $t('平日（日中）') }}
               </span>
               {{ $t('午前9時から午後9時') }}
@@ -31,17 +31,18 @@
             v-if="!['ja', 'ja-basic'].includes($i18n.locale)"
             :class="[$style.phone, $style.fzNumeric]"
           >
-            <span :class="[$style.fzMedium, $style.break, $style.mb10]">
+            <span :class="[$style.fzMedium, $style.break, $style.mb5]">
               {{ $t('ひまわり') }}
             </span>
           </div>
         </dd>
       </div>
+      <hr />
       <div>
         <dt>
           <ul :class="[$style.night]">
             <li>
-              <span :class="[$style.fzMedium, $style.break, $style.mb10]">
+              <span :class="[$style.fzMedium, $style.break, $style.mb5]">
                 {{ $t('平日（夜間）') }}
               </span>
               {{ $t('午後5時から翌朝午前9時') }}
@@ -64,7 +65,7 @@
             v-if="!['ja', 'ja-basic'].includes($i18n.locale)"
             :class="[$style.phone, $style.fzNumeric]"
           >
-            <span :class="[$style.fzMedium, $style.break, $style.mb10]">
+            <span :class="[$style.fzMedium, $style.break, $style.mb5]">
               {{ $t('ひまわり') }}
             </span>
           </div>
