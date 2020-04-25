@@ -20,7 +20,7 @@
     </ul>
 
     <div :class="$style.solution">
-      {{ $t('かかりつけ医にご相談ください。') }}
+      <p>{{ $t('かかりつけ医にご相談ください。') }}</p>
     </div>
     <div :class="$style.callcenter">
       <a
@@ -31,9 +31,7 @@
         href="#consult"
         :class="[$style.button, $style.clickable]"
       >
-        <div :class="$style.text">
-          {{ $t('かかりつけ医がいない方は、新型コロナ感染症コールセンターへ') }}
-        </div>
+        <span :class="$style.text">{{ $t('かかりつけ医がいない方は、新型コロナ感染症コールセンターへ') }}</span>
         <ArrowForwardIcon :class="$style.icon" />
       </a>
     </div>
@@ -81,11 +79,8 @@ export default {
 .callcenter {
   margin-top: px2vw(25);
   text-align: left;
-
-  > .text {
-    margin-top: px2vw(20);
-    margin-bottom: px2vw(20);
-  }
+  padding-top: px2vw(20);
+  padding-bottom: px2vw(20);
 }
 
 @include largerThan($small) {
@@ -114,11 +109,9 @@ export default {
   // suspect
   .callcenter {
     margin-top: px2vw(25, $vw);
+    padding-top: px2vw(20, $vw);
+    padding-bottom: px2vw(20, $vw);
     text-align: left;
-    > .text {
-      margin-top: px2vw(20, $vw);
-      margin-bottom: px2vw(20, $vw);
-    }
   }
 }
 </style>
