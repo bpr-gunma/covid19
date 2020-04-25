@@ -80,6 +80,7 @@ export default {
   text-align: left;
 
   > .button {
+    display: block;
     padding: px2vw(20) px2vw(30) px2vw(20) px2vw(36);
   }
 }
