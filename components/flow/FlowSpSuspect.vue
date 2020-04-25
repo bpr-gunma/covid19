@@ -71,7 +71,7 @@ export default {
   margin-top: px2vw(25);
 //  padding: px2vw(20) px2vw(10);
 //  border-radius: px2vw(6);
-//  border: px2vw(3) solid $gray-4;
+  border: px2vw(2) solid $gray-4;
   text-align: center;
 //  font-weight: bold;
 }
