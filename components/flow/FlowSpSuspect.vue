@@ -30,7 +30,7 @@
       href="#consult"
       :class="[$style.button, $style.clickable]"
     >
-      <span :class="$style.text">{{ $t('かかりつけ医がいない方は、新型コロナ感染症コールセンターへb') }}</span>
+      <span :class="$style.text">{{ $t('かかりつけ医がいない方は、新型コロナ感染症コールセンターへ') }}</span>
       <ArrowForwardIcon :class="$style.icon" />
     </a>
   </div>
@@ -77,8 +77,8 @@ export default {
   height: px2vw(116);
 
   .icon {
-    width: px2vw(90);
-    height: px2vw(90);
+    width: px2vw(88);
+    height: px2vw(88);
   }
 }
 
@@ -114,8 +114,8 @@ export default {
     height: px2vw(116, $vw);
 
     .icon {
-      width: px2vw(90, $vw);
-      height: px2vw(90, $vw);
+      width: px2vw(88, $vw);
+      height: px2vw(88, $vw);
     }
   }
 }
