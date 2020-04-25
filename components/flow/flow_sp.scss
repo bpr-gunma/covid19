@@ -90,7 +90,7 @@
   align-items: center;
 
   &:not(:first-child) {
-    margin-top: px2vw(30);
+    margin: px2vw(30) auto;
   }
 
   > * {

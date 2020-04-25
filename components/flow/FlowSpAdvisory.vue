@@ -11,7 +11,7 @@
               <span :class="[$style.fzMedium, $style.break, $style.mb5]">
                 {{ $t('平日（日中）') }}
               </span>
-              {{ $t('午前9時から午後9時') }}
+              {{ $t('午前9時から午後9時') }}<br />
               {{ $t('土日祝 含む') }}
             </li>
           </ul>
@@ -41,7 +41,7 @@
               <span :class="[$style.fzMedium, $style.break, $style.mb5]">
                 {{ $t('平日（夜間）') }}
               </span>
-              {{ $t('午後5時から翌朝午前9時') }}
+              {{ $t('午後5時から翌朝午前9時') }}<br />
               {{ $t('土日祝 終日') }}
             </li>
           </ul>
