@@ -33,7 +33,7 @@
       >
       <span :class="$style.text">{{ $t('かかりつけ医がいない方は、新型コロナ感染症コールセンターへ') }}</span>
       <ArrowForwardIcon :class="$style.icon" />
-    </a>
+    </div>
   </div>
 </template>
 
