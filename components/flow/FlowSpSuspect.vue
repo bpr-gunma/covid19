@@ -80,10 +80,9 @@ export default {
   margin-top: px2vw(25);
   text-align: left;
 
-  &.text {
-    margin-left: px2vw(11);
-    margin-right: px2vw(11);
-    flex-grow: 10;
+  > .text {
+    margin-top: px2vw(20);
+    margin-bottom: px2vw(20);
   }
 }
 
@@ -114,6 +113,10 @@ export default {
   .callcenter {
     margin-top: px2vw(25, $vw);
     text-align: left;
+    > .text {
+      margin-top: px2vw(20, $vw);
+      margin-bottom: px2vw(20, $vw);
+    }
   }
 }
 </style>
