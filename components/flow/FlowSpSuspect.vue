@@ -93,8 +93,8 @@ export default {
 
   .icon {
     margin-left: px2vw(10);
-    width: px2vw(45);
-    height: px2vw(45);
+    width: px2vw(100);
+    height: px2vw(100);
     transform: rotateZ(90deg);
     display: block;
   }
