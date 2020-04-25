@@ -92,8 +92,8 @@ export default {
   height: px2vw(96);
 
   .icon {
-    width: px2vw(55);
-    height: px2vw(55);
+    width: px2vw(50);
+    height: px2vw(50);
   }
 }
 
@@ -117,6 +117,17 @@ export default {
 
     .open {
       margin-top: px2vw(10, $vw);
+    }
+  }
+
+  .button {
+  //  text-align: left;
+  //  padding: 0 px2vw(20) 0 px2vw(26);
+    height: px2vw(96, $vw);
+
+    .icon {
+      width: px2vw(50, $vw);
+      height: px2vw(50, $vw);
     }
   }
 }
