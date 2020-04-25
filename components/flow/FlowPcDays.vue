@@ -100,30 +100,12 @@
       <div :class="$style.FlowRowRowThree">
         <ul :class="$style.FlowRowRowThreeCareTargetList">
           <li :class="$style.FlowRowRowThreeCareTargetListItem">
-<!--            <img
-              :class="$style.FlowRowRowThreeCareTargetListItemIcon"
-              src="/flow/directions_walk-24px.svg"
-              aria-hidden="true"
-              alt=" "
-            />-->
             {{ $t('ご高齢な方') }}
           </li>
           <li :class="$style.FlowRowRowThreeCareTargetListItem">
-<!--            <img
-              :class="$style.FlowRowRowThreeCareTargetListItemIcon"
-              src="/flow/accessible-24px.svg"
-              aria-hidden="true"
-              alt=" "
-            />-->
             {{ $t('基礎疾患のある方') }}
           </li>
           <li :class="$style.FlowRowRowThreeCareTargetListItem">
-<!--            <img
-              :class="$style.FlowRowRowThreeCareTargetListItemIcon"
-              src="/flow/pregnant_woman-24px.svg"
-              aria-hidden="true"
-              alt=" "
-            />-->
             {{ $t('妊娠中の方') }}
           </li>
         </ul>
@@ -180,7 +162,6 @@
       margin-top: 20px;
 
       &General {
-        color: $green-1;
         font-weight: bold;
 
         &Icon {
@@ -197,7 +178,6 @@
         list-style: none;
 
         &Item {
-          color: $green-1;
           font-weight: bold;
           display: flex;
           align-items: center;
