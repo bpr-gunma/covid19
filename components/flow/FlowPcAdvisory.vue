@@ -259,20 +259,21 @@
     &Contents {
 //      font-size: 0.8em;
       padding: 5px;
-      text-align: left;
+      text-align: center;
       border-radius: 0px 0px 8px 8px;
 
       &Helth {
 //        margin: 0px 10px;
+        text-align: left;
         font-weight: bold;
       }
       &Time {
+        text-align: left;
         font-size: 0.8em;
 //        margin: 0px 10px;
       }
       &Tel {
         display: inline-flex;
-        justify-content: center;
 //        margin: 0px 20px;
 
         &Number {
