@@ -80,8 +80,7 @@ export default {
   text-align: left;
 
   > .button {
-    display: block;
-    padding: px2vw(20) px2vw(30) px2vw(20) px2vw(36);
+    height: px2vw(106);
   }
 }
 
@@ -113,7 +112,7 @@ export default {
     text-align: left;
 
     > .button {
-      padding: px2vw(20, $vw) px2vw(30, $vw) px2vw(20, $vw) px2vw(36, $vw);
+      height: px2vw(106, $vw);
     }
   }
 }
