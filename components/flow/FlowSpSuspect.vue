@@ -81,7 +81,7 @@ export default {
   text-align: left;
 
   > .text {
-      display: inline-block;
+      display: block;
       padding-top: px2vw(20);
       padding-bottom: px2vw(20);
   }
