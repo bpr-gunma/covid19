@@ -1,37 +1,47 @@
 <template>
   <div :class="$style.container">
     <h4 id="consult" :class="[$style.heading, $style.fzXLarge]">
-      {{ $t('新型コロナ受診相談窓口（日本語のみ）') }}
-      <small :class="[$style.break, $style.fzRegular, $style.mt5]">{{
-        $t('帰国者・接触者 電話相談センター')
-      }}</small>
+      {{ $t('新型コロナ感染症コールセンター') }}
     </h4>
-    <p :class="[$style.open, $style.fzMedium]">
-      <span>{{ $t('24時間対応') }}</span>
-    </p>
     <dl>
-      <div :class="$style.daytime">
-        <dt :class="[$style.title, $style.fzMedium]">
-          {{ $t('平日（日中）') }}
+      <div>
+        <dt>
+          <ul :class="[$style.open]">
+            <li>
+              <span :class="[$style.fzMedium, $style.break, $style.mb10]">
+                {{ $t('平日（日中）') }}
+              </span>
+              {{ $t('午前9時から午後9時') }}
+            </li>
+            <li>
+              <span :class="$style.fzMedium">
+                {{ $t('土日祝 含む') }}
+              </span>
+            </li>
+          </ul>
         </dt>
-        <dd :class="$style.link">
-          <a
-            href="https://www.pref.gunma.jp/02/d29g_00243.html#hokenjo"
-            target="_blank"
-            rel="noopener noreferrer"
+        <dd>
+          <div :class="[$style.phone, $style.fzNumeric]">
+            <span :class="$style.icon">
+              <PhoneIcon alt="Phone" />
+            </span>
+            <a href="tel:0570082820">0570-082-820</a>
+          </div>
+          <div
+            v-if="!['ja', 'ja-basic'].includes($i18n.locale)"
+            :class="[$style.phone, $style.fzNumeric]"
           >
-            {{ $t('各保健所の電話番号は保健予防課HPへ') }}
-            <v-icon size="16">
-              mdi-open-in-new
-            </v-icon>
-          </a>
+            <span :class="[$style.fzMedium, $style.break, $style.mb5]">
+              {{ $t('ひまわり') }}
+            </span>
+          </div>
         </dd>
       </div>
       <div>
         <dt>
-          <ul :class="[$style.night]">
+          <ul :class="[$style.open]">
             <li>
-              <span :class="[$style.fzMedium, $style.break, $style.mb10]">
+              <span :class="[$style.fzMedium, $style.break, $style.mb5]">
                 {{ $t('平日（夜間）') }}
               </span>
               {{ $t('午後5時から翌朝午前9時') }}
@@ -137,23 +147,6 @@ export default {
   $vw: 960;
 
   .open {
-    margin-top: px2vw(20, $vw);
-
-    > span {
-      padding: px2vw(20) px2vw(40, $vw);
-      border-radius: px2vw(6, $vw);
-    }
-  }
-
-  .daytime {
-    margin-top: px2vw(20, $vw);
-
-    > * {
-      padding: px2vw(30) px2vw(10, $vw);
-    }
-  }
-
-  .night {
     margin: px2vw(30, $vw) auto;
 
     > li {
