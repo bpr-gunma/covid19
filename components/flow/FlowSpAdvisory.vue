@@ -12,11 +12,7 @@
                 {{ $t('平日（日中）') }}
               </span>
               {{ $t('午前9時から午後9時') }}
-            </li>
-            <li>
-              <span :class="$style.fzMedium">
-                {{ $t('土日祝 含む') }}
-              </span>
+              {{ $t('土日祝 含む') }}
             </li>
           </ul>
         </dt>
@@ -46,11 +42,7 @@
                 {{ $t('平日（夜間）') }}
               </span>
               {{ $t('午後5時から翌朝午前9時') }}
-            </li>
-            <li>
-              <span :class="$style.fzMedium">
-                {{ $t('土日祝 終日') }}
-              </span>
+              {{ $t('土日祝 終日') }}
             </li>
           </ul>
         </dt>
@@ -130,8 +122,13 @@ export default {
   }
 }
 
+.line {
+    border-width: 1px 0px 0px 0px;
+    color: $gray-4;
+}
+
 .night {
-  margin: px2vw(30) auto;
+  margin: px2vw(20) auto;
   padding-left: 0 !important;
   text-align: center;
 
