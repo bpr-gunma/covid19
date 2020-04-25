@@ -71,7 +71,7 @@ export default {
   margin-top: px2vw(25);
   padding: px2vw(20) px2vw(10);
   border-radius: px2vw(6);
-  border: px2vw(2) solid $gray-2;
+  border: px2vw(3) solid $gray-2;
   text-align: center;
 }
 
@@ -81,7 +81,9 @@ export default {
   text-align: left;
 
   &.text {
-    padding: px2vw(40) px2vw(10);  
+    margin-left: px2vw(11);
+    margin-right: px2vw(11);
+    flex-grow: 10;
   }
 }
 
