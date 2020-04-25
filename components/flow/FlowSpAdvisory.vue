@@ -125,7 +125,8 @@ export default {
 .line {
     border-width: 1px 0px 0px 0px;
     color: $gray-4;
-    margin-top: 10px;
+    margin-top: 20px;
+    margin-bottom: 10px;
 }
 
 .night {
