@@ -77,8 +77,10 @@ export default {
     grid-gap: $grid-gap;
     grid-template-columns: 70% 30%;
     -ms-grid-columns: 70% 12px 30%;
-    grid-template-rows: repeat(2, auto);
-    -ms-grid-rows: auto 12px auto;
+    grid-template-rows: repeat(2, 100%);
+    -ms-grid-rows: 100% 12px 100%;
+//    grid-template-rows: repeat(2, auto);
+//    -ms-grid-rows: auto 12px auto;
     // HACK: IEでGridの順番がうまくいかない対応
     // https://github.com/tokyo-metropolitan-gov/covid19/issues/1313
     & > *:nth-child(1) {
