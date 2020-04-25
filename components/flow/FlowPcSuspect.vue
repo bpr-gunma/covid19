@@ -178,7 +178,7 @@
 }
 
 .RowItemsHeader {
-  color: $green-1;
+//  color: $green-1;
   font-size: medium;
   font-weight: bold;
 
