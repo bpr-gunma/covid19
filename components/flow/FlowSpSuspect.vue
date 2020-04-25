@@ -89,11 +89,11 @@ export default {
 .button {
 //  text-align: left;
 //  padding: 0 px2vw(20) 0 px2vw(26);
-  height: px2vw(140);
+  height: px2vw(116);
 
   .icon {
-    width: px2vw(70);
-    height: px2vw(70);
+    width: px2vw(55);
+    height: px2vw(55);
   }
 }
 
