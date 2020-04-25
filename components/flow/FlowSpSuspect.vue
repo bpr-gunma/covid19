@@ -67,33 +67,18 @@ export default {
   }
 }
 
-.rect {
-  min-height: px2vw(188);
+.solution {
+  margin-top: px2vw(25);
   padding: px2vw(20) px2vw(10);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
-  flex: 0 0 48%;
   border-radius: px2vw(6);
-  font-size: px2vw(24);
-  text-decoration: none !important;
-  color: inherit !important;
+  border: px2vw(3) solid $gray-4;
   text-align: center;
   font-weight: bold;
-
-  &.solution {
-    border: px2vw(3) solid $gray-4;
-    // icon
-    padding-top: px2vw((46 + 20 * 2));
-    position: relative;
-  }
 }
 
 // suspect
 .callcenter {
   margin-top: px2vw(25);
-  padding: px2vw(20) px2vw(10);
   text-align: left;
 }
 
