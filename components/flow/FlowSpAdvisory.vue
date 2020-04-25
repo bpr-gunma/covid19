@@ -8,7 +8,7 @@
         <dt>
           <ul :class="[$style.night]">
             <li>
-              <span :class="[$style.fzMedium, $style.break, $style.mb5]">
+              <span :class="[$style.fzMedium, $style.break, $style.mb7]">
                 {{ $t('平日（日中）') }}
               </span>
               {{ $t('午前9時から午後9時') }}<br />
@@ -27,7 +27,7 @@
             v-if="!['ja', 'ja-basic'].includes($i18n.locale)"
             :class="[$style.phone, $style.fzNumeric]"
           >
-            <span :class="[$style.fzMedium, $style.break, $style.mb5]">
+            <span :class="[$style.fzMedium, $style.break, $style.mb7]">
               {{ $t('ひまわり') }}
             </span>
           </div>
@@ -38,7 +38,7 @@
         <dt>
           <ul :class="[$style.night]">
             <li>
-              <span :class="[$style.fzMedium, $style.break, $style.mb5]">
+              <span :class="[$style.fzMedium, $style.break, $style.mb7]">
                 {{ $t('平日（夜間）') }}
               </span>
               {{ $t('午後5時から翌朝午前9時') }}<br />
@@ -57,7 +57,7 @@
             v-if="!['ja', 'ja-basic'].includes($i18n.locale)"
             :class="[$style.phone, $style.fzNumeric]"
           >
-            <span :class="[$style.fzMedium, $style.break, $style.mb5]">
+            <span :class="[$style.fzMedium, $style.break, $style.mb7]">
               {{ $t('ひまわり') }}
             </span>
           </div>
@@ -125,6 +125,7 @@ export default {
 .line {
     border-width: 1px 0px 0px 0px;
     color: $gray-4;
+    margin-top: 10px;
 }
 
 .night {
