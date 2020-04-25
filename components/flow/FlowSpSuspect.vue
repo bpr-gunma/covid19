@@ -20,7 +20,7 @@
     </ul>
 
     <div :class="$style.solution">
-      <p>{{ $t('かかりつけ医にご相談ください。') }}</p>
+      {{ $t('かかりつけ医にご相談ください。') }}
     </div>
     <div :class="$style.callcenter">
       <a
@@ -31,7 +31,9 @@
         href="#consult"
         :class="[$style.button, $style.clickable]"
       >
-        <span :class="$style.text">{{ $t('かかりつけ医がいない方は、新型コロナ感染症コールセンターへ') }}</span>
+        <div :class="$style.text">
+          {{ $t('かかりつけ医がいない方は、新型コロナ感染症コールセンターへ') }}
+        </div>
         <ArrowForwardIcon :class="$style.icon" />
       </a>
     </div>
