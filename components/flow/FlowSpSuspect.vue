@@ -19,21 +19,9 @@
       </li>
     </ul>
 
-    <div :class="$style.callcenter">
-      <p :class="$style.fzLarge">
-        {{ $t('新型コロナコールセンター') }}
-      </p>
-      <p :class="$style.open">
-        {{ $t('午前9時から午後9時（土日祝含む）') }}
-      </p>
-      <p :class="[$style.phone, $style.fzNumeric]">
-        <span :class="$style.icon">
-          <PhoneIcon alt="Phone" />
-        </span>
-        <a href="tel:0570550571">0570-550571</a>
-      </p>
+    <div :class="$style.solution">
+      <p>{{ $t('かかりつけ医にご相談ください。') }}</p>
     </div>
-
     <a
       v-scroll-to="{
         el: '#consult',
@@ -42,7 +30,7 @@
       href="#consult"
       :class="[$style.button, $style.clickable]"
     >
-      <span :class="$style.text">{{ $t('かかりつけ医がいない方は、新型コロナ感染症コールセンターへ') }}</span>
+      <span :class="$style.text">{{ $t('かかりつけ医がいない方は、新型コロナ感染症コールセンターへb') }}</span>
       <ArrowForwardIcon :class="$style.icon" />
     </a>
   </div>
@@ -76,19 +64,16 @@ export default {
     }
   }
 }
-// suspect
-.callcenter {
-  margin-top: px2vw(25);
-  text-align: center;
 
-  .open {
-    margin-top: px2vw(10);
-  }
+.solution {
+  margin-top: px2vw(30);
+  padding: px2vw(20) px2vw(10);
+  border-radius: px2vw(6);
+  border: px2vw(3) solid $gray-2;
+  text-align: center;
 }
 
 .button {
-//  text-align: left;
-//  padding: 0 px2vw(20) 0 px2vw(26);
   height: px2vw(116);
 
   .icon {
@@ -111,18 +96,21 @@ export default {
       }
     }
   }
+
+  .solution {
+    margin-top: px2vw(30, $vw);
+    padding: px2vw(20, $vw) px2vw(10, $vw);
+    border-radius: px2vw(6, $vw);
+    border: px2vw(2, $vw) solid $gray-2;
+    text-align: center;
+  }
+
   // suspect
   .callcenter {
-    margin-top: px2vw(25, $vw);
-
-    .open {
-      margin-top: px2vw(10, $vw);
-    }
+    text-align: left;
   }
 
   .button {
-  //  text-align: left;
-  //  padding: 0 px2vw(20) 0 px2vw(26);
     height: px2vw(116, $vw);
 
     .icon {
