@@ -6,7 +6,7 @@
     <dl>
       <div>
         <dt>
-          <ul :class="[$style.open]">
+          <ul :class="[$style.night]">
             <li>
               <span :class="[$style.fzMedium, $style.break, $style.mb10]">
                 {{ $t('平日（日中）') }}
@@ -31,7 +31,7 @@
             v-if="!['ja', 'ja-basic'].includes($i18n.locale)"
             :class="[$style.phone, $style.fzNumeric]"
           >
-            <span :class="[$style.fzMedium, $style.break, $style.mb5]">
+            <span :class="[$style.fzMedium, $style.break, $style.mb10]">
               {{ $t('ひまわり') }}
             </span>
           </div>
@@ -39,9 +39,9 @@
       </div>
       <div>
         <dt>
-          <ul :class="[$style.open]">
+          <ul :class="[$style.night]">
             <li>
-              <span :class="[$style.fzMedium, $style.break, $style.mb5]">
+              <span :class="[$style.fzMedium, $style.break, $style.mb10]">
                 {{ $t('平日（夜間）') }}
               </span>
               {{ $t('午後5時から翌朝午前9時') }}
@@ -146,7 +146,7 @@ export default {
 @include largerThan($small) {
   $vw: 960;
 
-  .open {
+  .night {
     margin: px2vw(30, $vw) auto;
 
     > li {
