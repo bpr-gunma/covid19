@@ -123,11 +123,11 @@ export default {
   .button {
   //  text-align: left;
   //  padding: 0 px2vw(20) 0 px2vw(26);
-    height: px2vw(96, $vw);
+    height: px2vw(116, $vw);
 
     .icon {
-      width: px2vw(50, $vw);
-      height: px2vw(50, $vw);
+      width: px2vw(55, $vw);
+      height: px2vw(55, $vw);
     }
   }
 }
