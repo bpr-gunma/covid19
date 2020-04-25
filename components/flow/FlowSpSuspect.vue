@@ -89,7 +89,7 @@ export default {
 .button {
 //  text-align: left;
 //  padding: 0 px2vw(20) 0 px2vw(26);
-  height: px2vw(100);
+  height: px2vw(96);
 
   .icon {
     width: px2vw(55);
