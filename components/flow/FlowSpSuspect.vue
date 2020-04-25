@@ -42,7 +42,7 @@
       href="#consult"
       :class="[$style.button, $style.clickable]"
     >
-      <span :class="$style.text">{{ $t('かかりつけ医がいない方は、新型コロナ感染症コールセンターへ') }}</span>
+      <span :class="$style.text">{{ $t('専門的な助言が必要な場合') }}</span>
       <ArrowForwardIcon :class="$style.icon" />
     </a>
   </div>
