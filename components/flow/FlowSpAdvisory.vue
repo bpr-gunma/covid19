@@ -33,7 +33,7 @@
           </div>
         </dd>
       </div>
-      <hr />
+      <hr :class="$style.line" />
       <div>
         <dt>
           <ul :class="[$style.night]">
