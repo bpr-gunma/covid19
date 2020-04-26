@@ -82,7 +82,7 @@
               </li>
               <li :class="[$style.fzRegular]">夜間、土、日、祝日</li>
               <li>
-                <div :class="[$style.phone, $style.fzLarge]">
+                <div :class="[$style.phone, $style.centerphone, $style.fzLarge]">
                   <span :class="$style.icon">
                     <PhoneIcon alt="Phone" />
                   </span>
@@ -96,7 +96,7 @@
             <ul>
               <li :class="[$style.fzRegular]">平日：午前8時30分～午後9時</li>
               <li>
-                <div :class="[$style.phone, $style.fzLarge]">
+                <div :class="[$style.phone, $style.centerphone, $style.fzLarge]">
                   <span :class="$style.icon">
                     <PhoneIcon alt="Phone" />
                   </span>
@@ -105,7 +105,7 @@
               </li>
               <li :class="[$style.fzRegular]">夜間、土、日、祝日</li>
               <li>
-                <div :class="[$style.phone, $style.fzLarge]">
+                <div :class="[$style.phone, $style.centerphone, $style.fzLarge]">
                   <span :class="$style.icon">
                     <PhoneIcon alt="Phone" />
                   </span>
@@ -168,19 +168,19 @@ export default {
   }
 
   .contents {
-    padding: px2vw(5);
+//  padding-left: 0 !important;
     text-align: center;
     border-radius: 0 0 px2vw(8) px2vw(8);
 
     .helth {
-      margin: px2vw(10) 0;
+      margin: px2vw(15) 0;
     }
 
     li {
       list-style-type: none;
 
       &:not(:first-child) {
-        margin-top: px2vw(20);
+        margin-top: px2vw(10);
       }
     }
   }
@@ -222,16 +222,16 @@ export default {
     }
     
     .contents {
-      padding: px2vw(5, $vw);
+//      padding: px2vw(5, $vw);
       border-radius: 0 0 px2vw(8, $vw) px2vw(8, $vw);
 
       .helth {
-        margin: px2vw(10, $vw) 0;
+        margin: px2vw(15, $vw) 0;
       }
 
       li {
         &:not(:first-child) {
-          margin-top: px2vw(20, $vw);
+          margin-top: px2vw(10, $vw);
         }
       }
     }  
