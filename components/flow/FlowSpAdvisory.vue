@@ -73,7 +73,7 @@
             <ul>
               <li :class="[$style.fzRegular]">平日：午前8時30分～午後5時15分</li>
               <li>
-                <div :class="[$style.phone, $style.centerphone, $style.fzNumeric2]">
+                <div :class="[$style.phone, $style.centerphone, $style.fzXLarge]">
                   <span :class="$style.icon">
                     <PhoneIcon alt="Phone" />
                   </span>
@@ -82,7 +82,7 @@
               </li>
               <li :class="[$style.fzRegular]">夜間、土、日、祝日</li>
               <li>
-                <div :class="[$style.phone, $style.centerphone, $style.fzNumeric2]">
+                <div :class="[$style.phone, $style.centerphone, $style.fzXLarge]">
                   <span :class="$style.icon">
                     <PhoneIcon alt="Phone" />
                   </span>
@@ -96,7 +96,7 @@
             <ul>
               <li :class="[$style.fzRegular]">平日：午前8時30分～午後9時</li>
               <li>
-                <div :class="[$style.phone, $style.centerphone, $style.fzNumeric2]">
+                <div :class="[$style.phone, $style.centerphone, $style.fzXLarge]">
                   <span :class="$style.icon">
                     <PhoneIcon alt="Phone" />
                   </span>
@@ -193,16 +193,12 @@ export default {
       }
     }
   }
-
-  .fzNumeric2 {
-    font-size: px2vw(42);
-  }
 }
 
 .centerphone {
   .icon {
-    width: px2vw(35);
-    height: px2vw(35);
+    width: px2vw(30);
+    height: px2vw(30);
     margin-right: px2vw(7);
   }
 }
@@ -257,14 +253,10 @@ export default {
 
   .centerphone {
     .icon {
-      width: px2vw(35, $vw);
-      height: px2vw(35, $vw);
+      width: px2vw(30, $vw);
+      height: px2vw(30, $vw);
       margin-right: px2vw(7, $vw);
     }
-  }
-
-  .fzNumeric2 {
-    font-size: px2vw((42 - 4), $vw);
   }
 }
 </style>
