@@ -73,7 +73,7 @@
             <ul>
               <li :class="[$style.fzRegular]">平日：午前8時30分～午後5時15分</li>
               <li>
-                <div :class="[$style.phone, $style.centerphone, $style.fzLarge]">
+                <div :class="[$style.phone, $style.centerphone, $style.fzXLarge]">
                   <span :class="$style.icon">
                     <PhoneIcon alt="Phone" />
                   </span>
@@ -82,7 +82,7 @@
               </li>
               <li :class="[$style.fzRegular]">夜間、土、日、祝日</li>
               <li>
-                <div :class="[$style.phone, $style.centerphone, $style.fzLarge]">
+                <div :class="[$style.phone, $style.centerphone, $style.fzXLarge]">
                   <span :class="$style.icon">
                     <PhoneIcon alt="Phone" />
                   </span>
@@ -96,7 +96,7 @@
             <ul>
               <li :class="[$style.fzRegular]">平日：午前8時30分～午後9時</li>
               <li>
-                <div :class="[$style.phone, $style.centerphone, $style.fzLarge]">
+                <div :class="[$style.phone, $style.centerphone, $style.fzXLarge]">
                   <span :class="$style.icon">
                     <PhoneIcon alt="Phone" />
                   </span>
@@ -105,7 +105,7 @@
               </li>
               <li :class="[$style.fzRegular]">夜間、土、日、祝日</li>
               <li>
-                <div :class="[$style.phone, $style.centerphone, $style.fzLarge]">
+                <div :class="[$style.phone, $style.centerphone, $style.fzXLarge]">
                   <span :class="$style.icon">
                     <PhoneIcon alt="Phone" />
                   </span>
@@ -135,7 +135,7 @@ export default {
 .line {
     border-width: px2vw(1) 0 0 0;
     color: $gray-4;
-    margin: px2vw(20) auto;
+    margin: px2vw(30) auto;
 }
 
 .callcenter {
@@ -195,8 +195,8 @@ export default {
 
 .centerphone {
   .icon {
-    width: px2vw(25);
-    height: px2vw(25);
+    width: px2vw(30);
+    height: px2vw(30);
     margin-right: px2vw(7);
   }
 }
@@ -206,7 +206,7 @@ export default {
 
   .line {
     border-width: px2vw(1, $vw) 0 0 0;
-    margin: px2vw(20, $vw) auto;
+    margin: px2vw(30, $vw) auto;
   }
 
   .callcenter {
@@ -249,8 +249,8 @@ export default {
 
   .centerphone {
     .icon {
-      width: px2vw(25, $vw);
-      height: px2vw(25, $vw);
+      width: px2vw(30, $vw);
+      height: px2vw(30, $vw);
       margin-right: px2vw(7, $vw);
     }
   }
