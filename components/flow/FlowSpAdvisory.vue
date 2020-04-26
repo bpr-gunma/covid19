@@ -264,7 +264,7 @@ export default {
   }
 
   .fzNumeric2 {
-    font-size: px2vw(42, $vw);
+    font-size: px2vw((42 - 4), $vw);
   }
 }
 </style>
