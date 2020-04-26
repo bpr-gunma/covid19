@@ -68,21 +68,21 @@
       <div :class="[$style.title, $style.fzLarge]">前橋市、高崎市に在住の方は保健所へ相談</div>
       <div :class="$style.contents">
         <dl>
-          <dt :class="$style.helth">前橋市保健所</dt>
+          <dt :class="[$style.fzMedium]">前橋市保健所</dt>
           <dd>
             <ul>
-              <li>【平日】午前8時30分～午後5時15分</li>
+              <li :class="[$style.fzSmall]">【平日】午前8時30分～午後5時15分</li>
               <li>
-                <div :class="[$style.phone, $style.fzNumeric]">
+                <div :class="[$style.phone, $style.fzRegular]">
                   <span :class="$style.icon">
                     <PhoneIcon alt="Phone" />
                   </span>
                   <a href="tel:0272201151">027-220-1151</a>
                 </div>
               </li>
-              <li>【夜間、土、日、祝日】</li>
+              <li :class="[$style.fzSmall]">【夜間、土、日、祝日】</li>
               <li>
-                <div :class="[$style.phone, $style.fzNumeric]">
+                <div :class="[$style.phone, $style.fzRegular]">
                   <span :class="$style.icon">
                     <PhoneIcon alt="Phone" />
                   </span>
@@ -94,18 +94,18 @@
           <dt :class="$style.helth">高崎市保健所</dt>
           <dd>
             <ul>
-              <li>【平日】午前8時30分～午後9時</li>
+              <li :class="[$style.fzSmall]">【平日】午前8時30分～午後9時</li>
               <li>
-                <div :class="[$style.phone, $style.fzNumeric]">
+                <div :class="[$style.phone, $style.fzRegular]">
                   <span :class="$style.icon">
                     <PhoneIcon alt="Phone" />
                   </span>
                   <a href="tel:0273816112">027-381-6112</a>
                 </div>
               </li>
-              <li>【夜間、土、日、祝日】</li>
+              <li :class="[$style.fzSmall]">【夜間、土、日、祝日】</li>
               <li>
-                <div :class="[$style.phone, $style.fzNumeric]">
+                <div :class="[$style.phone, $style.fzRegular]">
                   <span :class="$style.icon">
                     <PhoneIcon alt="Phone" />
                   </span>
@@ -198,8 +198,12 @@ export default {
     padding: px2vw(5);
     text-align: center;
     border-radius: 0 0 px2vw(8) px2vw(8);
+
+    > li {
+      list-style-type: none;
+    }
   }
- }
+}
 
 @include largerThan($small) {
   $vw: 960;
