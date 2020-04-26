@@ -73,7 +73,7 @@
             <ul>
               <li :class="[$style.fzRegular]">平日：午前8時30分～午後5時15分</li>
               <li>
-                <div :class="[$style.phone, $style.centerphone, $style.fzXLarge]">
+                <div :class="[$style.phone, $style.centerphone, $style.fzNumeric2]">
                   <span :class="$style.icon">
                     <PhoneIcon alt="Phone" />
                   </span>
@@ -82,7 +82,7 @@
               </li>
               <li :class="[$style.fzRegular]">夜間、土、日、祝日</li>
               <li>
-                <div :class="[$style.phone, $style.centerphone, $style.fzXLarge]">
+                <div :class="[$style.phone, $style.centerphone, $style.fzNumeric2]">
                   <span :class="$style.icon">
                     <PhoneIcon alt="Phone" />
                   </span>
@@ -96,7 +96,7 @@
             <ul>
               <li :class="[$style.fzRegular]">平日：午前8時30分～午後9時</li>
               <li>
-                <div :class="[$style.phone, $style.centerphone, $style.fzXLarge]">
+                <div :class="[$style.phone, $style.centerphone, $style.fzNumeric2]">
                   <span :class="$style.icon">
                     <PhoneIcon alt="Phone" />
                   </span>
@@ -105,7 +105,7 @@
               </li>
               <li :class="[$style.fzRegular]">夜間、土、日、祝日</li>
               <li>
-                <div :class="[$style.phone, $style.centerphone, $style.fzXLarge]">
+                <div :class="[$style.phone, $style.centerphone, $style.fzNumeric2]">
                   <span :class="$style.icon">
                     <PhoneIcon alt="Phone" />
                   </span>
@@ -154,6 +154,8 @@ export default {
 
 .center {
   margin-top: px2vw(40);
+  margin-left: px2vw(10);
+  margin-right: px2vw(10);
   background: $white;
   border: solid px2vw(3) $green-1;
   border-radius: px2vw(8);
@@ -191,6 +193,10 @@ export default {
       }
     }
   }
+
+  .fzNumeric2 {
+    font-size: px2vw(42);
+  }
 }
 
 .centerphone {
@@ -221,6 +227,8 @@ export default {
 
   .center {
     margin-top: px2vw(40, $vw);
+    margin-left: px2vw(10, $vw);
+    margin-right: px2vw(10, $vw);
     border: solid px2vw(3, $vw) $green-1;
     border-radius: px2vw(8, $vw);
   
@@ -253,6 +261,10 @@ export default {
       height: px2vw(30, $vw);
       margin-right: px2vw(7, $vw);
     }
+  }
+
+  .fzNumeric2 {
+    font-size: px2vw(42, $vw);
   }
 }
 </style>
