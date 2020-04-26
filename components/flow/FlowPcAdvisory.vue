@@ -65,59 +65,59 @@
           <span>{{ $t('ひまわり') }}</span>
         </div>
       </div>
-        <div :class="$style.AdvisoryCenter">
-          <div :class="$style.AdvisoryCenterTitle">前橋市、高崎市に在住の方は保健所へ相談</div>
-          <div :class="$style.AdvisoryCenterContents">
-            <div :class="$style.AdvisoryCenterContentsHelth">前橋市保健所</div>
-            <div :class="$style.AdvisoryCenterContentsTime">【平日】午前8時30分～午後5時15分</div>
-            <div :class="$style.AdvisoryCenterContentsTel">
-              <a :class="$style.AdvisoryCenterContentsTelNumber" href="tel:0272201151">
-                <img
-                  :class="$style.AdvisoryCenterContentsTelNumberIcon"
-                  src="/flow/phone-24px.svg"
-                  aria-hidden="true"
-                  :alt="$t('電話番号')"
-                />
-                027-220-1151
-              </a>
-            </div>
-            <div :class="$style.AdvisoryCenterContentsTime">【夜間、土、日、祝日】</div>
-            <div :class="$style.AdvisoryCenterContentsTel">
-              <a :class="$style.AdvisoryCenterContentsTelNumber" href="tel:0272241111">
-                <img
-                  :class="$style.AdvisoryCenterContentsTelNumberIcon"
-                  src="/flow/phone-24px.svg"
-                  aria-hidden="true"
-                  :alt="$t('電話番号')"
-                />
-                027-224-1111
-              </a>
-            </div>
-            <div :class="$style.AdvisoryCenterContentsHelth">高崎市保健所</div>
-            <div :class="$style.AdvisoryCenterContentsTime">【平日】午前8時30分～午後9時</div>
-            <div :class="$style.AdvisoryCenterContentsTel">
-              <a :class="$style.AdvisoryCenterContentsTelNumber" href="tel:0273816112">
-                <img
-                  :class="$style.AdvisoryCenterContentsTelNumberIcon"
-                  src="/flow/phone-24px.svg"
-                  aria-hidden="true"
-                  :alt="$t('電話番号')"
-                />
-                027-381-6112
-              </a>
-            </div>
-            <div :class="$style.AdvisoryCenterContentsTime">【夜間、土、日、祝日】</div>
-            <div :class="$style.AdvisoryCenterContentsTel">
-              <a :class="$style.AdvisoryCenterContentsTelNumber" href="tel:0273816123">
-                <img
-                  :class="$style.AdvisoryCenterContentsTelNumberIcon"
-                  src="/flow/phone-24px.svg"
-                  aria-hidden="true"
-                  :alt="$t('電話番号')"
-                />
-                027-381-6123
-              </a>
-            </div>
+      <div :class="$style.AdvisoryCenter">
+        <div :class="$style.AdvisoryCenterTitle">前橋市、高崎市に在住の方は保健所へ相談</div>
+        <div :class="$style.AdvisoryCenterContents">
+          <div :class="$style.AdvisoryCenterContentsHelth">前橋市保健所</div>
+          <div :class="$style.AdvisoryCenterContentsTime">【平日】午前8時30分～午後5時15分</div>
+          <div :class="$style.AdvisoryCenterContentsTel">
+            <a :class="$style.AdvisoryCenterContentsTelNumber" href="tel:0272201151">
+              <img
+                :class="$style.AdvisoryCenterContentsTelNumberIcon"
+                src="/flow/phone-24px.svg"
+                aria-hidden="true"
+                :alt="$t('電話番号')"
+              />
+              027-220-1151
+            </a>
+          </div>
+          <div :class="$style.AdvisoryCenterContentsTime">【夜間、土、日、祝日】</div>
+          <div :class="$style.AdvisoryCenterContentsTel">
+            <a :class="$style.AdvisoryCenterContentsTelNumber" href="tel:0272241111">
+              <img
+                :class="$style.AdvisoryCenterContentsTelNumberIcon"
+                src="/flow/phone-24px.svg"
+                aria-hidden="true"
+                :alt="$t('電話番号')"
+              />
+              027-224-1111
+            </a>
+          </div>
+          <div :class="$style.AdvisoryCenterContentsHelth">高崎市保健所</div>
+          <div :class="$style.AdvisoryCenterContentsTime">【平日】午前8時30分～午後9時</div>
+          <div :class="$style.AdvisoryCenterContentsTel">
+            <a :class="$style.AdvisoryCenterContentsTelNumber" href="tel:0273816112">
+              <img
+                :class="$style.AdvisoryCenterContentsTelNumberIcon"
+                src="/flow/phone-24px.svg"
+                aria-hidden="true"
+                :alt="$t('電話番号')"
+              />
+              027-381-6112
+            </a>
+          </div>
+          <div :class="$style.AdvisoryCenterContentsTime">【夜間、土、日、祝日】</div>
+          <div :class="$style.AdvisoryCenterContentsTel">
+            <a :class="$style.AdvisoryCenterContentsTelNumber" href="tel:0273816123">
+              <img
+                :class="$style.AdvisoryCenterContentsTelNumberIcon"
+                src="/flow/phone-24px.svg"
+                aria-hidden="true"
+                :alt="$t('電話番号')"
+              />
+              027-381-6123
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -247,7 +247,6 @@
     color: $gray-2;
 
     &Title {
-//     font-size: 1em;
       background: $green-1;
       padding: 4px 10px;
       text-align: left;
@@ -257,30 +256,27 @@
     }
     
     &Contents {
-//      font-size: 0.8em;
       padding: 5px;
       text-align: center;
       border-radius: 0px 0px 8px 8px;
 
       &Helth {
-//        margin: 0px 10px;
         text-align: left;
         font-weight: bold;
       }
+      
       &Time {
         text-align: left;
         font-size: 0.8em;
-//        margin: 0px 10px;
       }
+
       &Tel {
         display: inline-flex;
-//        margin: 0px 20px;
 
         &Number {
           display: flex;
+          font-weight: bold;
           align-items: center;
-//          font-size: 24px;
-//          font-weight: bold;
           margin: 0 auto;
 
           &:link,
