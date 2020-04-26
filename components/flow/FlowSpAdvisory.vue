@@ -154,8 +154,8 @@ export default {
 
 .center {
   margin-top: px2vw(40);
-  margin-left: px2vw(10);
-  margin-right: px2vw(10);
+  margin-left: px2vw(20);
+  margin-right: px2vw(20);
   background: $white;
   border: solid px2vw(3) $green-1;
   border-radius: px2vw(8);
@@ -201,8 +201,8 @@ export default {
 
 .centerphone {
   .icon {
-    width: px2vw(30);
-    height: px2vw(30);
+    width: px2vw(35);
+    height: px2vw(35);
     margin-right: px2vw(7);
   }
 }
@@ -227,8 +227,8 @@ export default {
 
   .center {
     margin-top: px2vw(40, $vw);
-    margin-left: px2vw(10, $vw);
-    margin-right: px2vw(10, $vw);
+    margin-left: px2vw(20, $vw);
+    margin-right: px2vw(20, $vw);
     border: solid px2vw(3, $vw) $green-1;
     border-radius: px2vw(8, $vw);
   
@@ -257,8 +257,8 @@ export default {
 
   .centerphone {
     .icon {
-      width: px2vw(30, $vw);
-      height: px2vw(30, $vw);
+      width: px2vw(35, $vw);
+      height: px2vw(35, $vw);
       margin-right: px2vw(7, $vw);
     }
   }
