@@ -105,19 +105,11 @@
               </li>
               <li :class="[$style.fzRegular]">夜間、土、日、祝日</li>
               <li>
-                <div :class="[$style.phone, $style.centerphone, $style.fzNumeric2]">
+                <div :class="[$style.phone, $style.centerphone, $style.fzXLarge]">
                   <span :class="$style.icon">
                     <PhoneIcon alt="Phone" />
                   </span>
                   <a href="tel:0273816123">027-381-6123</a>
-                </div>
-                <div
-                  v-if="!['ja', 'ja-basic'].includes($i18n.locale)"
-                  :class="[$style.phone, $style.fzNumeric2]"
-                >
-                  <span :class="[$style.fzMedium, $style.break, $style.mb10]">
-                    {{ $t('ひまわり') }}
-                  </span>
                 </div>
               </li>
             </ul>
