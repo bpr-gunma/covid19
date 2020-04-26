@@ -132,7 +132,7 @@ export default {
 }
 
 .center {
-  margin-top: px2vw(10);
+  margin-top: px2vw(30);
   background: $white;
   border: solid px2vw(3) $green-1;
   border-radius: px2vw(8);
