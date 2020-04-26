@@ -6,7 +6,7 @@
     <dl>
       <div>
         <dt>
-          <ul :class="[$style.night]">
+          <ul :class="[$style.callcenter]">
             <li>
               <span :class="[$style.fzMedium, $style.break, $style.mb7]">
                 {{ $t('平日（日中）') }}
@@ -36,7 +36,7 @@
       <hr :class="$style.line" />
       <div>
         <dt>
-          <ul :class="[$style.night]">
+          <ul :class="[$style.callcenter]">
             <li>
               <span :class="[$style.fzMedium, $style.break, $style.mb7]">
                 {{ $t('平日（夜間）') }}
@@ -65,8 +65,56 @@
       </div>
     </dl>
     <div :class="$style.center">
-      <div :class="$style.title">前橋市、高崎市に在住の方は保健所へ相談</div>
+      <div :class="[$style.title, $style.fzLarge]">前橋市、高崎市に在住の方は保健所へ相談</div>
       <div :class="$style.contents">
+        <dl>
+          <dt :class="$style.helth">前橋市保健所</dt>
+          <dd>
+            <ul>
+              <li>【平日】午前8時30分～午後5時15分</li>
+              <li>
+                <div :class="[$style.phone, $style.fzNumeric]">
+                  <span :class="$style.icon">
+                    <PhoneIcon alt="Phone" />
+                  </span>
+                  <a href="tel:0272201151">027-220-1151</a>
+                </div>
+              </li>
+              <li>【夜間、土、日、祝日】</li>
+              <li>
+                <div :class="[$style.phone, $style.fzNumeric]">
+                  <span :class="$style.icon">
+                    <PhoneIcon alt="Phone" />
+                  </span>
+                  <a href="tel:0272241111">027-224-1111</a>
+                </div>
+              </li>
+            </ul>
+          </dd>
+          <dt :class="$style.helth">高崎市保健所</dt>
+          <dd>
+            <ul>
+              <li>【平日】午前8時30分～午後9時</li>
+              <li>
+                <div :class="[$style.phone, $style.fzNumeric]">
+                  <span :class="$style.icon">
+                    <PhoneIcon alt="Phone" />
+                  </span>
+                  <a href="tel:0273816112">027-381-6112</a>
+                </div>
+              </li>
+              <li>【夜間、土、日、祝日】</li>
+              <li>
+                <div :class="[$style.phone, $style.fzNumeric]">
+                  <span :class="$style.icon">
+                    <PhoneIcon alt="Phone" />
+                  </span>
+                  <a href="tel:0273816123">027-381-6123</a>
+                </div>
+              </li>
+            </ul>
+          </dd>
+        </dl>
       </div>
     </div>
   </div>
@@ -117,7 +165,7 @@ export default {
     margin: px2vw(20) auto;
 }
 
-.night {
+.callcenter {
   margin: px2vw(20) auto;
   padding-left: 0 !important;
   text-align: center;
@@ -156,7 +204,7 @@ export default {
 @include largerThan($small) {
   $vw: 960;
 
-  .night {
+  .callcenter {
     margin: px2vw(30, $vw) auto;
 
     > li {
