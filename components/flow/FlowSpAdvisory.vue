@@ -168,7 +168,6 @@ export default {
   }
 
   .contents {
-    padding-left: 0 !important;
     text-align: center;
     border-radius: 0 0 px2vw(8) px2vw(8);
 
@@ -176,15 +175,19 @@ export default {
       margin: px2vw(15) 0;
     }
 
-    li {
+    ul {
       list-style-type: none;
+      margin-left: 0;
+      padding-left: 0;
+    }
 
+    li {
       &:not(:first-child) {
         margin-top: px2vw(10);
       }
 
       &:last-child {
-        margin-bottom: px2vw(20);
+        margin-bottom: px2vw(30);
       }
     }
   }
@@ -238,7 +241,7 @@ export default {
         }
 
         &:last-child {
-          margin-bottom: px2vw(20, $vw);
+          margin-bottom: px2vw(30, $vw);
         }
       }
     }  
