@@ -111,6 +111,14 @@
                   </span>
                   <a href="tel:0273816123">027-381-6123</a>
                 </div>
+                <div
+                  v-if="!['ja', 'ja-basic'].includes($i18n.locale)"
+                  :class="[$style.phone, $style.fzNumeric2]"
+                >
+                  <span :class="[$style.fzMedium, $style.break, $style.mb10]">
+                    {{ $t('ひまわり') }}
+                  </span>
+                </div>
               </li>
             </ul>
           </dd>
