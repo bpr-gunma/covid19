@@ -68,21 +68,21 @@
       <div :class="[$style.title, $style.fzLarge]">前橋市、高崎市に在住の方は保健所へ相談</div>
       <div :class="$style.contents">
         <dl>
-          <dt :class="[$style.fzMedium]">前橋市保健所</dt>
+          <dt :class="[$style.fzLarge]">前橋市保健所</dt>
           <dd>
             <ul>
-              <li :class="[$style.fzSmall]">【平日】午前8時30分～午後5時15分</li>
+              <li :class="[$style.fzRegular]">【平日】午前8時30分～午後5時15分</li>
               <li>
-                <div :class="[$style.phone, $style.fzRegular]">
+                <div :class="[$style.phone, $style.centerphone, $style.fzLarge]">
                   <span :class="$style.icon">
                     <PhoneIcon alt="Phone" />
                   </span>
                   <a href="tel:0272201151">027-220-1151</a>
                 </div>
               </li>
-              <li :class="[$style.fzSmall]">【夜間、土、日、祝日】</li>
+              <li :class="[$style.fzRegular]">【夜間、土、日、祝日】</li>
               <li>
-                <div :class="[$style.phone, $style.fzRegular]">
+                <div :class="[$style.phone, $style.fzLarge]">
                   <span :class="$style.icon">
                     <PhoneIcon alt="Phone" />
                   </span>
@@ -91,21 +91,21 @@
               </li>
             </ul>
           </dd>
-          <dt :class="$style.helth">高崎市保健所</dt>
+          <dt :class="[$style.fzLarge]">高崎市保健所</dt>
           <dd>
             <ul>
-              <li :class="[$style.fzSmall]">【平日】午前8時30分～午後9時</li>
+              <li :class="[$style.fzRegular]">【平日】午前8時30分～午後9時</li>
               <li>
-                <div :class="[$style.phone, $style.fzRegular]">
+                <div :class="[$style.phone, $style.fzLarge]">
                   <span :class="$style.icon">
                     <PhoneIcon alt="Phone" />
                   </span>
                   <a href="tel:0273816112">027-381-6112</a>
                 </div>
               </li>
-              <li :class="[$style.fzSmall]">【夜間、土、日、祝日】</li>
+              <li :class="[$style.fzRegular]">【夜間、土、日、祝日】</li>
               <li>
-                <div :class="[$style.phone, $style.fzRegular]">
+                <div :class="[$style.phone, $style.fzLarge]">
                   <span :class="$style.icon">
                     <PhoneIcon alt="Phone" />
                   </span>
@@ -180,7 +180,7 @@ export default {
 }
 
 .center {
-  margin-top: px2vw(30);
+  margin-top: px2vw(40);
   background: $white;
   border: solid px2vw(3) $green-1;
   border-radius: px2vw(8);
@@ -188,7 +188,7 @@ export default {
 
   .title {
     background: $green-1;
-    padding: px2vw(4) px2vw(10);
+    padding: px2vw(7) px2vw(10);
     text-align: left;
     color: $white;
     font-weight: bold;
@@ -199,9 +199,17 @@ export default {
     text-align: center;
     border-radius: 0 0 px2vw(8) px2vw(8);
 
-    > li {
+    li {
       list-style-type: none;
     }
+  }
+}
+
+.centerphone {
+  .icon {
+    width: px2vw(25) !important;
+    height: px2vw(25) !important;
+    margin-right: px2vw(7) !important;
   }
 }
 
@@ -216,6 +224,21 @@ export default {
         margin-top: px2vw(20, $vw);
       }
     }
+  }
+
+  .center {
+    margin-top: px2vw(40, $vw);
+    border: solid px2vw(3, $vw) $green-1;
+    border-radius: px2vw(8, $vw);
+  
+    .title {
+      padding: px2vw(7, $vw) px2vw(10, $vw);
+    }
+    
+    .contents {
+      padding: px2vw(5, $vw);
+      border-radius: 0 0 px2vw(8, $vw) px2vw(8, $vw);
+    }  
   }
 }
 </style>
