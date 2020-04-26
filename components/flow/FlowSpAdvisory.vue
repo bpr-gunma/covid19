@@ -64,6 +64,11 @@
         </dd>
       </div>
     </dl>
+    <div :class="$style.center">
+      <div :class="$style.title">前橋市、高崎市に在住の方は保健所へ相談</div>
+      <div :class="$style.contents">
+      </div>
+    </div>
   </div>
 </template>
 
@@ -79,22 +84,6 @@ export default {
 @import '@/components/flow/flow_sp.scss';
 
 // advisory
-.open {
-  margin-top: px2vw(20);
-  display: flex;
-  justify-content: center;
-
-  > span {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: $white;
-    color: $green-1;
-    padding: px2vw(20) px2vw(40);
-    border-radius: px2vw(6);
-  }
-}
-
 .daytime {
   margin-top: px2vw(20);
   display: flex;
@@ -123,9 +112,9 @@ export default {
 }
 
 .line {
-    border-width: 1px 0px 0px 0px;
+    border-width: px2vw(1) 0 0 0;
     color: $gray-4;
-    margin: 20px auto;
+    margin: px2vw(20) auto;
 }
 
 .night {
@@ -141,6 +130,28 @@ export default {
     }
   }
 }
+
+.center {
+  margin-top: px2vw(10);
+  background: $white;
+  border: solid px2vw(3) $green-1;
+  border-radius: px2vw(8);
+  color: $gray-2;  
+
+  .title {
+    background: $green-1;
+    padding: px2vw(4) px2vw(10);
+    text-align: left;
+    color: $white;
+    font-weight: bold;
+  }
+  
+  .contents {
+    padding: px2vw(5);
+    text-align: center;
+    border-radius: 0 0 px2vw(8) px2vw(8);
+  }
+ }
 
 @include largerThan($small) {
   $vw: 960;
