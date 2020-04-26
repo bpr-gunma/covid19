@@ -68,10 +68,10 @@
       <div :class="[$style.title, $style.fzLarge]">前橋市、高崎市に在住の方は保健所へ相談</div>
       <div :class="$style.contents">
         <dl>
-          <dt :class="[$style.fzLarge]">前橋市保健所</dt>
+          <dt :class="[$style.helth, $style.fzLarge]">前橋市保健所</dt>
           <dd>
             <ul>
-              <li :class="[$style.fzRegular]">【平日】午前8時30分～午後5時15分</li>
+              <li :class="[$style.fzRegular]">平日：午前8時30分～午後5時15分</li>
               <li>
                 <div :class="[$style.phone, $style.centerphone, $style.fzLarge]">
                   <span :class="$style.icon">
@@ -80,7 +80,7 @@
                   <a href="tel:0272201151">027-220-1151</a>
                 </div>
               </li>
-              <li :class="[$style.fzRegular]">【夜間、土、日、祝日】</li>
+              <li :class="[$style.fzRegular]">夜間、土、日、祝日</li>
               <li>
                 <div :class="[$style.phone, $style.fzLarge]">
                   <span :class="$style.icon">
@@ -91,10 +91,10 @@
               </li>
             </ul>
           </dd>
-          <dt :class="[$style.fzLarge]">高崎市保健所</dt>
+          <dt :class="[$style.helth, $style.fzLarge]">高崎市保健所</dt>
           <dd>
             <ul>
-              <li :class="[$style.fzRegular]">【平日】午前8時30分～午後9時</li>
+              <li :class="[$style.fzRegular]">平日：午前8時30分～午後9時</li>
               <li>
                 <div :class="[$style.phone, $style.fzLarge]">
                   <span :class="$style.icon">
@@ -103,7 +103,7 @@
                   <a href="tel:0273816112">027-381-6112</a>
                 </div>
               </li>
-              <li :class="[$style.fzRegular]">【夜間、土、日、祝日】</li>
+              <li :class="[$style.fzRegular]">夜間、土、日、祝日</li>
               <li>
                 <div :class="[$style.phone, $style.fzLarge]">
                   <span :class="$style.icon">
@@ -132,33 +132,6 @@ export default {
 @import '@/components/flow/flow_sp.scss';
 
 // advisory
-.daytime {
-  margin-top: px2vw(20);
-  display: flex;
-  border-top: 1px solid $gray-4;
-  border-bottom: 1px solid $gray-4;
-
-  > * {
-    padding: px2vw(30) px2vw(10);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .title {
-    text-align: center;
-    flex-basis: 40%;
-  }
-
-  .link {
-    flex-basis: 60%;
-
-    > a {
-      text-decoration: none;
-    }
-  }
-}
-
 .line {
     border-width: px2vw(1) 0 0 0;
     color: $gray-4;
@@ -193,33 +166,46 @@ export default {
     color: $white;
     font-weight: bold;
   }
-  
+
   .contents {
     padding: px2vw(5);
     text-align: center;
     border-radius: 0 0 px2vw(8) px2vw(8);
 
+    .helth {
+      margin: px2vw(10) 0;
+    }
+
     li {
       list-style-type: none;
+
+      &:not(:first-child) {
+        margin-top: px2vw(20);
+      }
     }
   }
 }
 
 .centerphone {
   .icon {
-    width: px2vw(25) !important;
-    height: px2vw(25) !important;
-    margin-right: px2vw(7) !important;
+    width: px2vw(25);
+    height: px2vw(25);
+    margin-right: px2vw(7);
   }
 }
 
 @include largerThan($small) {
   $vw: 960;
 
+  .line {
+    border-width: px2vw(1, $vw) 0 0 0;
+    margin: px2vw(20, $vw) auto;
+  }
+
   .callcenter {
     margin: px2vw(30, $vw) auto;
 
-    > li {
+  > li {
       &:not(:first-child) {
         margin-top: px2vw(20, $vw);
       }
@@ -238,7 +224,25 @@ export default {
     .contents {
       padding: px2vw(5, $vw);
       border-radius: 0 0 px2vw(8, $vw) px2vw(8, $vw);
+
+      .helth {
+        margin: px2vw(10, $vw) 0;
+      }
+
+      li {
+        &:not(:first-child) {
+          margin-top: px2vw(20, $vw);
+        }
+      }
     }  
+  }
+
+  .centerphone {
+    .icon {
+      width: px2vw(25, $vw);
+      height: px2vw(25, $vw);
+      margin-right: px2vw(7, $vw);
+    }
   }
 }
 </style>
