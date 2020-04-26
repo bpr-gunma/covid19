@@ -150,7 +150,7 @@
   
   &Icon2 {
     position: absolute;
-    bottom: 72%;
+    bottom: 70%;
     right: -30px;
     z-index: 2;
     display: block;
