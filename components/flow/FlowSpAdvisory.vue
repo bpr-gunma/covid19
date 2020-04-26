@@ -168,7 +168,7 @@ export default {
   }
 
   .contents {
-//  padding-left: 0 !important;
+    padding-left: 0 !important;
     text-align: center;
     border-radius: 0 0 px2vw(8) px2vw(8);
 
@@ -181,6 +181,10 @@ export default {
 
       &:not(:first-child) {
         margin-top: px2vw(10);
+      }
+
+      &:last-child {
+        margin-bottom: px2vw(20);
       }
     }
   }
@@ -222,7 +226,6 @@ export default {
     }
     
     .contents {
-//      padding: px2vw(5, $vw);
       border-radius: 0 0 px2vw(8, $vw) px2vw(8, $vw);
 
       .helth {
@@ -232,6 +235,10 @@ export default {
       li {
         &:not(:first-child) {
           margin-top: px2vw(10, $vw);
+        }
+
+        &:last-child {
+          margin-bottom: px2vw(20, $vw);
         }
       }
     }  
