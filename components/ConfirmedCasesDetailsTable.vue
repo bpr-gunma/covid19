@@ -56,9 +56,9 @@
         <li :class="[$style.box, $style.severe]">
           <div :class="$style.pillar">
             <div :class="$style.content">
-              <span>{{ $t('県外病院へ入院') }}</span>
+              <span>{{ $t('宿泊施設での療養') }}</span>
               <span>
-                <strong>{{ 県外病院へ入院.toLocaleString() }}</strong>
+                <strong>{{ 宿泊施設での療養.toLocaleString() }}</strong>
                 <span :class="$style.unit">{{ $t('人') }}</span>
               </span>
             </div>
@@ -104,7 +104,7 @@ export default Vue.extend({
       type: Number,
       required: true
     },
-    県外病院へ入院: {
+    宿泊施設での療養: {
       type: Number,
       required: true
     },
