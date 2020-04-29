@@ -19,7 +19,7 @@ type DataType = {
           value: number
         },
         {
-          attr: '県外病院へ入院'
+          attr: '宿泊施設での療養'
           value: number
         },
         {
@@ -36,7 +36,7 @@ type ConfirmedCasesType = {
   感染症病床から退院: number
   入院中: number
   入院調整中: number
-  県外病院へ入院: number
+  宿泊施設での療養: number
   死亡: number
 }
 
@@ -51,7 +51,7 @@ export default (data: DataType) => {
     感染症病床から退院: data.children[0].children[0].value,
     入院中: data.children[0].children[1].value,
     入院調整中: data.children[0].children[2].value,
-    県外病院へ入院: data.children[0].children[3].value,
+    宿泊施設での療養: data.children[0].children[3].value,
     死亡: data.children[0].children[4].value,
   }
   return formattedData
