@@ -17,7 +17,7 @@
 
       <ul :class="$style.group">
 
-        <li :class="[$style.box, $style.recovered]">
+        <li :class="[$style.box, $style.parent, $style.recovered]">
           <div :class="$style.pillar">
             <div :class="$style.content">
               <span>{{ $t('感染症病床から退院') }}</span>
@@ -27,6 +27,21 @@
               </span>
             </div>
           </div>
+          <ul :class="$style.group">
+
+            <li :class="[$style.box, $style.short, $style.severe]">
+              <div :class="$style.pillar">
+                <div :class="$style.content">
+                  <span>{{ $t('宿泊施設での療養') }}</span>
+                  <span>
+                    <strong>{{ 宿泊施設での療養.toLocaleString() }}</strong>
+                    <span :class="$style.unit">{{ $t('人') }}</span>
+                  </span>
+                </div>
+              </div>
+            </li>
+
+          </ul>
         </li>
 
         <li :class="[$style.box, $style.hospitalized]">
@@ -47,18 +62,6 @@
               <span v-html="$t('入院調整中')" />
               <span>
                 <strong>{{ 入院調整中.toLocaleString() }}</strong>
-                <span :class="$style.unit">{{ $t('人') }}</span>
-              </span>
-            </div>
-          </div>
-        </li>
-
-        <li :class="[$style.box, $style.severe]">
-          <div :class="$style.pillar">
-            <div :class="$style.content">
-              <span>{{ $t('宿泊施設での療養') }}</span>
-              <span>
-                <strong>{{ 宿泊施設での療養.toLocaleString() }}</strong>
                 <span :class="$style.unit">{{ $t('人') }}</span>
               </span>
             </div>
@@ -225,16 +228,35 @@ $default-boxdiff: 35px;
     }
   }
 
-  &.recovered,
+  &.recovered {
+    margin-left: $default-bdw;
+    // [5列] 2/5
+    width: calc(100% / 5 * 2 - #{$default-bdw});
+
+    > .pillar {
+      // [2列] 1/2
+      width: calc((100% + #{$default-bdw} * 1) / 2 - #{$default-bdw} * 2);
+    }
+
+    > .group {
+      // [2列] 1/2
+      width: calc((100% + #{$default-bdw} * 1) / 2 * 1 + #{$default-bdw});
+    }
+  }
+
+  &.severe {
+    margin-left: $default-bdw;
+    // [1列]
+    width: calc(100% - #{$default-bdw});
+  }
+
   &.hospitalized,
   &.minor,
-  &.severe,
   &.deceased {
     margin-left: $default-bdw;
     // [2列] 1/2
     width: calc(100% / 5 - #{$default-bdw});
   }
-
 }
 
 .content {
@@ -316,9 +338,6 @@ $default-boxdiff: 35px;
       }
     }
 
-
-
-
     &.confirmed {
       > .pillar {
         // [6列] 1/6
@@ -331,17 +350,36 @@ $default-boxdiff: 35px;
       }
     }
 
-    &.recovered,
+    &.recovered {
+      margin-left: px2vw($bdw, $vw);
+      width: calc(100% / 5 * 2 - #{px2vw($bdw, $vw)});
+
+      > .pillar {
+        width: calc(
+          (100% + #{px2vw($bdw, $vw)} * 1) / 2 - #{px2vw($bdw, $vw)} * 2
+        );
+      }
+
+      > .group {
+        width: calc(
+          (100% + #{px2vw($bdw, $vw)} * 1) / 2 * 1 + #{px2vw($bdw, $vw)}
+        );
+      }
+    }
+
+    &.severe {
+      margin-left: px2vw($bdw, $vw);
+      // [1列]
+      width: calc(100% - #{px2vw($bdw, $vw)});
+    }
+
     &.hospitalized,
     &.minor,
-    &.severe,
     &.deceased {
       margin-left: px2vw($bdw, $vw);
       // [2列] 1/2
       width: calc(100% / 5 - #{px2vw($bdw, $vw)});
     }
-
-
   }
 }
 
