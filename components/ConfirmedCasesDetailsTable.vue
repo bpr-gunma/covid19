@@ -244,9 +244,14 @@ $default-boxdiff: 35px;
     }
   }
 
+  &.severe {
+    margin-left: $default-bdw;
+    // [1列]
+    width: calc(100% - #{$default-bdw});
+  }
+
   &.hospitalized,
   &.minor,
-  &.severe,
   &.deceased {
     margin-left: $default-bdw;
     // [2列] 1/2
@@ -366,9 +371,13 @@ $default-boxdiff: 35px;
       }
     }
 
+    &.severe {
+      margin-left: px2vw($bdw, $vw);
+      width: calc(100% - #{px2vw($bdw, $vw)});
+    }
+
     &.hospitalized,
     &.minor,
-    &.severe,
     &.deceased {
       margin-left: px2vw($bdw, $vw);
       // [2列] 1/2
