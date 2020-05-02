@@ -257,7 +257,6 @@ $default-boxdiff: 35px;
     // [2列] 1/2
     width: calc(100% / 5 - #{$default-bdw});
   }
-
 }
 
 .content {
@@ -339,9 +338,6 @@ $default-boxdiff: 35px;
       }
     }
 
-
-
-
     &.confirmed {
       > .pillar {
         // [6列] 1/6
@@ -373,6 +369,7 @@ $default-boxdiff: 35px;
 
     &.severe {
       margin-left: px2vw($bdw, $vw);
+      // [1列]
       width: calc(100% - #{px2vw($bdw, $vw)});
     }
 
@@ -383,8 +380,6 @@ $default-boxdiff: 35px;
       // [2列] 1/2
       width: calc(100% / 5 - #{px2vw($bdw, $vw)});
     }
-
-
   }
 }
 
