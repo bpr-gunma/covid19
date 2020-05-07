@@ -46,7 +46,7 @@
             <div :class="$style.content">
               <span>{{ $t('退院・退所') }}</span>
               <span>
-                <strong>{{ 退院・退所.toLocaleString() }}</strong>
+                <strong>{{ 退院退所.toLocaleString() }}</strong>
                 <span :class="$style.unit">{{ $t('人') }}</span>
               </span>
             </div>
@@ -100,7 +100,7 @@ export default Vue.extend({
       type: Number,
       required: true
     },
-    退院・退所: {
+    退院退所: {
       type: Number,
       required: true
     },
