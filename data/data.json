@@ -3192,20 +3192,20 @@
                 "value": 147,
                 "children": [
                     {
-                        "attr": "退院",
-                        "value": 60
-                    },
-                    {
                         "attr": "入院中",
                         "value": 69
                     },
                     {
-                        "attr": "入院調整中",
-                        "value": 0
+                        "attr": "宿泊施設療養中",
+                        "value": 11
                     },
                     {
-                        "attr": "宿泊施設での療養",
-                        "value": 11
+                        "attr": "退院・退所",
+                        "value": 49
+                    },
+                    {
+                        "attr": "入院調整中",
+                        "value": 0
                     },
                     {
                         "attr": "死亡",
