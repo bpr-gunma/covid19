@@ -3419,23 +3419,23 @@
     "main_summary": {
         "date": "2020\/05\/19 20:45",
         "attr": "総PCR検査件数",
-        "value": 3308,
+        "value": 3349,
         "children": [
             {
                 "attr": "陽性（県内感染者）",
-                "value": 147,
+                "value": 148,
                 "children": [
                     {
                         "attr": "入院中",
-                        "value": 29
+                        "value": 28
                     },
                     {
                         "attr": "宿泊施設療養中",
-                        "value": 4
+                        "value": 1
                     },
                     {
                         "attr": "退院退所",
-                        "value": 96
+                        "value": 101
                     },
                     {
                         "attr": "入院調整中",
