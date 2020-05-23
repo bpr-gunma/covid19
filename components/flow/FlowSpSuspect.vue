@@ -24,7 +24,7 @@
       href="#consult"
       :class="[$style.button, $style.clickable]"
     >
-      <span :class="$style.text">{{ $t('かかりつけ医がいない方は、新型コロナ感染症コールセンターへ') }}</span>
+      <span :class="$style.text">{{ $t('新型コロナ感染症コールセンターへ') }}</span>
       <ArrowForwardIcon :class="$style.icon" />
     </a>
   </div>
@@ -61,19 +61,10 @@ export default {
 
 .solution {
   margin-top: px2vw(30);
-  padding: px2vw(20) px2vw(10);
+  padding: px2vw(10) px2vw(10);
   border-radius: px2vw(6);
   border: px2vw(3) solid $gray-2;
   text-align: left;
-}
-
-.button {
-  height: px2vw(116);
-
-  .icon {
-    width: px2vw(88);
-    height: px2vw(88);
-  }
 }
 
 @include largerThan($small) {
@@ -93,24 +84,9 @@ export default {
 
   .solution {
     margin-top: px2vw(30, $vw);
-    padding: px2vw(20, $vw) px2vw(10, $vw);
+    padding: px2vw(10, $vw) px2vw(10, $vw);
     border-radius: px2vw(6, $vw);
     border: px2vw(2, $vw) solid $gray-2;
-    text-align: center;
-  }
-
-  // suspect
-  .callcenter {
-    text-align: left;
-  }
-
-  .button {
-    height: px2vw(116, $vw);
-
-    .icon {
-      width: px2vw(88, $vw);
-      height: px2vw(88, $vw);
-    }
   }
 }
 </style>
