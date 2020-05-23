@@ -13,9 +13,6 @@
       </li>
     </ul>
 
-    <div :class="$style.solution">
-      <p>{{ $t('いずれかに該当する場合にはすぐにご相談ください。') }}</p>
-    </div>
     <a
       v-scroll-to="{
         el: '#consult',
