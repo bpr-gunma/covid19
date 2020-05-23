@@ -9,10 +9,9 @@
           <ul :class="[$style.callcenter]">
             <li>
               <span :class="[$style.fzMedium, $style.break, $style.mb7]">
-                {{ $t('平日（日中）') }}
+                {{ $t('毎日（土日祝含む）') }}
               </span>
               {{ $t('午前9時から午後9時') }}<br />
-              {{ $t('土日祝 含む') }}
             </li>
           </ul>
         </dt>
@@ -39,10 +38,9 @@
           <ul :class="[$style.callcenter]">
             <li>
               <span :class="[$style.fzMedium, $style.break, $style.mb7]">
-                {{ $t('平日（夜間）') }}
+                {{ $t('夜間（土日祝含む）') }}
               </span>
-              {{ $t('午後5時から翌朝午前9時') }}<br />
-              {{ $t('土日祝 終日') }}
+              {{ $t('午後9時から翌朝午前9時') }}<br />
             </li>
           </ul>
         </dt>
@@ -71,7 +69,7 @@
           <dt :class="[$style.helth, $style.fzLarge]">前橋市保健所</dt>
           <dd>
             <ul>
-              <li :class="[$style.fzRegular]">平日：午前8時30分～午後5時15分</li>
+              <li :class="[$style.fzRegular]">【毎日】午前8時30分～午後9時</li>
               <li>
                 <div :class="[$style.phone, $style.centerphone, $style.fzXLarge]">
                   <span :class="$style.icon">
@@ -80,7 +78,7 @@
                   <a href="tel:0272201151">027-220-1151</a>
                 </div>
               </li>
-              <li :class="[$style.fzRegular]">夜間、土、日、祝日</li>
+              <li :class="[$style.fzRegular]">【夜間】</li>
               <li>
                 <div :class="[$style.phone, $style.centerphone, $style.fzXLarge]">
                   <span :class="$style.icon">
@@ -94,7 +92,7 @@
           <dt :class="[$style.helth, $style.fzLarge]">高崎市保健所</dt>
           <dd>
             <ul>
-              <li :class="[$style.fzRegular]">平日：午前8時30分～午後9時</li>
+              <li :class="[$style.fzRegular]">【平日】午前8時30分～午後9時</li>
               <li>
                 <div :class="[$style.phone, $style.centerphone, $style.fzXLarge]">
                   <span :class="$style.icon">
@@ -103,7 +101,7 @@
                   <a href="tel:0273816112">027-381-6112</a>
                 </div>
               </li>
-              <li :class="[$style.fzRegular]">夜間、土、日、祝日</li>
+              <li :class="[$style.fzRegular]">【夜間、土、日、祝日】</li>
               <li>
                 <div :class="[$style.phone, $style.centerphone, $style.fzXLarge]">
                   <span :class="$style.icon">
