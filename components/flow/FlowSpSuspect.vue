@@ -9,18 +9,12 @@
 
     <ul :class="[$style.rectContainer, $style.triple]">
       <li :class="$style.symptom">
-        {{ $t('微熱') }}
-      </li>
-      <li :class="$style.symptom">
-        {{ $t('軽い咳') }}
-      </li>
-      <li :class="$style.symptom">
         {{ $t('感染の不安') }}
       </li>
     </ul>
 
     <div :class="$style.solution">
-      <p>{{ $t('かかりつけ医にご相談ください。') }}</p>
+      <p>{{ $t('いずれかに該当する場合にはすぐにご相談ください。') }}</p>
     </div>
     <a
       v-scroll-to="{
@@ -70,7 +64,7 @@ export default {
   padding: px2vw(20) px2vw(10);
   border-radius: px2vw(6);
   border: px2vw(3) solid $gray-2;
-  text-align: center;
+  text-align: left;
 }
 
 .button {
