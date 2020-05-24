@@ -121,7 +121,7 @@
   position: relative;
   flex-grow: 0;
   flex-shrink: 0;
-  width: 55%;
+//  width: 55%;
   flex-direction: row;
 
   &Icon1 {
