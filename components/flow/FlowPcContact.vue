@@ -1,6 +1,6 @@
 <template>
   <div :class="$style.FlowComponent">
-    <div :class="[$style.SubtleBox, $style.Box, $style.LargeText]">
+    <div :class="[$style.SubtleBox, $style.Box, $style.LargerText]">
       <div :class="$style.RowItems">
         {{ $t('「新型コロナウイルス感染者」との濃厚接触が疑われる方') }}
       </div>

@@ -24,9 +24,9 @@
           />
         </div>
       </div>
-      <div :class="[$style.CardBlock, $style.Suspect]">
+      <div :class="[$style.CardBlock, $style.General]">
         <div :class="[$style.CardBlockInner]">
-          <flow-pc-suspect />
+          <flow-pc-general />
           <img
             :class="$style.CardBlockIcon3"
             src="/flow/flow_arrow.svg"
@@ -35,9 +35,9 @@
           />
         </div>
       </div>
-      <div :class="[$style.CardBlock, $style.Days]">
+      <div :class="[$style.CardBlock, $style.Suspect]">
         <div :class="[$style.CardBlockInner]">
-          <flow-pc-days />
+          <flow-pc-suspect />
           <img
             :class="$style.CardBlockIcon4"
             src="/flow/flow_arrow.svg"
@@ -56,16 +56,16 @@
 <script>
 import FlowPcContact from './FlowPcContact.vue'
 import FlowPcElder from './FlowPcElder.vue'
+import FlowPcGeneral from './FlowPcGeneral.vue'
 import FlowPcSuspect from './FlowPcSuspect.vue'
-import FlowPcDays from './FlowPcDays.vue'
 import FlowPcAdvisory from './FlowPcAdvisory.vue'
 
 export default {
   components: {
     FlowPcContact,
     FlowPcElder,
+    FlowPcGeneral,
     FlowPcSuspect,
-    FlowPcDays,
     FlowPcAdvisory
   }
 }
@@ -196,12 +196,12 @@ export default {
   grid-row: 2 / 3;
 }
 
-.Suspect {
+.General {
   grid-column: 1 / 2;
   grid-row: 3 / 4;
 }
 
-.Days {
+.Suspect {
   grid-column: 1 / 2;
   grid-row: 4 / 5;
 }
