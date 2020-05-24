@@ -119,9 +119,9 @@
 
 .Box1 {
   position: relative;
-  flex-grow: 0;
+  flex-grow: 1;
   flex-shrink: 0;
-//  width: 55%;
+//  width: 100%;
   flex-direction: row;
 
   &Icon1 {
