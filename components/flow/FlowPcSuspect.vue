@@ -65,7 +65,7 @@
   border-radius: 4px;
   margin: 8px 0;
   padding: 10px;
-  max-width: 250px;
+  max-width: 300px;
   text-align: center;
   font-weight: bold;
   font-size: calc(0.875rem + ((1vw - 7.68px) * 0.8929));
@@ -99,7 +99,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1em;
+  padding: 0.5em 1em;
 }
 
 .ContentBox {

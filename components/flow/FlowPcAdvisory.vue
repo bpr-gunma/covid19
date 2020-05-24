@@ -67,7 +67,7 @@
         <div :class="$style.AdvisoryCenterTitle">前橋市、高崎市に在住の方は保健所へ相談</div>
         <div :class="$style.AdvisoryCenterContents">
           <div :class="$style.AdvisoryCenterContentsHelth">前橋市保健所</div>
-          <div :class="$style.AdvisoryCenterContentsTime">【毎日】午前8時30分～午後9</div>
+          <div :class="$style.AdvisoryCenterContentsTime">【毎日】午前8時30分～午後9時</div>
           <div :class="$style.AdvisoryCenterContentsTel">
             <a :class="$style.AdvisoryCenterContentsTelNumber" href="tel:0272201151">
               <img
