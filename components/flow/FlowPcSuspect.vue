@@ -1,8 +1,8 @@
 <template>
   <div :class="$style.FlowComponent">
-    <div :class="[$style.SubtleBox, $style.Box1]">
+    <div :class="[$style.SubtleBox, $style.Box]">
       <img
-        :class="$style.Box1Icon1"
+        :class="$style.BoxIcon"
         src="/flow/flow_arrow.svg"
         aria-hidden="true"
         alt=" "
@@ -65,7 +65,7 @@
   border-radius: 4px;
   margin: 8px 0;
   padding: 10px;
-  max-width: 200px;
+  max-width: 250px;
   text-align: center;
   font-weight: bold;
   font-size: calc(0.875rem + ((1vw - 7.68px) * 0.8929));
@@ -97,16 +97,9 @@
   @include card-container();
 
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   padding: 0.5em;
-}
-
-.SubtleBox2 {
-  display: flex;
-  justify-content: space-between;
-  align-items: stretch;
-  margin: 0;
 }
 
 .ContentBox {
@@ -117,14 +110,14 @@
   padding: 0.8em 1.2em;
 }
 
-.Box1 {
+.Box {
   position: relative;
   flex-grow: 1;
   flex-shrink: 0;
 //  width: 100%;
   flex-direction: row;
 
-  &Icon1 {
+  &Icon {
     position: absolute;
     bottom: 20%;
     right: -30px;
@@ -133,24 +126,6 @@
     width: 46px;
     height: 46px;
   }
-  
-  &Icon2 {
-    position: absolute;
-    bottom: 68%;
-    right: -30px;
-    z-index: 2;
-    display: block;
-    width: 46px;
-    height: 46px;
-  }
-}
-
-.Box2 {
-  flex-grow: 0;
-  flex-shrink: 0;
-  width: 43%;
-  flex-direction: column;
-  justify-content: center;
 }
 
 .RowItems {
