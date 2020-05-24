@@ -1,6 +1,6 @@
 <template>
   <div :class="$style.container">
-    <p :class="$style.duration">
+    <p :class="[$style.duration, $style.fzMedium]">
       「新型コロナウイルス感染者」との濃厚接触が疑われる方
     </p>
 

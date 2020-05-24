@@ -30,9 +30,10 @@
 <script lang="ts">
 import { onDoneScroll } from '@/utils/vueScrollTo'
 import ArrowForwardIcon from '@/static/flow/responsive/arrow_forward.svg'
+import SentimentIcon from '@/static/flow/responsive/sentiment_very_dissatisfied.svg'
 
 export default {
-  components: { ArrowForwardIcon },
+  components: { ArrowForwardIcon, SentimentIcon },
   methods: { onDoneScroll }
 }
 </script>
