@@ -97,7 +97,7 @@
   @include card-container();
 
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   padding: 0.5em;
 }
