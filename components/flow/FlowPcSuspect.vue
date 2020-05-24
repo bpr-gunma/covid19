@@ -1,12 +1,6 @@
 <template>
   <div :class="$style.FlowComponent">
     <div :class="[$style.SubtleBox, $style.Box]">
-      <img
-        :class="$style.BoxIcon"
-        src="/flow/flow_arrow.svg"
-        aria-hidden="true"
-        alt=" "
-      />
       <div :class="$style.RowItems">
         <div :class="$style.RowItemsHeader">
           <img
@@ -116,16 +110,6 @@
   flex-shrink: 0;
 //  width: 100%;
   flex-direction: row;
-
-  &Icon {
-    position: absolute;
-    bottom: 20%;
-    right: -30px;
-    z-index: 1;
-    display: block;
-    width: 46px;
-    height: 46px;
-  }
 }
 
 .RowItems {
