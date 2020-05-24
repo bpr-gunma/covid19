@@ -5,11 +5,11 @@
         <div :class="$style.RowItemsHeader">
           <img
             :class="$style.RowItemsHeaderIcon"
-            src="/flow/sentiment_very_dissatisfied-24px.svg"
+            src="/flow/accessibility-24px.svg"
             aria-hidden="true"
             alt=" "
           />
-          {{ $t('不安に思う方') }}
+          {{ $t('一般の方') }}
         </div>
       </div>
       <div :class="$style.RowItems">
@@ -20,7 +20,43 @@
             aria-hidden="true"
             alt=" "
           />
-          {{ $t('感染の不安') }}
+          {{ $t('高熱') }}
+        </div>
+        <div :class="$style.CheckBox">
+          <img
+            :class="$style.CheckBoxIcon"
+            src="/flow/check_circle-24px.svg"
+            aria-hidden="true"
+            alt=" "
+          />
+          {{ $t('強いだるさ（倦怠感）') }}
+        </div>
+        <div :class="$style.CheckBox">
+          <img
+            :class="$style.CheckBoxIcon"
+            src="/flow/check_circle-24px.svg"
+            aria-hidden="true"
+            alt=" "
+          />
+          {{ $t('息苦しさ（呼吸困難）') }}
+        </div>
+        <div :class="$style.CheckBox">
+          <img
+            :class="$style.CheckBoxIcon"
+            src="/flow/check_circle-24px.svg"
+            aria-hidden="true"
+            alt=" "
+          />
+          {{ $t('発熱が続く') }}
+        </div>
+        <div :class="$style.CheckBox">
+          <img
+            :class="$style.CheckBoxIcon"
+            src="/flow/check_circle-24px.svg"
+            aria-hidden="true"
+            alt=" "
+          />
+          {{ $t('咳が続く') }}
         </div>
       </div>
     </div>

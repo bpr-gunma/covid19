@@ -1,6 +1,6 @@
 <template>
   <div :class="$style.FlowComponent">
-    <div :class="[$style.SubtleBox, $style.Box, $style.MediumText]">
+    <div :class="[$style.SubtleBox, $style.Box, $style.LargeText]">
       <div :class="$style.RowItems">
         {{ $t('「新型コロナウイルス感染者」との濃厚接触が疑われる方') }}
       </div>
@@ -22,7 +22,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5em;
+  padding: 1em;
 }
 
 .Box {
