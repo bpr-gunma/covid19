@@ -11,10 +11,9 @@
       <div :class="$style.AdvisoryContents">
         <div class="pt-4">
           <div :class="$style.AdvisoryContentsTitle2">
-            {{ $t('平日（日中）') }}
+            {{ $t('毎日（土日祝含む）') }}
           </div>
           <span>{{ $t('午前9時から午後9時') }}</span><br />
-          <span>{{ $t('土日祝 含む') }}</span>
         </div>
         <div
           :class="[
@@ -40,10 +39,9 @@
       <div :class="$style.AdvisoryContents">
         <div class="pt-4">
           <div :class="$style.AdvisoryContentsTitle2">
-            {{ $t('平日（夜間）') }}
+            {{ $t('夜間（土日祝含む）') }}
           </div>
-          <span>{{ $t('午後5時から翌朝午前9時') }}</span><br />
-          <span>{{ $t('土日祝 終日') }}</span>
+          <span>{{ $t('午後9時から翌朝午前9時') }}</span><br />
         </div>
         <div
           :class="[
@@ -69,7 +67,7 @@
         <div :class="$style.AdvisoryCenterTitle">前橋市、高崎市に在住の方は保健所へ相談</div>
         <div :class="$style.AdvisoryCenterContents">
           <div :class="$style.AdvisoryCenterContentsHelth">前橋市保健所</div>
-          <div :class="$style.AdvisoryCenterContentsTime">【平日】午前8時30分～午後5時15分</div>
+          <div :class="$style.AdvisoryCenterContentsTime">【毎日】午前8時30分～午後9</div>
           <div :class="$style.AdvisoryCenterContentsTel">
             <a :class="$style.AdvisoryCenterContentsTelNumber" href="tel:0272201151">
               <img
@@ -81,7 +79,7 @@
               027-220-1151
             </a>
           </div>
-          <div :class="$style.AdvisoryCenterContentsTime">【夜間、土、日、祝日】</div>
+          <div :class="$style.AdvisoryCenterContentsTime">【夜間】</div>
           <div :class="$style.AdvisoryCenterContentsTel">
             <a :class="$style.AdvisoryCenterContentsTelNumber" href="tel:0272241111">
               <img
