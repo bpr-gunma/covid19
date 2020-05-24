@@ -2,9 +2,9 @@
   <div :class="$style.FlowCard">
     <h3>{{ $t('新型コロナウイルス感染症にかかる相談窓口について') }}</h3>
     <div :class="[$style.Outer, $style.OuterUpper]">
-      <div :class="[$style.CardBlock, $style.Suspect]">
+      <div :class="[$style.CardBlock, $style.Contact]">
         <div :class="[$style.CardBlockInner]">
-          <flow-pc-suspect />
+          <flow-pc-contact />
           <img
             :class="$style.CardBlockIcon1"
             src="/flow/flow_arrow.svg"
@@ -24,7 +24,7 @@
           />
         </div>
       </div>
-      <div :class="[$style.CardBlock, $style.Suspect2]">
+      <div :class="[$style.CardBlock, $style.Suspect]">
         <div :class="[$style.CardBlockInner]">
           <flow-pc-suspect />
           <img
@@ -54,6 +54,7 @@
 </template>
 
 <script>
+import FlowPcContact from './FlowPcContact.vue'
 import FlowPcElder from './FlowPcElder.vue'
 import FlowPcSuspect from './FlowPcSuspect.vue'
 import FlowPcDays from './FlowPcDays.vue'
@@ -61,8 +62,8 @@ import FlowPcAdvisory from './FlowPcAdvisory.vue'
 
 export default {
   components: {
+    FlowPcContact,
     FlowPcElder,
-    FlowPcSuspect,
     FlowPcSuspect,
     FlowPcDays,
     FlowPcAdvisory
@@ -168,7 +169,7 @@ export default {
     right: -30px;
     z-index: 1;
   }
-  
+
   &Icon3 {
     position: absolute;
     bottom: 20%;
@@ -176,7 +177,7 @@ export default {
     z-index: 1;
   }
 
-  &Icon2 {
+  &Icon4 {
     position: absolute;
     bottom: 80%;
     right: -30px;
@@ -185,7 +186,7 @@ export default {
   }
 }
 
-.Suspect {
+.Contact {
   grid-column: 1 / 2;
   grid-row: 1 / 2;
 }
@@ -195,7 +196,7 @@ export default {
   grid-row: 2 / 3;
 }
 
-.Suspect2 {
+.Suspect {
   grid-column: 1 / 2;
   grid-row: 3 / 4;
 }
