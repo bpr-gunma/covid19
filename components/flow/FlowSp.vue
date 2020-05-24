@@ -32,7 +32,7 @@ import FlowSpAdvisory from './FlowSpAdvisory.vue'
 
 export default {
   components: {
-    FlowSpContact
+    FlowSpContact,
     FlowSpGeneral,
     FlowSpElder,
     FlowSpSuspect,
