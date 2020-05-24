@@ -1,8 +1,8 @@
 <template>
   <div :class="$style.FlowComponent">
-    <div :class="[$style.SubtleBox, $style.Box]">
+    <div :class="[$style.SubtleBox, $style.Box, $style.MediumText]">
       <div :class="$style.RowItems">
-        {{ $t('いずれかに該当する場合にはすぐにご相談ください') }}
+        {{ $t('「新型コロナウイルス感染者」との濃厚接触が疑われる方') }}
       </div>
     </div>
   </div>
@@ -22,13 +22,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.5em 1em;
+  padding: 1.5em;
 }
 
 .Box {
   position: relative;
   flex-grow: 1;
-  flex-shrink: 0;
+  flex-shrink: 1;
 //  width: 100%;
   flex-direction: row;
 }
