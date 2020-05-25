@@ -129,8 +129,8 @@
       </div>
     </div>
     <h3 :class="$style.SectionTitle">
-      <i18n path="いずれかに該当する場合には {immediately} ご相談ください">
-        <template v-slot:immediately>
+      <i18n path="いずれかに該当する場合には {advice} ご相談ください" tag="p">
+        <template v-slot:advice>
           <strong>
             {{ $t('すぐに') }}
           </strong>
@@ -287,10 +287,11 @@
     align-items: right;
     justify-content: right;
     text-align: right;
-    margin-top: 10px
-//    width: 100%;
+    width: 100%;
+    margin-bottom: 1rem;
 
     strong {
+      margin: 0 0.2em;
       font-size: 28px;
       font-weight: bold;
     }
