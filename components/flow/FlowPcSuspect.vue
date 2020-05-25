@@ -35,19 +35,19 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 20px 20px 0px 20px;
+  padding: 1em;
   color: $gray-2;
 
   &Row {
     flex-grow: 1;
     flex-shrink: 0;
-    flex-basis: 26%;
+    flex-basis: 15%;
     display: flex;
     flex-direction: column;
     text-align: center;
 
     &RowCheck {
-//      flex-basis: calc(28% - 20px);
+      flex-basis: calc(28% - 20px);
       margin: 0 10px;
     }
 
