@@ -80,14 +80,14 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 20px;
+  padding: 20px 20px 0px 20px;
 //  height: 100%;
   color: $gray-2;
 
   &Row {
     flex-grow: 1;
     flex-shrink: 0;
-    flex-basis: 45%;
+    flex-basis: 26%;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -180,7 +180,6 @@
     justify-content: flex-end;
     text-align: right;
     width: 100%;
-    margin-bottom: 0;
 
     strong {
       margin: 0 0.2em;
