@@ -81,17 +81,51 @@
     </div>
     <div :class="$style.FlowRow">
       <div :class="$style.FlowRowRowThree">
-        <ul :class="$style.FlowRowRowThreeCareTargetList">
-          <li :class="$style.FlowRowRowThreeCareTargetListItem">
-            {{ $t('ご高齢な方') }}
-          </li>
-          <li :class="$style.FlowRowRowThreeCareTargetListItem">
-            {{ $t('基礎疾患のある方') }}
-          </li>
-          <li :class="$style.FlowRowRowThreeCareTargetListItem">
-            {{ $t('妊娠中の方') }}
-          </li>
-        </ul>
+        <div :class="$style.CheckBox">
+          <img
+            :class="$style.CheckBoxIcon"
+            src="/flow/check_circle-24px.svg"
+            aria-hidden="true"
+            alt=" "
+          />
+          {{ $t('高熱') }}
+        </div>
+        <div :class="$style.CheckBox">
+          <img
+            :class="$style.CheckBoxIcon"
+            src="/flow/check_circle-24px.svg"
+            aria-hidden="true"
+            alt=" "
+          />
+          {{ $t('強いだるさ（倦怠感）') }}
+        </div>
+        <div :class="$style.CheckBox">
+          <img
+            :class="$style.CheckBoxIcon"
+            src="/flow/check_circle-24px.svg"
+            aria-hidden="true"
+            alt=" "
+          />
+          {{ $t('息苦しさ（呼吸困難）') }}
+        </div>
+        <div :class="$style.CheckBox">
+          <img
+            :class="$style.CheckBoxIcon"
+            src="/flow/check_circle-24px.svg"
+            aria-hidden="true"
+            alt=" "
+          />
+          {{ $t('発熱が続く') }}
+        </div>
+        <div :class="$style.CheckBox">
+          <img
+            :class="$style.CheckBoxIcon"
+            src="/flow/check_circle-24px.svg"
+            aria-hidden="true"
+            alt=" "
+          />
+          {{ $t('咳が続く') }}
+        </div>
       </div>
     </div>
     <h3 :class="$style.SectionTitle">
@@ -124,7 +158,6 @@
   padding: 20px;
   height: 100%;
   color: $gray-2;
-
 
   &Row {
     flex-grow: 1;
@@ -243,6 +276,40 @@
       &Day {
         font-size: 41px;
       }
+    }
+  }
+  
+  .CheckBox {
+    position: relative;
+    border: 2px solid $green-1;
+    border-radius: 4px;
+    margin: 8px 0;
+    padding: 10px;
+    max-width: 350px;
+    text-align: center;
+    font-weight: bold;
+    font-size: calc(0.875rem + ((1vw - 7.68px) * 0.8929));
+
+    @include largerThan($large) {
+      font-size: 20px;
+    }
+
+    &Icon {
+      position: absolute;
+      left: -8px;
+      top: -8px;
+      width: 24px;
+      height: 24px;
+    }
+
+    &::before {
+      position: absolute;
+      left: -4px;
+      top: -4px;
+      width: 20px;
+      height: 20px;
+      background-color: white;
+      content: '';
     }
   }
 
