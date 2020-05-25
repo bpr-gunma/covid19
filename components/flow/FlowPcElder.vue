@@ -136,10 +136,19 @@
 }
 
 .RowItemsFooter {
-  flex-grow: 1;
-  font-size: larger;
-  text-align: left;
-  margin: 0 4px;
+    display: flex;
+    width: 100%;
+    padding: 0 15px;
+    margin-top: 15px;
+    justify-content: right;
+    align-items: stretch;
+    text-align: right;
+    font-weight: bold;
+    font-size: 22px;
+
+    @include largerThan($large) {
+      padding: 0 20px;
+    }
 }
 
 .FlowArrow {
