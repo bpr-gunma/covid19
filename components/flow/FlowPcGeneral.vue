@@ -15,16 +15,16 @@
     </div>
     <div :class="$style.FlowRow">
       <div :class="$style.FlowRowRowThree">
-        <div :class="$style.CheckBox">
+        <div :class="$style.FlowRowRowThreeCheckBox">
           <img
-            :class="$style.CheckBoxIcon"
+            :class="$style.FlowRowRowThreeCheckBoxIcon"
             src="/flow/check_circle-24px.svg"
             aria-hidden="true"
             alt=" "
           />
           {{ $t('高熱') }}
         </div>
-        <div :class="$style.CheckBox">
+        <div :class="$style.FlowRowRowThreeCheckBox">
           <img
             :class="$style.CheckBoxIcon"
             src="/flow/check_circle-24px.svg"
@@ -33,27 +33,27 @@
           />
           {{ $t('強いだるさ（倦怠感）') }}
         </div>
-        <div :class="$style.CheckBox">
+        <div :class="$style.FlowRowRowThreeCheckBox">
           <img
-            :class="$style.CheckBoxIcon"
+            :class="$style.FlowRowRowThreeCheckBoxIcon"
             src="/flow/check_circle-24px.svg"
             aria-hidden="true"
             alt=" "
           />
           {{ $t('息苦しさ（呼吸困難）') }}
         </div>
-        <div :class="$style.CheckBox">
+        <div :class="$style.FlowRowRowThreeCheckBox">
           <img
-            :class="$style.CheckBoxIcon"
+            :class="$style.FlowRowRowThreeCheckBoxIcon"
             src="/flow/check_circle-24px.svg"
             aria-hidden="true"
             alt=" "
           />
           {{ $t('発熱が続く') }}
         </div>
-        <div :class="$style.CheckBox">
+        <div :class="$style.FlowRowRowThreeCheckBox">
           <img
-            :class="$style.CheckBoxIcon"
+            :class="$style.FlowRowRowThreeCheckBoxIcon"
             src="/flow/check_circle-24px.svg"
             aria-hidden="true"
             alt=" "
@@ -102,7 +102,7 @@
     text-align: center;
 
     &RowThree {
-      flex-grow: 3;
+      flex-grow: 2;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -118,42 +118,44 @@
           height: 44px;
         }
       }
+  
+      &CheckBox {
+        position: relative;
+        border: 2px solid $green-1;
+        border-radius: 4px;
+        margin: 8px 0;
+        padding: 10px;
+        max-width: 350px;
+        text-align: center;
+        font-weight: bold;
+        font-size: calc(0.875rem + ((1vw - 7.68px) * 0.8929));
+
+        @include largerThan($large) {
+          font-size: 20px;
+        }
+
+        &Icon {
+          position: absolute;
+          left: -8px;
+          top: -8px;
+          width: 24px;
+          height: 24px;
+        }
+
+        &::before {
+          position: absolute;
+          left: -4px;
+          top: -4px;
+          width: 20px;
+          height: 20px;
+          background-color: white;
+          content: '';
+        }
+      }
     }
   }
 
-  .CheckBox {
-    position: relative;
-    border: 2px solid $green-1;
-    border-radius: 4px;
-    margin: 8px 0;
-    padding: 10px;
-    max-width: 350px;
-    text-align: center;
-    font-weight: bold;
-    font-size: calc(0.875rem + ((1vw - 7.68px) * 0.8929));
 
-    @include largerThan($large) {
-      font-size: 20px;
-    }
-
-    &Icon {
-      position: absolute;
-      left: -8px;
-      top: -8px;
-      width: 24px;
-      height: 24px;
-    }
-
-    &::before {
-      position: absolute;
-      left: -4px;
-      top: -4px;
-      width: 20px;
-      height: 20px;
-      background-color: white;
-      content: '';
-    }
-  }
 
   .SectionTitle {
     display: flex;
