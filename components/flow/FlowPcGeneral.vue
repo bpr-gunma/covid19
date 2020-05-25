@@ -74,13 +74,6 @@
 
 <style module lang="scss">
 .Flow {
-  // @include card-container();
-
-  // display: flex;
-  // flex-direction: row;
-  // padding: 20px 20px !important;
-  // position: relative;
-  // color: $gray-2;
   @include card-container();
 
   display: flex;
@@ -90,7 +83,6 @@
   padding: 20px;
 //  height: 100%;
   color: $gray-2;
-
 
   &Row {
     flex-grow: 1;
@@ -133,7 +125,7 @@
       padding: 10px;
       position: relative;
       border: 2px solid $green-1 !important;
-      border-radius: 2px;
+      border-radius: 4px;
       background-color: $white;
 
       p {
@@ -178,16 +170,6 @@
         content: '';
       }
     }
-
-    &Emphasis {
-      font-size: 24px;
-      font-weight: bold;
-      border-bottom: solid 3px $green-1;
-
-      &Day {
-        font-size: 41px;
-      }
-    }
   }
 
   .SectionTitle {
@@ -197,7 +179,7 @@
     align-items: center;
     justify-content: flex-end;
     text-align: right;
-//    width: 100%;
+    width: 100%;
 
     strong {
       margin: 0 0.2em;
