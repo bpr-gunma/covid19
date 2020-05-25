@@ -18,7 +18,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 20px 20px 0px 20px;
+  padding: 1em;
   color: $gray-2;
 
   .SectionTitle {
