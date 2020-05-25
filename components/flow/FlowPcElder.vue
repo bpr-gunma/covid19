@@ -3,9 +3,9 @@
     <div :class="[$style.SubtleBox, $style.Box]">
       <div :class="$style.RowItems">
         <div :class="$style.RowItemsHeader">
-          <p>{{ $t('ご高齢な方') }}</p>
-          <p>{{ $t('基礎疾患のある方') }}</p>
-          <p>{{ $t('妊娠中の方') }}</p>
+          <p :class="$style.Target">{{ $t('ご高齢な方') }}</p>
+          <p :class="$style.Target">{{ $t('基礎疾患のある方') }}</p>
+          <p :class="$style.Target">{{ $t('妊娠中の方') }}</p>
         </div>
       </div>
       <div :class="$style.RowItems">
@@ -124,14 +124,13 @@
 
 .RowItemsHeader {
 //  color: $green-1;
-  font-size: medium;
-  font-weight: bold;
+  .Target {
+    font-size: medium;
+    font-weight: bold;
+  }
 
-  &Icon {
-    display: block;
-    margin: auto;
-    width: 45px;
-    height: 45px;
+  .Target:last-of-type {
+    margin: 0;
   }
 }
 
