@@ -7,7 +7,7 @@
       :chart-option="{}"
       :date="Data.patients.date"
       :info="sumInfoOfPatients"
-      :url="'/csv/data01.csv'"
+      :url="'/csv/01kanja.csv'"
       :source="$t('オープンデータを入手')"
     />
   </v-col>
