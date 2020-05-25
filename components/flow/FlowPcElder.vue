@@ -3,9 +3,9 @@
     <div :class="[$style.SubtleBox, $style.Box]">
       <div :class="$style.RowItems">
         <div :class="$style.RowItemsHeader">
-          {{ $t('ご高齢な方') }}<br />
-          {{ $t('基礎疾患のある方') }}<br />
-          {{ $t('妊娠中の方') }}
+          <p>{{ $t('ご高齢な方') }}</p>
+          <p>{{ $t('基礎疾患のある方') }}</p>
+          <p>{{ $t('妊娠中の方') }}</p>
         </div>
       </div>
       <div :class="$style.RowItems">
@@ -16,7 +16,7 @@
             aria-hidden="true"
             alt=" "
           />
-          {{ $t('発熱がある') }}
+          {{ $t(' 　　発熱がある　　 ') }}
         </div>
         <div :class="$style.CheckBox">
           <img

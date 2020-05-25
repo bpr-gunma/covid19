@@ -20,7 +20,7 @@
             aria-hidden="true"
             alt=" "
           />
-          {{ $t('　　　感染の不安　　　') }}
+          {{ $t(' 　　感染の不安　　 ') }}
         </div>
       </div>
     </div>
