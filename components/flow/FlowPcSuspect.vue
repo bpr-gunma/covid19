@@ -9,7 +9,7 @@
             aria-hidden="true"
             alt=" "
           />
-          {{ $t('不安に思う方') }}
+          {{ $t('　不安に思う方　') }}
         </div>
       </div>
       <div :class="$style.RowItems">
@@ -41,7 +41,7 @@
   border-radius: 4px;
   margin: 8px 0;
   padding: 10px;
-  max-width: 250px;
+  max-width: 300px;
   text-align: center;
   font-weight: bold;
   font-size: calc(0.875rem + ((1vw - 7.68px) * 0.8929));
