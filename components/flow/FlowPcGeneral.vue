@@ -15,9 +15,7 @@
     </div>
     <div :class="[$style.FlowRow, $style.FlowRowRowCheck]">
       <div :class="$style.FlowRowCondition">
-        <p>
-          {{ $t('高熱') }}
-        </p>
+        <p>{{ $t('高熱') }}</p>
         <img
           :class="$style.FlowRowConditionIcon"
           src="/flow/check_circle-24px.svg"
@@ -26,23 +24,7 @@
         />
       </div>
       <div :class="$style.FlowRowCondition">
-        <p>
-          <i18n
-            tag="span"
-            :class="$style.FlowRowConditionSmall"
-            path="発熱{temperature}"
-          >
-            <template v-slot:temperature>
-              <i18n tag="span" path="{tempNum}以上">
-                <template v-slot:tempNum>
-                  <span :class="$style.FlowRowConditionLarge">
-                    {{ $t('37.5℃') }}
-                  </span>
-                </template>
-              </i18n>
-            </template>
-          </i18n>
-        </p>
+        <p>{{ $t('強いだるさ（倦怠感）') }}</p>
         <img
           :class="$style.FlowRowConditionIcon"
           src="/flow/check_circle-24px.svg"
@@ -51,7 +33,7 @@
         />
       </div>
       <div :class="$style.FlowRowCondition">
-        <p>{{ $t('強いだるさ') }}</p>
+        <p>{{ $t('息苦しさ（呼吸困難）') }}</p>
         <img
           :class="$style.FlowRowConditionIcon"
           src="/flow/check_circle-24px.svg"
@@ -60,7 +42,16 @@
         />
       </div>
       <div :class="$style.FlowRowCondition">
-        <p>{{ $t('息苦しさ') }}</p>
+        <p>{{ $t('発熱が続く') }}</p>
+        <img
+          :class="$style.FlowRowConditionIcon"
+          src="/flow/check_circle-24px.svg"
+          aria-hidden="true"
+          alt=" "
+        />
+      </div>
+      <div :class="$style.FlowRowCondition">
+        <p>{{ $t('咳が続く') }}</p>
         <img
           :class="$style.FlowRowConditionIcon"
           src="/flow/check_circle-24px.svg"
@@ -97,7 +88,7 @@
   flex-wrap: wrap;
   justify-content: center;
   padding: 20px;
-  height: 100%;
+//  height: 100%;
   color: $gray-2;
 
 
@@ -129,28 +120,6 @@
           margin: auto;
           width: 44px;
           height: 44px;
-        }
-      }
-
-      &CareTargetList {
-        margin: 16px 0;
-        text-align: left;
-        list-style: none;
-
-        &Item {
-          font-weight: bold;
-          display: flex;
-          align-items: center;
-
-          &Icon {
-            display: inline-block;
-            width: 30px;
-            height: 30px;
-          }
-        }
-
-        &Item + &Item {
-          margin-top: 14px;
         }
       }
     }
@@ -228,12 +197,11 @@
     align-items: center;
     justify-content: flex-end;
     text-align: right;
-    width: 100%;
+//    width: 100%;
 
     strong {
       margin: 0 0.2em;
-      color: $green-1;
-//      font-size: 26px;
+      font-size: 24px;
       font-weight: bold;
     }
   }
