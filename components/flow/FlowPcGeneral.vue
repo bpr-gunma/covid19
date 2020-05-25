@@ -16,7 +16,6 @@
           />
           {{ $t('高熱') }}
         </div>
-        <!--
         <div :class="$style.CheckBox">
           <img
             :class="$style.CheckBoxIcon"
@@ -25,7 +24,7 @@
             alt=" "
           />
           {{ $t('強いだるさ（倦怠感）') }}
-        </div>-->
+        </div>
         <div :class="$style.CheckBox">
           <img
             :class="$style.CheckBoxIcon"
@@ -63,7 +62,7 @@
   color: $gray-2;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-end
 }
 
 .CheckBox {
