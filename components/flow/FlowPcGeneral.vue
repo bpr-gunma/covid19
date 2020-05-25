@@ -123,6 +123,7 @@
       justify-content: center;
       margin-bottom: 10px;
       padding: 10px;
+      max-width: 300px;
       position: relative;
       border: 2px solid $green-1 !important;
       border-radius: 4px;
