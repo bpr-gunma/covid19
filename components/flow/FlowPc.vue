@@ -158,30 +158,29 @@ export default {
 
   &Icon1 {
     position: absolute;
-    bottom: 20%;
-    right: -30px;
+    bottom: 50%;
+    right: -40px;
     z-index: 1;
   }
 
   &Icon2 {
     position: absolute;
-    bottom: 20%;
+    bottom: 50%;
     right: -30px;
     z-index: 1;
   }
 
   &Icon3 {
     position: absolute;
-    bottom: 20%;
+    bottom: 50%;
     right: -30px;
     z-index: 1;
   }
 
   &Icon4 {
     position: absolute;
-    bottom: 80%;
+    bottom: 50%;
     right: -30px;
-    transform: rotateZ(-30deg);
     z-index: 1;
   }
 }
@@ -210,12 +209,5 @@ export default {
   grid-column: 2 / 3;
   grid-row: 1 / 5;
   position: relative;
-
-  &Icon {
-    position: absolute;
-    left: calc(50% - 23px);
-    transform: rotate(-90deg);
-    z-index: 1;
-  }
 }
 </style>
