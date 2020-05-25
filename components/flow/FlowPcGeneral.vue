@@ -87,7 +87,7 @@
   &Row {
     flex-grow: 1;
     flex-shrink: 0;
-    flex-basis: 36%;
+    flex-basis: 45%;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -123,7 +123,6 @@
       justify-content: center;
       margin-bottom: 10px;
       padding: 10px;
-      max-width: 300px;
       position: relative;
       border: 2px solid $green-1 !important;
       border-radius: 4px;
@@ -181,6 +180,7 @@
     justify-content: flex-end;
     text-align: right;
     width: 100%;
+    margin-bottom: 0;
 
     strong {
       margin: 0 0.2em;
