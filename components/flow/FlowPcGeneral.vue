@@ -1,179 +1,290 @@
 <template>
-  <div :class="$style.FlowComponent">
-    <div :class="[$style.SubtleBox, $style.Box]">
-      <div :class="$style.RowItems">
-        <div :class="$style.RowItemsHeader">
+  <div :class="$style.Flow">
+    <div :class="$style.FlowRow">
+      <div :class="$style.FlowRowRowThree">
+        <p :class="$style.FlowRowRowThreeGeneral">
           <img
-            :class="$style.RowItemsHeaderIcon"
+            :class="$style.FlowRowRowThreeGeneralIcon"
             src="/flow/accessibility-24px.svg"
             aria-hidden="true"
             alt=" "
           />
-          {{ $t('　　一般の方　　') }}
-        </div>
+          {{ $t('一般の方') }}
+        </p>
       </div>
-      <div :class="$style.RowItems">
-        <div :class="$style.CheckBox">
-          <img
-            :class="$style.CheckBoxIcon"
-            src="/flow/check_circle-24px.svg"
-            aria-hidden="true"
-            alt=" "
-          />
-          {{ $t('高熱') }}
-        </div>
-        <div :class="$style.CheckBox">
-          <img
-            :class="$style.CheckBoxIcon"
-            src="/flow/check_circle-24px.svg"
-            aria-hidden="true"
-            alt=" "
-          />
-          {{ $t('強いだるさ（倦怠感）') }}
-        </div>
-        <div :class="$style.CheckBox">
-          <img
-            :class="$style.CheckBoxIcon"
-            src="/flow/check_circle-24px.svg"
-            aria-hidden="true"
-            alt=" "
-          />
-          {{ $t('息苦しさ（呼吸困難）') }}
-        </div>
-        <div :class="$style.CheckBox">
-          <img
-            :class="$style.CheckBoxIcon"
-            src="/flow/check_circle-24px.svg"
-            aria-hidden="true"
-            alt=" "
-          />
-          {{ $t('発熱が続く') }}
-        </div>
-        <div :class="$style.CheckBox">
-          <img
-            :class="$style.CheckBoxIcon"
-            src="/flow/check_circle-24px.svg"
-            aria-hidden="true"
-            alt=" "
-          />
-          {{ $t('咳が続く') }}
-        </div>
+      <div>
+        <p>
+          <i18n path="{duration}続いている">
+            <template v-slot:duration>
+              <i18n
+                tag="span"
+                path="{day}日以上"
+                :class="$style.FlowRowEmphasis"
+              >
+                <template v-slot:day>
+                  <span :class="$style.FlowRowEmphasisDay">4</span>
+                </template>
+              </i18n>
+            </template>
+          </i18n>
+        </p>
       </div>
     </div>
+    <div :class="[$style.FlowRow, $style.FlowRowRowCheck]">
+      <div :class="$style.FlowRowCondition">
+        <p>
+          <i18n
+            tag="span"
+            path="{cold}のような症状"
+            :class="$style.FlowRowConditionSmall"
+          >
+            <template v-slot:cold>
+              <span :class="$style.FlowRowConditionLarge">
+                {{ $t('風邪') }}
+              </span>
+            </template>
+          </i18n>
+        </p>
+        <img
+          :class="$style.FlowRowConditionIcon"
+          src="/flow/check_circle-24px.svg"
+          aria-hidden="true"
+          alt=" "
+        />
+      </div>
+      <div :class="$style.FlowRowCondition">
+        <p>
+          <i18n
+            tag="span"
+            :class="$style.FlowRowConditionSmall"
+            path="発熱{temperature}"
+          >
+            <template v-slot:temperature>
+              <i18n tag="span" path="{tempNum}以上">
+                <template v-slot:tempNum>
+                  <span :class="$style.FlowRowConditionLarge">
+                    {{ $t('37.5℃') }}
+                  </span>
+                </template>
+              </i18n>
+            </template>
+          </i18n>
+        </p>
+        <img
+          :class="$style.FlowRowConditionIcon"
+          src="/flow/check_circle-24px.svg"
+          aria-hidden="true"
+          alt=" "
+        />
+      </div>
+      <div :class="$style.FlowRowCondition">
+        <p>{{ $t('強いだるさ') }}</p>
+        <img
+          :class="$style.FlowRowConditionIcon"
+          src="/flow/check_circle-24px.svg"
+          aria-hidden="true"
+          alt=" "
+        />
+      </div>
+      <div :class="$style.FlowRowCondition">
+        <p>{{ $t('息苦しさ') }}</p>
+        <img
+          :class="$style.FlowRowConditionIcon"
+          src="/flow/check_circle-24px.svg"
+          aria-hidden="true"
+          alt=" "
+        />
+      </div>
+    </div>
+    <div :class="$style.FlowRow">
+      <div :class="$style.FlowRowRowThree">
+        <ul :class="$style.FlowRowRowThreeCareTargetList">
+          <li :class="$style.FlowRowRowThreeCareTargetListItem">
+            {{ $t('ご高齢な方') }}
+          </li>
+          <li :class="$style.FlowRowRowThreeCareTargetListItem">
+            {{ $t('基礎疾患のある方') }}
+          </li>
+          <li :class="$style.FlowRowRowThreeCareTargetListItem">
+            {{ $t('妊娠中の方') }}
+          </li>
+        </ul>
+      </div>
+      <div>
+        <p>
+          <i18n path="{duration}続いている">
+            <template v-slot:duration>
+              <i18n
+                tag="span"
+                path="{day}日程度"
+                :class="$style.FlowRowEmphasis"
+              >
+                <template v-slot:day>
+                  <span :class="$style.FlowRowEmphasisDay">2</span>
+                </template>
+              </i18n>
+            </template>
+          </i18n>
+        </p>
+      </div>
+    </div>
+    <h3 :class="$style.sectionTitle">
+      <i18n path="新型コロナ外来 {advice} と判断された場合" tag="p">
+        <template v-slot:advice>
+          <strong>
+            {{ $t('受診が不要') }}
+          </strong>
+        </template>
+      </i18n>
+    </h3>]
   </div>
 </template>
 
 <style module lang="scss">
-.FlowComponent {
+.Flow {
+  @include card-container();
+
+  display: flex;
+  flex-direction: row;
+  padding: 20px 20px !important;
+  position: relative;
   color: $gray-2;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-}
 
-.CheckBox {
-  position: relative;
-  border: 2px solid $green-1;
-  border-radius: 4px;
-  margin: 8px 0;
-  padding: 10px;
-  max-width: 350px;
-  text-align: center;
-  font-weight: bold;
-  font-size: calc(0.875rem + ((1vw - 7.68px) * 0.8929));
+  &Row {
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 36%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
 
-  @include largerThan($large) {
-    font-size: 20px;
+    &RowCheck {
+      flex-basis: calc(28% - 20px);
+      margin: 0 10px;
+    }
+
+    &RowThree {
+      flex-grow: 3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 20px;
+
+      &General {
+        font-weight: bold;
+
+        &Icon {
+          display: block;
+          margin: auto;
+          width: 44px;
+          height: 44px;
+        }
+      }
+
+      &CareTargetList {
+        margin: 16px 0;
+        text-align: left;
+        list-style: none;
+
+        &Item {
+          font-weight: bold;
+          display: flex;
+          align-items: center;
+
+          &Icon {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+          }
+        }
+
+        &Item + &Item {
+          margin-top: 14px;
+        }
+      }
+    }
+
+    &Condition {
+      flex-grow: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 10px;
+      padding: 10px;
+      position: relative;
+      border: 2px solid $green-1 !important;
+      border-radius: 2px;
+      background-color: $white;
+
+      p {
+        text-align: center;
+        display: inline-block;
+        margin: 0 !important; // FIXME: IEだとv-applicationのmarginが優先される
+        font-size: calc(0.875rem + ((1vw - 7.68px) * 0.8929));
+        font-weight: bold;
+
+        @include largerThan($large) {
+          font-size: 20px;
+        }
+      }
+
+      &Large {
+        font-size: calc(1rem + ((1vw - 7.68px) * 2.4876));
+
+        @include largerThan($large) {
+          font-size: 25px;
+        }
+      }
+
+      &Small {
+        font-size: 15px;
+      }
+
+      &Icon {
+        position: absolute;
+        left: -8px;
+        top: -8px;
+        width: 24px;
+        height: 24px;
+      }
+
+      &::before {
+        position: absolute;
+        left: -4px;
+        top: -4px;
+        width: 20px;
+        height: 20px;
+        background-color: white;
+        content: '';
+      }
+    }
+
+    &Emphasis {
+      font-size: 24px;
+      font-weight: bold;
+      border-bottom: solid 3px $green-1;
+
+      &Day {
+        font-size: 41px;
+      }
+    }
   }
 
-  &Icon {
-    position: absolute;
-    left: -8px;
-    top: -8px;
-    width: 24px;
-    height: 24px;
+  .sectionTitle {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 1rem;
+
+    strong {
+      margin: 0 0.2em;
+      font-size: 28px;
+      font-weight: bold;
+    }
   }
-
-  &::before {
-    position: absolute;
-    left: -4px;
-    top: -4px;
-    width: 20px;
-    height: 20px;
-    background-color: white;
-    content: '';
-  }
-}
-
-.SubtleBox {
-  @include card-container();
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.5em 1em;
-}
-
-.ContentBox {
-  @include card-container();
-
-  font-size: larger;
-  text-align: left;
-  padding: 0.8em 1.2em;
-}
-
-.Box {
-  position: relative;
-  flex-grow: 1;
-  flex-shrink: 0;
-//  width: 100%;
-  flex-direction: row;
-}
-
-.RowItems {
-  flex-grow: 1;
-  text-align: center;
-  margin: 0 4px;
-
-  @include largerThan($large) {
-    margin: 0 2em;
-  }
-}
-
-.RowItemsHeader {
-//  color: $green-1;
-  font-size: medium;
-  font-weight: bold;
-
-  &Icon {
-    display: block;
-    margin: auto;
-    width: 45px;
-    height: 45px;
-  }
-}
-
-.FlowArrow {
-  position: absolute;
-  margin: 0 -20px;
-  z-index: 1;
-}
-
-.LargerText {
-  font-size: larger;
-  font-weight: bold;
-}
-
-.MediumText {
-  font-size: medium;
-  font-weight: bold;
-}
-
-.Center {
-  text-align: center;
-}
-
-.SmallerText {
-  font-size: smaller;
 }
 </style>
