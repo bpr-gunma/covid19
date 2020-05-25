@@ -128,11 +128,11 @@
         </p>
       </div>
     </div>
-    <h3 :class="$style.sectionTitle">
-      <i18n path="新型コロナ外来 {advice} と判断された場合" tag="p">
-        <template v-slot:advice>
+    <h3 :class="$style.SectionTitle">
+      <i18n path="いずれかに該当する場合には {immediately} ご相談ください">
+        <template v-slot:immediately>
           <strong>
-            {{ $t('受診が不要') }}
+            {{ $t('すぐに') }}
           </strong>
         </template>
       </i18n>
@@ -280,18 +280,17 @@
     }
   }
 
-  .sectionTitle {
+  .SectionTitle {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    width: 100%;
-    margin-bottom: 1rem;
+    align-items: right;
+    justify-content: right;
+    text-align: right;
+    margin-top: 10px
+//    width: 100%;
 
     strong {
-      margin: 0 0.2em;
       font-size: 28px;
       font-weight: bold;
     }
