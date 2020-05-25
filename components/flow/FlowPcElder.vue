@@ -33,9 +33,9 @@
           />
           {{ $t('咳が出る') }}
         </div>
-        <div :class="$style.ContentBox">
-          {{ $t('いずれかに該当する場合にはすぐにご相談ください') }}
-        </div>
+      </div>
+      <div :class="$style.RowItemsFooter">
+        {{ $t('いずれかに該当する場合にはすぐにご相談ください') }}
       </div>
     </div>
   </div>
@@ -139,6 +139,13 @@
     width: 45px;
     height: 45px;
   }
+}
+
+.RowItemsFooter {
+  flex-grow: 1;
+  font-size: larger;
+  text-align: left;
+  margin: 0 4px;
 }
 
 .FlowArrow {
