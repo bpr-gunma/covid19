@@ -62,7 +62,7 @@
   color: $gray-2;
   display: flex;
   flex-direction: row;
-  justify-content: flex-end
+  justify-content: flex-end;
 }
 
 .CheckBox {
@@ -71,7 +71,7 @@
   border-radius: 4px;
   margin: 8px 0;
   padding: 10px;
-  max-width: 300px;
+  max-width: 350px;
   text-align: center;
   font-weight: bold;
   font-size: calc(0.875rem + ((1vw - 7.68px) * 0.8929));
