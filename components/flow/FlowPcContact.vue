@@ -1,6 +1,6 @@
 <template>
   <div :class="$style.Flow">
-    <div :class="$style.RowItems">
+    <div :class="[$style.RowItems, $style.LargerText]">
       {{ $t('「新型コロナウイルス感染者」との') }}
       <em :class="$style.FlowLine">
         {{ $t('濃厚接触') }}
@@ -39,5 +39,10 @@
   @include largerThan($large) {
     border-width: 4px;
   }
+}
+
+.LargerText {
+  font-size: larger;
+  font-weight: bold;
 }
 </style>
