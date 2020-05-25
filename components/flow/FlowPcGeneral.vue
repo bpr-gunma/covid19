@@ -136,19 +136,29 @@
           </strong>
         </template>
       </i18n>
-    </h3>]
+    </h3>
   </div>
 </template>
 
 <style module lang="scss">
 .Flow {
+  // @include card-container();
+
+  // display: flex;
+  // flex-direction: row;
+  // padding: 20px 20px !important;
+  // position: relative;
+  // color: $gray-2;
   @include card-container();
 
   display: flex;
   flex-direction: row;
-  padding: 20px 20px !important;
-  position: relative;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+  height: 100%;
   color: $gray-2;
+
 
   &Row {
     flex-grow: 1;
