@@ -3,7 +3,9 @@
     <div :class="[$style.SubtleBox, $style.Box]">
       <div :class="$style.RowItems">
         <div :class="$style.RowItemsHeader">
-          {{ $t('不安に思う方') }}
+          {{ $t('ご高齢な方') }}<br />
+          {{ $t('基礎疾患のある方') }}<br />
+          {{ $t('妊娠中の方') }}
         </div>
       </div>
       <div :class="$style.RowItems">
@@ -14,8 +16,20 @@
             aria-hidden="true"
             alt=" "
           />
-          {{ $t('感染の不安') }}
+          {{ $t('発熱がある') }}
         </div>
+        <div :class="$style.CheckBox">
+          <img
+            :class="$style.CheckBoxIcon"
+            src="/flow/check_circle-24px.svg"
+            aria-hidden="true"
+            alt=" "
+          />
+          {{ $t('咳が出る') }}
+        </div>
+      </div>
+      <div :class="$style.RowItemsFooter">
+        {{ $t('いずれかに該当する場合にはすぐにご相談ください') }}
       </div>
     </div>
   </div>
@@ -86,6 +100,16 @@
   flex-shrink: 0;
 //  width: 100%;
   flex-direction: row;
+
+  &Icon {
+    position: absolute;
+    bottom: 20%;
+    right: -30px;
+    z-index: 1;
+    display: block;
+    width: 46px;
+    height: 46px;
+  }
 }
 
 .RowItems {
@@ -109,6 +133,13 @@
     width: 45px;
     height: 45px;
   }
+}
+
+.RowItemsFooter {
+  flex-grow: 1;
+  font-size: larger;
+  text-align: left;
+  margin: 0 4px;
 }
 
 .FlowArrow {
