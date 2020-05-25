@@ -47,7 +47,7 @@
     text-align: center;
 
     &RowCheck {
-      flex-basis: calc(28% - 20px);
+//      flex-basis: calc(28% - 20px);
       margin: 0 10px;
     }
 
@@ -59,6 +59,7 @@
       margin-top: 20px;
 
       &General {
+        font-size: medium;
         font-weight: bold;
 
         &Icon {
