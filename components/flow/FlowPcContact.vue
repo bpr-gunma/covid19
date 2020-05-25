@@ -2,7 +2,7 @@
   <div :class="$style.FlowComponent">
     <div :class="[$style.SubtleBox, $style.Box, $style.LargerText]">
       <div :class="$style.RowItems">
-        {{ $t('「新型コロナウイルス感染者」との濃厚接触が疑われる方') }}
+        {{ $t('「新型コロナウイルス感染者」との') }}
         <em :class="$style.FlowLine">
           {{ $t('濃厚接触') }}
         </em>
