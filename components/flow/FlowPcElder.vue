@@ -72,13 +72,14 @@
     }
 
     &RowThree {
-      flex-grow: 3;
+//      flex-grow: 1;
       display: flex;
       align-items: center;
       justify-content: center;
       margin-top: 20px;
 
       &General {
+        font-size: medium;
         font-weight: bold;
 
         &Icon {
@@ -113,11 +114,11 @@
     }
 
     &Condition {
-      flex-grow: 1;
+//      flex-grow: 1;
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-bottom: 10px;
+      margin: 10px 0;
       padding: 10px;
       position: relative;
       border: 2px solid $green-1 !important;
