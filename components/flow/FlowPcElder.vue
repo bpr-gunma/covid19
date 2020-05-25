@@ -28,10 +28,11 @@
           {{ $t('咳が出る') }}
         </div>
       </div>
+      <div :class="$style.RowItemsFooter">
+        {{ $t('いずれかに該当する場合にはすぐにご相談ください') }}
+      </div>
     </div>
-    <div :class="$style.RowItemsFooter">
-      {{ $t('いずれかに該当する場合にはすぐにご相談ください') }}
-    </div>
+
   </div>
 </template>
 
