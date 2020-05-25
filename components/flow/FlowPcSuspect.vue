@@ -1,143 +1,129 @@
 <template>
-  <div :class="$style.FlowComponent">
-    <div :class="[$style.SubtleBox, $style.Box]">
-      <div :class="$style.RowItems">
-        <div :class="$style.RowItemsHeader">
+  <div :class="$style.Flow">
+    <div :class="$style.FlowRow">
+      <div :class="$style.FlowRowRowThree">
+        <p :class="$style.FlowRowRowThreeGeneral">
           <img
-            :class="$style.RowItemsHeaderIcon"
+            :class="$style.FlowRowRowThreeGeneralIcon"
             src="/flow/sentiment_very_dissatisfied-24px.svg"
             aria-hidden="true"
             alt=" "
           />
-          {{ $t('　不安に思う方　') }}
-        </div>
+          {{ $t('不安に思う方') }}
+        </p>
       </div>
-      <div :class="$style.RowItems">
-        <div :class="$style.CheckBox">
-          <img
-            :class="$style.CheckBoxIcon"
-            src="/flow/check_circle-24px.svg"
-            aria-hidden="true"
-            alt=" "
-          />
-          {{ $t(' 　　感染の不安　　 ') }}
-        </div>
+    </div>
+    <div :class="[$style.FlowRow, $style.FlowRowRowCheck]">
+      <div :class="$style.FlowRowCondition">
+        <p>{{ $t('感染の不安') }}</p>
+        <img
+          :class="$style.FlowRowConditionIcon"
+          src="/flow/check_circle-24px.svg"
+          aria-hidden="true"
+          alt=" "
+        />
       </div>
     </div>
   </div>
 </template>
 
 <style module lang="scss">
-.FlowComponent {
+.Flow {
+  @include card-container();
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px 20px 0px 20px;
   color: $gray-2;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
 
-.CheckBox {
-  position: relative;
-  border: 2px solid $green-1;
-  border-radius: 4px;
-  margin: 8px 0;
-  padding: 10px;
-  max-width: 350px;
-  text-align: center;
-  font-weight: bold;
-  font-size: calc(0.875rem + ((1vw - 7.68px) * 0.8929));
+  &Row {
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 26%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
 
-  @include largerThan($large) {
-    font-size: 20px;
+    &RowCheck {
+      flex-basis: calc(28% - 20px);
+      margin: 0 10px;
+    }
+
+    &RowThree {
+      flex-grow: 3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 20px;
+
+      &General {
+        font-weight: bold;
+
+        &Icon {
+          display: block;
+          margin: auto;
+          width: 44px;
+          height: 44px;
+        }
+      }
+    }
+
+    &Condition {
+      flex-grow: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 10px;
+      padding: 10px;
+      position: relative;
+      border: 2px solid $green-1 !important;
+      border-radius: 4px;
+      background-color: $white;
+
+      p {
+        text-align: center;
+        display: inline-block;
+        margin: 0 !important; // FIXME: IEだとv-applicationのmarginが優先される
+        font-size: calc(0.875rem + ((1vw - 7.68px) * 0.8929));
+        font-weight: bold;
+
+        @include largerThan($large) {
+          font-size: 20px;
+        }
+      }
+
+      &Large {
+        font-size: calc(1rem + ((1vw - 7.68px) * 2.4876));
+
+        @include largerThan($large) {
+          font-size: 25px;
+        }
+      }
+
+      &Small {
+        font-size: 15px;
+      }
+
+      &Icon {
+        position: absolute;
+        left: -8px;
+        top: -8px;
+        width: 24px;
+        height: 24px;
+      }
+
+      &::before {
+        position: absolute;
+        left: -4px;
+        top: -4px;
+        width: 20px;
+        height: 20px;
+        background-color: white;
+        content: '';
+      }
+    }
   }
-
-  &Icon {
-    position: absolute;
-    left: -8px;
-    top: -8px;
-    width: 24px;
-    height: 24px;
-  }
-
-  &::before {
-    position: absolute;
-    left: -4px;
-    top: -4px;
-    width: 20px;
-    height: 20px;
-    background-color: white;
-    content: '';
-  }
-}
-
-.SubtleBox {
-  @include card-container();
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.5em 1em;
-}
-
-.ContentBox {
-  @include card-container();
-
-  font-size: larger;
-  text-align: left;
-  padding: 0.8em 1.2em;
-}
-
-.Box {
-  position: relative;
-  flex-grow: 1;
-  flex-shrink: 0;
-//  width: 100%;
-  flex-direction: row;
-}
-
-.RowItems {
-  flex-grow: 1;
-  text-align: center;
-  margin: 0 4px;
-
-  @include largerThan($large) {
-    margin: 0 2em;
-  }
-}
-
-.RowItemsHeader {
-//  color: $green-1;
-  font-size: medium;
-  font-weight: bold;
-
-  &Icon {
-    display: block;
-    margin: auto;
-    width: 45px;
-    height: 45px;
-  }
-}
-
-.FlowArrow {
-  position: absolute;
-  margin: 0 -20px;
-  z-index: 1;
-}
-
-.LargerText {
-  font-size: larger;
-  font-weight: bold;
-}
-
-.MediumText {
-  font-size: medium;
-  font-weight: bold;
-}
-
-.Center {
-  text-align: center;
-}
-
-.SmallerText {
-  font-size: smaller;
 }
 </style>

@@ -81,7 +81,6 @@
   flex-wrap: wrap;
   justify-content: center;
   padding: 20px 20px 0px 20px;
-//  height: 100%;
   color: $gray-2;
 
   &Row {
