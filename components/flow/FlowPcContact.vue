@@ -1,29 +1,12 @@
 <template>
   <div :class="$style.Flow">
-    <div :class="$style.FlowRow">
-      <div :class="$style.FlowRowRowThree">
-        <p :class="$style.FlowRowRowThreeGeneral">
-          <img
-            :class="$style.FlowRowRowThreeGeneralIcon"
-            src="/flow/sentiment_very_dissatisfied-24px.svg"
-            aria-hidden="true"
-            alt=" "
-          />
-          {{ $t('不安に思う方') }}
-        </p>
-      </div>
-    </div>
-    <div :class="[$style.FlowRow, $style.FlowRowRowCheck]">
-      <div :class="$style.FlowRowCondition">
-        <p>{{ $t('感染の不安') }}</p>
-        <img
-          :class="$style.FlowRowConditionIcon"
-          src="/flow/check_circle-24px.svg"
-          aria-hidden="true"
-          alt=" "
-        />
-      </div>
-    </div>
+    <h3 :class="$style.SectionTitle">
+      {{ $t('「新型コロナウイルス感染者」との') }}
+      <em :class="$style.FlowLine">
+        {{ $t('濃厚接触') }}
+      </em>
+      {{ $t('が疑われる方') }}
+    </h3>
   </div>
 </template>
 
@@ -38,91 +21,21 @@
   padding: 20px 20px 0px 20px;
   color: $gray-2;
 
-  &Row {
-    flex-grow: 1;
-    flex-shrink: 0;
-    flex-basis: 26%;
+  .SectionTitle {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
     text-align: center;
+    width: 100%;
 
-    &RowCheck {
-//      flex-basis: calc(28% - 20px);
-      margin: 0 10px;
-    }
+    .FlowLine {
+      border-bottom: 2px solid $green-1;
+      font-style: inherit;
 
-    &RowThree {
-      flex-grow: 3;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-top: 20px;
-
-      &General {
-        font-size: medium;
-        font-weight: bold;
-
-        &Icon {
-          display: block;
-          margin: auto;
-          width: 44px;
-          height: 44px;
-        }
-      }
-    }
-
-    &Condition {
-      flex-grow: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 10px;
-      padding: 10px;
-      position: relative;
-      border: 2px solid $green-1 !important;
-      border-radius: 4px;
-      background-color: $white;
-
-      p {
-        text-align: center;
-        display: inline-block;
-        margin: 0 !important; // FIXME: IEだとv-applicationのmarginが優先される
-        font-size: calc(0.875rem + ((1vw - 7.68px) * 0.8929));
-        font-weight: bold;
-
-        @include largerThan($large) {
-          font-size: 20px;
-        }
-      }
-
-      &Large {
-        font-size: calc(1rem + ((1vw - 7.68px) * 2.4876));
-
-        @include largerThan($large) {
-          font-size: 25px;
-        }
-      }
-
-      &Small {
-        font-size: 15px;
-      }
-
-      &Icon {
-        position: absolute;
-        left: -8px;
-        top: -8px;
-        width: 24px;
-        height: 24px;
-      }
-
-      &::before {
-        position: absolute;
-        left: -4px;
-        top: -4px;
-        width: 20px;
-        height: 20px;
-        background-color: white;
-        content: '';
+      @include largerThan($large) {
+        border-width: 4px;
       }
     }
   }
