@@ -102,8 +102,9 @@
     text-align: center;
 
     &RowThree {
-      flex-grow: 2;
+//      flex-grow: 2;
       display: flex;
+      flex-direction: row;
       align-items: center;
       justify-content: center;
       margin-top: 20px;
