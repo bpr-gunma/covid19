@@ -12,23 +12,6 @@
           {{ $t('一般の方') }}
         </p>
       </div>
-      <div>
-        <p>
-          <i18n path="{duration}続いている">
-            <template v-slot:duration>
-              <i18n
-                tag="span"
-                path="{day}日以上"
-                :class="$style.FlowRowEmphasis"
-              >
-                <template v-slot:day>
-                  <span :class="$style.FlowRowEmphasisDay">4</span>
-                </template>
-              </i18n>
-            </template>
-          </i18n>
-        </p>
-      </div>
     </div>
     <div :class="[$style.FlowRow, $style.FlowRowRowCheck]">
       <div :class="$style.FlowRowCondition">
@@ -109,23 +92,6 @@
             {{ $t('妊娠中の方') }}
           </li>
         </ul>
-      </div>
-      <div>
-        <p>
-          <i18n path="{duration}続いている">
-            <template v-slot:duration>
-              <i18n
-                tag="span"
-                path="{day}日程度"
-                :class="$style.FlowRowEmphasis"
-              >
-                <template v-slot:day>
-                  <span :class="$style.FlowRowEmphasisDay">2</span>
-                </template>
-              </i18n>
-            </template>
-          </i18n>
-        </p>
       </div>
     </div>
     <h3 :class="$style.SectionTitle">
@@ -284,15 +250,14 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    align-items: right;
-    justify-content: right;
+    align-items: center;
+    justify-content: flex-end;
     text-align: right;
     width: 100%;
-    margin-bottom: 1rem;
 
     strong {
       margin: 0 0.2em;
-      font-size: 28px;
+      font-size: 26px;
       font-weight: bold;
     }
   }
