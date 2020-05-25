@@ -16,6 +16,7 @@
           />
           {{ $t('高熱') }}
         </div>
+        <!--
         <div :class="$style.CheckBox">
           <img
             :class="$style.CheckBoxIcon"
@@ -33,7 +34,7 @@
             alt=" "
           />
           {{ $t('息苦しさ（呼吸困難）') }}
-        </div>
+        </div>-->
         <div :class="$style.CheckBox">
           <img
             :class="$style.CheckBoxIcon"
