@@ -2,7 +2,7 @@
   <div :class="$style.Flow">
     <div :class="$style.FlowRow">
       <div :class="$style.FlowRowRowThree">
-        <!-- <p :class="$style.FlowRowRowThreeGeneral">
+        <p :class="$style.FlowRowRowThreeGeneral">
           <img
             :class="$style.FlowRowRowThreeGeneralIcon"
             src="/flow/sentiment_very_dissatisfied-24px.svg"
@@ -10,7 +10,7 @@
             alt=" "
           />
           {{ $t('不安に思う方') }}
-        </p> -->
+        </p>
       </div>
     </div>
     <div :class="[$style.FlowRow, $style.FlowRowRowCheck]">
@@ -72,7 +72,7 @@
     }
 
     &Condition {
-      flex-grow: 1;
+//      flex-grow: 1;
       display: flex;
       align-items: center;
       justify-content: center;
