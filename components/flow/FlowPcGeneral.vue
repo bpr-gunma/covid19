@@ -3,7 +3,13 @@
     <div :class="[$style.SubtleBox, $style.Box]">
       <div :class="$style.RowItems">
         <div :class="$style.RowItemsHeader">
-          {{ $t('不安に思う方') }}
+          <img
+            :class="$style.RowItemsHeaderIcon"
+            src="/flow/accessibility-24px.svg"
+            aria-hidden="true"
+            alt=" "
+          />
+          {{ $t('一般の方') }}
         </div>
       </div>
       <div :class="$style.RowItems">
