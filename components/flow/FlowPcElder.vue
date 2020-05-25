@@ -27,10 +27,10 @@
           />
           {{ $t('咳が出る') }}
         </div>
-      </div>
+      </div><!--
       <div :class="$style.RowItemsFooter">
         {{ $t('いずれかに該当する場合にはすぐにご相談ください') }}
-      </div>
+      </div>-->
     </div>
   </div>
 </template>
@@ -49,7 +49,7 @@
   border-radius: 4px;
   margin: 8px 0;
   padding: 10px;
-  max-width: 350px;
+  max-width: 250px;
   text-align: center;
   font-weight: bold;
   font-size: calc(0.875rem + ((1vw - 7.68px) * 0.8929));

@@ -20,7 +20,7 @@
             aria-hidden="true"
             alt=" "
           />
-          {{ $t('　感染の不安　') }}
+          {{ $t('感染の不安') }}
         </div>
       </div>
     </div>
@@ -41,7 +41,7 @@
   border-radius: 4px;
   margin: 8px 0;
   padding: 10px;
-  max-width: 350px;
+  max-width: 250px;
   text-align: center;
   font-weight: bold;
   font-size: calc(0.875rem + ((1vw - 7.68px) * 0.8929));
