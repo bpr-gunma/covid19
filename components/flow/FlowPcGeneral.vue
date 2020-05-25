@@ -164,7 +164,7 @@
     flex-shrink: 0;
     flex-basis: 36%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     text-align: center;
 
     &RowCheck {
@@ -278,7 +278,7 @@
       }
     }
   }
-  
+
   .CheckBox {
     position: relative;
     border: 2px solid $green-1;
