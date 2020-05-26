@@ -61,7 +61,7 @@
       &General {
         font-size: medium;
         font-weight: bold: 0;
-        margin-bottom
+        margin-bottom: 0;
 
         &Icon {
           display: block;
