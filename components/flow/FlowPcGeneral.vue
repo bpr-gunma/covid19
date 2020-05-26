@@ -101,7 +101,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      margin: 10px 0;
+      margin: 0;
 
       &General {
         font-weight: bold;
@@ -120,7 +120,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-//      margin-bottom: 10px;
+      margin-bottom: 10px;
       padding: 10px;
       position: relative;
       border: 2px solid $green-1 !important;
