@@ -2,7 +2,7 @@
   <div :class="$style.Flow">
     <div :class="$style.FlowRow">
       <div :class="$style.FlowRowRowThree">
-        <p :class="$style.FlowRowRowThreeGeneral">
+        <div :class="$style.FlowRowRowThreeGeneral">
           <img
             :class="$style.FlowRowRowThreeGeneralIcon"
             src="/flow/sentiment_very_dissatisfied-24px.svg"
@@ -10,7 +10,7 @@
             alt=" "
           />
           {{ $t('不安に思う方') }}
-        </p>
+        </div>
       </div>
     </div>
     <div :class="[$style.FlowRow, $style.FlowRowRowCheck]">
@@ -59,7 +59,6 @@
 //      margin-top: 20px;
 
       &General {
-        display: inline;
         font-size: medium;
         font-weight: bold;
 
