@@ -2,19 +2,19 @@
   <div :class="$style.Flow">
     <div :class="$style.FlowRow">
       <div :class="$style.FlowRowRowThree">
-        <p :class="$style.FlowRowRowThreeGeneral">え
-          <!-- <img
+        <!-- <p :class="$style.FlowRowRowThreeGeneral">え
+          <img
             :class="$style.FlowRowRowThreeGeneralIcon"
             src="/flow/sentiment_very_dissatisfied-24px.svg"
             aria-hidden="true"
             alt=" "
           />
-          {{ $t('不安に思う方') }} -->
-        </p>
+          {{ $t('不安に思う方') }}
+        </p> -->
       </div>
     </div>
-    <!-- <div :class="[$style.FlowRow, $style.FlowRowRowCheck]">
-      <div :class="$style.FlowRowCondition">
+    <div :class="[$style.FlowRow, $style.FlowRowRowCheck]">お
+      <!-- <div :class="$style.FlowRowCondition">
         <p>{{ $t('感染の不安') }}</p>
         <img
           :class="$style.FlowRowConditionIcon"
