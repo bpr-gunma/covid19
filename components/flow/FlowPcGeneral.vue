@@ -84,7 +84,7 @@
   color: $gray-2;
 
   &Row {
-    flex-grow: 1;
+    flex-grow: 3;
     flex-shrink: 0;
     flex-basis: 15%;
     display: flex;
