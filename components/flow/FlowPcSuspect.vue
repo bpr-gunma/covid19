@@ -1,6 +1,6 @@
 <template>
-  <div :class="$style.Flow">あ
-    <div :class="$style.FlowRow">い
+  <div :class="$style.Flow">
+    <div :class="$style.FlowRow">
       <div :class="$style.FlowRowRowThree">う
         <!-- <p :class="$style.FlowRowRowThreeGeneral">
           <img
