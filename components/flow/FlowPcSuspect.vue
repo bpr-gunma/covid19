@@ -1,8 +1,8 @@
 <template>
   <div :class="$style.Flow">あ
     <div :class="$style.FlowRow">い
-      <!-- <div :class="$style.FlowRowRowThree">
-        <p :class="$style.FlowRowRowThreeGeneral">
+      <div :class="$style.FlowRowRowThree">う
+        <!-- <p :class="$style.FlowRowRowThreeGeneral">
           <img
             :class="$style.FlowRowRowThreeGeneralIcon"
             src="/flow/sentiment_very_dissatisfied-24px.svg"
@@ -10,10 +10,10 @@
             alt=" "
           />
           {{ $t('不安に思う方') }}
-        </p>
+        </p> -->
       </div>
     </div>
-    <div :class="[$style.FlowRow, $style.FlowRowRowCheck]">
+    <!-- <div :class="[$style.FlowRow, $style.FlowRowRowCheck]">
       <div :class="$style.FlowRowCondition">
         <p>{{ $t('感染の不安') }}</p>
         <img
