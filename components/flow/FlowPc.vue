@@ -172,14 +172,14 @@ export default {
 
   &Icon3 {
     position: absolute;
-    bottom: 55%;
+    bottom: 50%;
     right: -25px;
     z-index: 1;
   }
 
   &Icon4 {
     position: absolute;
-    bottom: 15%;
+    bottom: 20%;
     right: -25px;
     z-index: 1;
   }
