@@ -13,10 +13,10 @@
     </div>
     <ul :class="[$style.rectContainer, $style.double]">
       <li :class="$style.symptom">
-        {{ $t('強いだるさ') }}
+        {{ $t('発熱がある') }}
       </li>
       <li :class="$style.symptom">
-        {{ $t('息苦しさ') }}
+        {{ $t('咳が出る') }}
       </li>
     </ul>
 
