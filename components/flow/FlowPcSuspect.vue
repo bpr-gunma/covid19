@@ -35,7 +35,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 1em 1em 0 1em;
+  padding: 1em 1em 0.5em 1em;
   color: $gray-2;
 
   &Row {
@@ -56,7 +56,6 @@
       display: flex;
       align-items: center;
       justify-content: center;
-//      margin-top: 20px;
 
       &General {
         font-size: medium;

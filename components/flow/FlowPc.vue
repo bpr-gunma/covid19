@@ -165,21 +165,21 @@ export default {
 
   &Icon2 {
     position: absolute;
-    bottom: 35%;
+    bottom: 50%;
     right: -25px;
     z-index: 1;
   }
 
   &Icon3 {
     position: absolute;
-    bottom: 45%;
+    bottom: 55%;
     right: -25px;
     z-index: 1;
   }
 
   &Icon4 {
     position: absolute;
-    bottom: 25%;
+    bottom: 15%;
     right: -25px;
     z-index: 1;
   }
