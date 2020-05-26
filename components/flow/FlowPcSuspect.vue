@@ -60,7 +60,7 @@
 
       &General {
         font-size: medium;
-        font-weight: bold: 0;
+        font-weight: bold;
         margin-bottom: 0;
 
         &Icon {
