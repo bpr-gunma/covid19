@@ -2,7 +2,7 @@
   <div :class="$style.Flow">
     <div :class="$style.FlowRow">
       <div :class="$style.FlowRowRowThree">
-        <p :class="$style.FlowRowRowThreeGeneral">
+        <div :class="$style.FlowRowRowThreeGeneral">
           <img
             :class="$style.FlowRowRowThreeGeneralIcon"
             src="/flow/accessibility-24px.svg"
@@ -10,7 +10,7 @@
             alt=" "
           />
           {{ $t('一般の方') }}
-        </p>
+        </div>
       </div>
     </div>
     <div :class="[$style.FlowRow, $style.FlowRowRowCheck]">
@@ -101,9 +101,10 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      margin: 0;
+//      margin: 0;
 
       &General {
+        font-size: medium;
         font-weight: bold;
 
         &Icon {
