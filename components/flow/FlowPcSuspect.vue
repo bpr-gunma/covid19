@@ -2,7 +2,7 @@
   <div :class="$style.Flow">
     <div :class="$style.FlowRow">
       <div :class="$style.FlowRowRowThree">
-        <p :class="$style.FlowRowRowThreeGeneral">え
+        <p :class="$style.FlowRowRowThreeGeneral">
           <img
             :class="$style.FlowRowRowThreeGeneralIcon"
             src="/flow/sentiment_very_dissatisfied-24px.svg"
@@ -52,7 +52,7 @@
     }
 
     &RowThree {
-      flex-grow: 1;
+      flex-grow: 0;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -73,7 +73,7 @@
     }
 
     &Condition {
-      flex-grow: 1;
+      flex-grow: 0;
       display: flex;
       align-items: center;
       justify-content: center;
