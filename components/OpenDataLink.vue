@@ -1,4 +1,16 @@
 <template>
+  <a class="OpenDataLink" :href="url" target="_blank" rel="noopener noreferrer">
+    {{ $t('オープンデータを入手') }}
+    <v-icon
+      class="ExternalLinkIcon"
+      size="15"
+      :aria-label="this.$t('別タブで開く')"
+      role="img"
+      :aria-hidden="false"
+    >
+      mdi-open-in-new
+    </v-icon>
+  </a>
 </template>
 
 <style lang="scss">

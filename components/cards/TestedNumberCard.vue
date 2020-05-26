@@ -9,6 +9,8 @@
       :labels="inspectionsLabels"
       :unit="$t('件.tested')"
       :data-labels="inspectionsDataLabels"
+      :url="'/csv/02kensa.csv'"
+      :source="$t('オープンデータを入手')"
     >
       <!-- 件.tested = 検査数 -->
       <template v-if="$i18n.locale !== 'ja-basic'" v-slot:additionalNotes>
