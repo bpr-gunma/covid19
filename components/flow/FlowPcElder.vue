@@ -67,7 +67,7 @@
     text-align: center;
 
     &RowCheck {
-      flex-basis: calc(28% - 20px);
+//      flex-basis: calc(28% - 20px);
       margin: 0 10px;
     }
 
