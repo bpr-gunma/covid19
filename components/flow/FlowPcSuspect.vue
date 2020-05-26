@@ -13,8 +13,8 @@
         </p> -->
       </div>
     </div>
-    <div :class="[$style.FlowRow, $style.FlowRowRowCheck]">お
-      <!-- <div :class="$style.FlowRowCondition">
+    <div :class="[$style.FlowRow, $style.FlowRowRowCheck]">
+      <div :class="$style.FlowRowCondition">
         <p>{{ $t('感染の不安') }}</p>
         <img
           :class="$style.FlowRowConditionIcon"
@@ -22,7 +22,7 @@
           aria-hidden="true"
           alt=" "
         />
-      </div> -->
+      </div>
     </div>
   </div>
 </template>
