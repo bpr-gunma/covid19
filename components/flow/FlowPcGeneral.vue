@@ -61,7 +61,7 @@
       </div>
     </div>
     <h3 :class="$style.SectionTitle">
-      <i18n path="いずれかに該当する場合には {immediately} ご相談ください" tag="p">
+      <i18n path="いずれかに該当する場合には {immediately} ご相談ください。" tag="p">
         <template v-slot:immediately>
           <strong>
             {{ $t('すぐに') }}
