@@ -101,7 +101,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-top: 20px;
+      margin: 10px 0;
 
       &General {
         font-weight: bold;
