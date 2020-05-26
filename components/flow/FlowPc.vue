@@ -179,7 +179,7 @@ export default {
 
   &Icon4 {
     position: absolute;
-    bottom: 25%;
+    bottom: 26%;
     right: -25px;
     z-index: 1;
   }
