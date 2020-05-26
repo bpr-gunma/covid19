@@ -86,7 +86,7 @@
   &Row {
     flex-grow: 1;
     flex-shrink: 0;
-    flex-basis: 15%;
+    flex-basis: 26%;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -97,11 +97,11 @@
     }
 
     &RowThree {
-//      flex-grow: 1;
+      flex-grow: 3;
       display: flex;
       align-items: center;
       justify-content: center;
-//      margin-top: 20px;
+      margin-top: 20px;
 
       &General {
         font-weight: bold;
@@ -116,11 +116,11 @@
     }
 
     &Condition {
-//      flex-grow: 1;
+      flex-grow: 1;
       display: flex;
       align-items: center;
       justify-content: center;
-      margin: 10px 0;
+      margin-bottom: 10px;
       padding: 10px;
       position: relative;
       border: 2px solid $green-1 !important;
