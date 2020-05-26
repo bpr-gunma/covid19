@@ -84,7 +84,7 @@
   color: $gray-2;
 
   &Row {
-    flex-grow: 3;
+    flex-grow: 1;
     flex-shrink: 0;
     flex-basis: 15%;
     display: flex;
@@ -97,7 +97,7 @@
     }
 
     &RowThree {
-      flex-grow: 3;
+      flex-grow: 1;
       display: flex;
       align-items: center;
       justify-content: center;
