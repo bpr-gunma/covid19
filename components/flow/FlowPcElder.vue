@@ -72,7 +72,7 @@
     }
 
     &RowThree {
-//      flex-grow: 1;
+      flex-grow: 1;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -114,11 +114,11 @@
     }
 
     &Condition {
-//      flex-grow: 1;
+      flex-grow: 1;
       display: flex;
       align-items: center;
       justify-content: center;
-      margin: 10px 0;
+      margin-bottom: 10px;
       padding: 10px;
       position: relative;
       border: 2px solid $green-1 !important;
