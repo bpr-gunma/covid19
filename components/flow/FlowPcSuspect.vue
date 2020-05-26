@@ -1,7 +1,7 @@
 <template>
   <div :class="$style.Flow">あ
-    <!-- <div :class="$style.FlowRow">い
-      <div :class="$style.FlowRowRowThree">
+    <div :class="$style.FlowRow">い
+      <!-- <div :class="$style.FlowRowRowThree">
         <p :class="$style.FlowRowRowThreeGeneral">
           <img
             :class="$style.FlowRowRowThreeGeneralIcon"
@@ -22,8 +22,8 @@
           aria-hidden="true"
           alt=" "
         />
-      </div>
-    </div> -->
+      </div> -->
+    </div>
   </div>
 </template>
 
