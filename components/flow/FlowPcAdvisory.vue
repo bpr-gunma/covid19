@@ -3,12 +3,12 @@
     <div :class="$style.AdvisoryContainer">
       <div :class="$style.AdvisoryContents">
         <div>
-          <span :class="$style.AdvisoryContentsTitle">{{
-            $t('新型コロナ感染症')<br />
-          }}</span>
-          <span :class="$style.AdvisoryContentsTitle">{{
-            $t('コールセンター')
-          }}</span>
+          <span :class="$style.AdvisoryContentsTitle">
+            {{ $t('新型コロナ感染症') }}
+          </span><br />
+          <span :class="$style.AdvisoryContentsTitle">
+            {{ $t('コールセンター') }}
+          </span>
         </div>
       </div>
       <div :class="$style.AdvisoryContents">
