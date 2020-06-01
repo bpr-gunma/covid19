@@ -159,6 +159,7 @@ export default {
   &Icon1 {
     position: absolute;
     bottom: 14%;
+    transform: rotateZ(-30deg);
     right: -25px;
     z-index: 1;
   }
@@ -167,6 +168,7 @@ export default {
     position: absolute;
     bottom: 50%;
     right: -25px;
+    transform: rotateZ(-30deg);
     z-index: 1;
   }
 
@@ -174,6 +176,7 @@ export default {
     position: absolute;
     bottom: 50%;
     right: -25px;
+    transform: rotateZ(-30deg);
     z-index: 1;
   }
 
@@ -181,6 +184,7 @@ export default {
     position: absolute;
     bottom: 26%;
     right: -25px;
+    transform: rotateZ(-30deg);
     z-index: 1;
   }
 }

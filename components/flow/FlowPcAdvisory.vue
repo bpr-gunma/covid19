@@ -4,7 +4,8 @@
       <div :class="$style.AdvisoryContents">
         <div>
           <span :class="$style.AdvisoryContentsTitle">{{
-            $t('新型コロナ感染症コールセンター')
+            $t('新型コロナ感染症')<br />
+            $t('コールセンター')
           }}</span>
         </div>
       </div>
@@ -131,7 +132,7 @@
   color: $gray-2;
 
   &Container {
-    background-color: $gray-5;
+    background-color: $gray-4;
     border-radius: 4px;
     height: 100%;
     padding: 20px 15px 20px 15px;
