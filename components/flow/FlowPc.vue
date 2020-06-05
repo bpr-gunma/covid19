@@ -2,6 +2,8 @@
   <div :class="$style.FlowCard">
     <h3>{{ $t('新型コロナウイルス感染症にかかる相談窓口について') }}</h3>
     <div :class="[$style.Outer, $style.OuterUpper]">
+      <div>相談の目安</div>
+      <div>相談窓口</div>
       <div :class="[$style.CardBlock, $style.Contact]">
         <div :class="[$style.CardBlockInner]">
           <flow-pc-contact />
@@ -79,8 +81,8 @@ export default {
     grid-gap: $grid-gap;
     grid-template-columns: 70% 30%;
     -ms-grid-columns: 70% 12px 30%;
-    grid-template-rows: repeat(4, auto);
-    -ms-grid-rows: auto 12px auto 12px auto 12px auto;
+    grid-template-rows: repeat(5, auto);
+    -ms-grid-rows: auto 12px auto 12px auto 12px auto 12px auto;
 //    grid-template-rows: auto 1fr;
 //    -ms-grid-rows: auto 12px 1fr;
     // HACK: IEでGridの順番がうまくいかない対応
@@ -89,25 +91,34 @@ export default {
       -ms-grid-column: 1;
       -ms-grid-row: 1;
     }
-
+    
     & > *:nth-child(2) {
-      -ms-grid-column: 1;
-      -ms-grid-row: 3;
+      -ms-grid-column: 3;
+      -ms-grid-row: 1;
     }
     
     & > *:nth-child(3) {
       -ms-grid-column: 1;
+      -ms-grid-row: 3;
+    }
+    & > *:nth-child(4) {
+      -ms-grid-column: 1;
       -ms-grid-row: 5;
     }
     
-    & > *:nth-child(4) {
+    & > *:nth-child(5) {
       -ms-grid-column: 1;
       -ms-grid-row: 7;
+    }
+    
+    & > *:nth-child(6) {
+      -ms-grid-column: 1;
+      -ms-grid-row: 9;
     }
 
     & > *:nth-child(5) {
       -ms-grid-column: 3;
-      -ms-grid-row: 1;
+      -ms-grid-row: 3;
       -ms-grid-row-span: 7;
     }
   }
