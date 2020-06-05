@@ -54,12 +54,12 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: center;
   padding: 1em 1em 0 1em;
   color: $gray-2;
 
   &Row {
-    flex-grow: 0;
+    flex-grow: 1;
     flex-shrink: 0;
     flex-basis: 15%;
     display: flex;
@@ -90,13 +90,13 @@
       }
 
       &CareTargetList {
-        margin: 16px 0;
+        margin: 10px 0;
         text-align: left;
         list-style: none;
 
         &Item {
           font-weight: bold;
-          display: flex;
+//          display: flex;
           align-items: left;
 
           &Icon {
