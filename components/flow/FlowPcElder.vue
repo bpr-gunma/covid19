@@ -90,7 +90,7 @@
       }
 
       &CareTargetList {
-        margin: 10px 0;
+        margin: 5px 0;
         text-align: left;
         list-style: none;
 
