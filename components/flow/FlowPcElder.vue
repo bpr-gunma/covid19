@@ -92,7 +92,7 @@
       }
 
       &CareTargetList {
-        margin: 5px 0;
+        margin: 0;
         text-align: left;
         list-style: none;
 
@@ -117,7 +117,7 @@
     &Condition {
       flex-grow: 0;
       display: flex;
-      align-items: center;
+//      align-items: center;
       justify-content: center;
       margin-bottom: 10px;
       padding: 10px;
