@@ -65,7 +65,7 @@
         </div>
       </div>
       <div :class="$style.AdvisoryCenter">
-        <div :class="$style.AdvisoryCenterTitle">前橋市、高崎市に在住の方は保健所へ相談</div>
+        <div :class="$style.AdvisoryCenterTitle">前橋市、高崎市に在住の方は<br />居住地の保健所へ相談</div>
         <div :class="$style.AdvisoryCenterContents">
           <div :class="$style.AdvisoryCenterContentsHelth">前橋市保健所</div>
           <div :class="$style.AdvisoryCenterContentsTime">【毎日】午前8時30分～午後9時</div>
@@ -80,7 +80,7 @@
               027-220-1151
             </a>
           </div>
-          <div :class="$style.AdvisoryCenterContentsTime">【夜間】</div>
+          <div :class="$style.AdvisoryCenterContentsTime">【上記以外の時間で緊急の場合】</div>
           <div :class="$style.AdvisoryCenterContentsTel">
             <a :class="$style.AdvisoryCenterContentsTelNumber" href="tel:0272241111">
               <img
@@ -105,7 +105,7 @@
               027-381-6112
             </a>
           </div>
-          <div :class="$style.AdvisoryCenterContentsTime">【夜間、土、日、祝日】</div>
+          <div :class="$style.AdvisoryCenterContentsTime">【上記以外の時間で緊急の場合】</div>
           <div :class="$style.AdvisoryCenterContentsTel">
             <a :class="$style.AdvisoryCenterContentsTelNumber" href="tel:0273816123">
               <img
@@ -132,7 +132,8 @@
   color: $gray-2;
 
   &Container {
-    background-color: #e6e6fa;
+    background-color: $green-4;
+//    background-color: #e6e6fa;
     border-radius: 4px;
     height: 100%;
     padding: 20px 15px 20px 15px;
@@ -248,7 +249,7 @@
     &Title {
       background: $green-1;
       padding: 4px 10px;
-      text-align: left;
+      text-align: center;
       color: $white;
       font-weight: bold;
       letter-spacing: 0.05em;
