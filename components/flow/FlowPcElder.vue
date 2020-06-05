@@ -68,8 +68,6 @@
 
     &RowCheck {
       flex-basis: calc(28% - 20px);
-      align-items: center;
-      justify-content: center;
       margin: 0 10px;
     }
 
@@ -92,13 +90,13 @@
       }
 
       &CareTargetList {
-        margin: 0;
+        margin: 16px 0;
         text-align: left;
         list-style: none;
 
         &Item {
           font-weight: bold;
-//          display: flex;
+          display: flex;
           align-items: left;
 
           &Icon {
@@ -115,9 +113,9 @@
     }
 
     &Condition {
-      flex-grow: 0;
+      flex-grow: 1;
       display: flex;
-//      align-items: center;
+      align-items: center;
       justify-content: center;
       margin-bottom: 10px;
       padding: 10px;
