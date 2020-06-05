@@ -2,8 +2,12 @@
   <div :class="$style.FlowCard">
     <h3>{{ $t('新型コロナウイルス感染症にかかる相談窓口について') }}</h3>
     <div :class="[$style.Outer, $style.OuterUpper]">
-      <div :class="$style.CardBlockInner">相談の目安</div>
-      <div :class="$style.CardBlockInner">相談窓口</div>
+      <div :class="$style.CardBlock">
+        <div :class="$style.CardBlockInner">相談の目安</div>
+      </div>
+      <div :class="$style.CardBlock">
+        <div :class="$style.CardBlockInner">相談窓口</div>
+      </div>
       <div :class="[$style.CardBlock, $style.Contact]">
         <div :class="[$style.CardBlockInner]">
           <flow-pc-contact />
