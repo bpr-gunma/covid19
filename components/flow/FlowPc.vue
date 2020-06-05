@@ -2,6 +2,8 @@
   <div :class="$style.FlowCard">
     <h3>{{ $t('新型コロナウイルス感染症にかかる相談窓口について') }}</h3>
     <div :class="[$style.Outer, $style.OuterUpper]">
+      <div :class="$style.Content1">相談の目安</div>
+      <div :class="$style.Content2">相談先</div>
       <div :class="[$style.CardBlock, $style.Contact]">
         <div :class="[$style.CardBlockInner]">
           <flow-pc-contact />
@@ -87,25 +89,35 @@ export default {
     // https://github.com/tokyo-metropolitan-gov/covid19/issues/1313
     & > *:nth-child(1) {
       -ms-grid-column: 1;
-      -ms-grid-row: 3;
+      -ms-grid-row: 1;
     }
 
     & > *:nth-child(2) {
+      -ms-grid-column: 3;
+      -ms-grid-row: 1;
+    }
+
+    & > *:nth-child(3) {
+      -ms-grid-column: 1;
+      -ms-grid-row: 3;
+    }
+
+    & > *:nth-child(4) {
       -ms-grid-column: 1;
       -ms-grid-row: 5;
     }
     
-    & > *:nth-child(3) {
+    & > *:nth-child(5) {
       -ms-grid-column: 1;
       -ms-grid-row: 7;
     }
     
-    & > *:nth-child(4) {
+    & > *:nth-child(6) {
       -ms-grid-column: 1;
       -ms-grid-row: 9;
     }
 
-    & > *:nth-child(5) {
+    & > *:nth-child(7) {
       -ms-grid-column: 3;
       -ms-grid-row: 3;
       -ms-grid-row-span: 7;
@@ -159,6 +171,16 @@ export default {
     right: -25px;
     z-index: 1;
   }
+}
+
+.Content1 {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.Content2 {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
 }
 
 .Contact {
