@@ -141,13 +141,12 @@ export default {
 
 .ContentBlock {
     background: $green-3;
-    padding: 4px 10px;
+    padding: 10px 10px;
     text-align: center;
     font-weight: bold;
-//    border: solid 3px $green-3;
     border-radius: 4px;
     color: $white;
-    font-size: 1em;
+    font-size: 1.5em;
 }
 
 .CardBlock {

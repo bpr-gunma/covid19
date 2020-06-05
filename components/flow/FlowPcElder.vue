@@ -68,6 +68,7 @@
 
     &RowCheck {
       flex-basis: calc(28% - 20px);
+      align-items: center;
       margin: 0 10px;
     }
 
