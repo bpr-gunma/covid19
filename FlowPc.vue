@@ -3,7 +3,8 @@
     <h3>{{ $t('新型コロナウイルス感染症にかかる相談窓口について') }}</h3>
     <div :class="[$style.Outer, $style.OuterUpper]">
       <div :class="[$style.CardBlock, $style.Contact]">
-        <div>相談の目安</div>
+        <div>相談</div>
+        <div>相談窓口</div>
         <div :class="[$style.CardBlockInner]">
           <flow-pc-contact />
         </div>
@@ -24,7 +25,6 @@
         </div>
       </div>
       <div :class="$style.Advisory"
-        <div>相談窓口</div>
         <flow-pc-advisory />
       </div>
     </div>
