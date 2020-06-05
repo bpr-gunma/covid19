@@ -36,7 +36,7 @@
       </div>
     </div>
     <h3 :class="$style.SectionTitle">
-      <i18n path="いずれかに症状や風邪の様な症状があれば {immediately} ご相談ください。" tag="p">
+      <i18n path="いずれかの症状や風邪の様な症状があれば {immediately} ご相談ください。" tag="p">
         <template v-slot:immediately>
           <strong>
             {{ $t('すぐに') }}
@@ -72,7 +72,7 @@
     }
 
     &RowThree {
-      flex-grow: 1;
+      flex-grow: 0;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -92,7 +92,6 @@
       &CareTargetList {
         margin: 16px 0;
         text-align: left;
-        justify-content: center;
         list-style: none;
 
         &Item {

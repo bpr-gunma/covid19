@@ -79,35 +79,35 @@ export default {
     grid-gap: $grid-gap;
     grid-template-columns: 70% 30%;
     -ms-grid-columns: 70% 12px 30%;
-    grid-template-rows: repeat(4, auto);
-    -ms-grid-rows: auto 12px auto 12px auto 12px auto;
+    grid-template-rows: repeat(5, auto);
+    -ms-grid-rows: auto 12px auto 12px auto 12px auto 12px auto;
 //    grid-template-rows: auto 1fr;
 //    -ms-grid-rows: auto 12px 1fr;
     // HACK: IEでGridの順番がうまくいかない対応
     // https://github.com/tokyo-metropolitan-gov/covid19/issues/1313
     & > *:nth-child(1) {
       -ms-grid-column: 1;
-      -ms-grid-row: 1;
+      -ms-grid-row: 3;
     }
 
     & > *:nth-child(2) {
       -ms-grid-column: 1;
-      -ms-grid-row: 3;
+      -ms-grid-row: 5;
     }
     
     & > *:nth-child(3) {
       -ms-grid-column: 1;
-      -ms-grid-row: 5;
+      -ms-grid-row: 7;
     }
     
     & > *:nth-child(4) {
       -ms-grid-column: 1;
-      -ms-grid-row: 7;
+      -ms-grid-row: 9;
     }
 
     & > *:nth-child(5) {
       -ms-grid-column: 3;
-      -ms-grid-row: 1;
+      -ms-grid-row: 3;
       -ms-grid-row-span: 7;
     }
   }
@@ -163,27 +163,27 @@ export default {
 
 .Contact {
   grid-column: 1 / 2;
-  grid-row: 1 / 2;
+  grid-row: 2 / 3;
 }
 
 .Elder {
   grid-column: 1 / 2;
-  grid-row: 2 / 3;
+  grid-row: 3 / 4;
 }
 
 .General {
   grid-column: 1 / 2;
-  grid-row: 3 / 4;
+  grid-row: 4 / 5;
 }
 
 .Suspect {
   grid-column: 1 / 2;
-  grid-row: 4 / 5;
+  grid-row: 5 / 6;
 }
 
 .Advisory {
   grid-column: 2 / 3;
-  grid-row: 1 / 5;
+  grid-row: 2 / 6;
   position: relative;
 }
 </style>
