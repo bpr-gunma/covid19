@@ -7,7 +7,7 @@
             {{ $t('ご高齢な方') }}
           </li>
           <li :class="$style.FlowRowRowThreeCareTargetListItem">
-            {{ $t('基礎疾患のある方') }}
+            {{ $t('基礎疾患のある方（透析を受けている方、免疫抑制剤や抗がん剤を用いている方を含む）') }}
           </li>
           <li :class="$style.FlowRowRowThreeCareTargetListItem">
             {{ $t('妊娠中の方') }}
@@ -36,7 +36,7 @@
       </div>
     </div>
     <h3 :class="$style.SectionTitle">
-      <i18n path="いずれかに該当する場合には {immediately} ご相談ください。" tag="p">
+      <i18n path="いずれかに症状や風邪の様な症状があれば {immediately} ご相談ください。" tag="p">
         <template v-slot:immediately>
           <strong>
             {{ $t('すぐに') }}
@@ -97,7 +97,7 @@
         &Item {
           font-weight: bold;
           display: flex;
-          align-items: center;
+          align-items: left;
 
           &Icon {
             display: inline-block;
