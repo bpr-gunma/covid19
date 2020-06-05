@@ -266,7 +266,8 @@
       
       &Time {
         text-align: left;
-        font-size: 1em;
+        font-weight: bold;
+//        font-size: 1em;
       }
 
       &Tel {
