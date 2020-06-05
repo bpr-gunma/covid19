@@ -5,24 +5,48 @@
       <div :class="[$style.CardBlock, $style.Contact]">
         <div :class="[$style.CardBlockInner]">
           <flow-pc-contact />
+          <img
+            :class="$style.CardBlockIcon1"
+            src="/flow/flow_arrow.svg"
+            aria-hidden="true"
+            alt=" "
+          />
         </div>
       </div>
       <div :class="[$style.CardBlock, $style.Elder]">
         <div :class="[$style.CardBlockInner]">
           <flow-pc-elder />
+          <img
+            :class="$style.CardBlockIcon2"
+            src="/flow/flow_arrow.svg"
+            aria-hidden="true"
+            alt=" "
+          />
         </div>
       </div>
       <div :class="[$style.CardBlock, $style.General]">
         <div :class="[$style.CardBlockInner]">
           <flow-pc-general />
+          <img
+            :class="$style.CardBlockIcon3"
+            src="/flow/flow_arrow.svg"
+            aria-hidden="true"
+            alt=" "
+          />
         </div>
       </div>
       <div :class="[$style.CardBlock, $style.Suspect]">
         <div :class="[$style.CardBlockInner]">
           <flow-pc-suspect />
+          <img
+            :class="$style.CardBlockIcon4"
+            src="/flow/flow_arrow.svg"
+            aria-hidden="true"
+            alt=" "
+          />
         </div>
       </div>
-      <div :class="$style.Advisory"
+      <div :class="$style.Advisory">
         <flow-pc-advisory />
       </div>
     </div>
@@ -135,7 +159,6 @@ export default {
   &Icon1 {
     position: absolute;
     bottom: 14%;
-    transform: rotateZ(30deg);
     right: -25px;
     z-index: 1;
   }
@@ -145,14 +168,12 @@ export default {
     bottom: 50%;
     right: -25px;
     z-index: 1;
-    transform: rotateZ(30deg);
   }
 
   &Icon3 {
     position: absolute;
     bottom: 50%;
     right: -25px;
-    transform: rotateZ(-30deg);
     z-index: 1;
   }
 
@@ -160,7 +181,6 @@ export default {
     position: absolute;
     bottom: 26%;
     right: -25px;
-    transform: rotateZ(-30deg);
     z-index: 1;
   }
 }
