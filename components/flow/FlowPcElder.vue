@@ -92,7 +92,7 @@
       &CareTargetList {
         margin: 16px 0;
         text-align: left;
-        align-items: center;
+        justify-content: center;
         list-style: none;
 
         &Item {
@@ -108,7 +108,7 @@
         }
 
         &Item + &Item {
-          margin-top: 5px;
+          margin-top: 10px;
         }
       }
     }
