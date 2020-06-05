@@ -54,12 +54,12 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
   padding: 1em 1em 0 1em;
   color: $gray-2;
 
   &Row {
-    flex-grow: 1;
+    flex-grow: 0;
     flex-shrink: 0;
     flex-basis: 15%;
     display: flex;
