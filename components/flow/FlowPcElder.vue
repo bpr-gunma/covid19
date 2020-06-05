@@ -107,7 +107,7 @@
         }
 
         &Item + &Item {
-          margin-top: 14px;
+          margin-top: 5px;
         }
       }
     }
