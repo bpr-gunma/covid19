@@ -132,8 +132,7 @@
   color: $gray-2;
 
   &Container {
-    background-color: $green-4;
-//    background-color: #e6e6fa;
+    background-color: #e6e6fa;
     border-radius: 4px;
     height: 100%;
     padding: 20px 15px 20px 15px;
@@ -267,7 +266,7 @@
       
       &Time {
         text-align: left;
-        font-size: 0.8em;
+        font-size: 1em;
       }
 
       &Tel {
