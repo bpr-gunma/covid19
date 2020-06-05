@@ -5,45 +5,21 @@
       <div :class="[$style.CardBlock, $style.Contact]">
         <div :class="[$style.CardBlockInner]">
           <flow-pc-contact />
-          <img
-            :class="$style.CardBlockIcon1"
-            src="/flow/flow_arrow.svg"
-            aria-hidden="true"
-            alt=" "
-          />
         </div>
       </div>
       <div :class="[$style.CardBlock, $style.Elder]">
         <div :class="[$style.CardBlockInner]">
           <flow-pc-elder />
-          <img
-            :class="$style.CardBlockIcon2"
-            src="/flow/flow_arrow.svg"
-            aria-hidden="true"
-            alt=" "
-          />
         </div>
       </div>
       <div :class="[$style.CardBlock, $style.General]">
         <div :class="[$style.CardBlockInner]">
           <flow-pc-general />
-          <img
-            :class="$style.CardBlockIcon3"
-            src="/flow/flow_arrow.svg"
-            aria-hidden="true"
-            alt=" "
-          />
         </div>
       </div>
       <div :class="[$style.CardBlock, $style.Suspect]">
         <div :class="[$style.CardBlockInner]">
           <flow-pc-suspect />
-          <img
-            :class="$style.CardBlockIcon4"
-            src="/flow/flow_arrow.svg"
-            aria-hidden="true"
-            alt=" "
-          />
         </div>
       </div>
       <div :class="$style.Advisory">

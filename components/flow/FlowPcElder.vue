@@ -92,6 +92,7 @@
       &CareTargetList {
         margin: 16px 0;
         text-align: left;
+        align-items: center;
         list-style: none;
 
         &Item {
