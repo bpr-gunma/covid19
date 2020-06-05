@@ -2,8 +2,8 @@
   <div :class="$style.FlowCard">
     <h3>{{ $t('新型コロナウイルス感染症にかかる相談窓口について') }}</h3>
     <div :class="[$style.Outer, $style.OuterUpper]">
-      <div :class="$style.Content1">相談の目安</div>
-      <div :class="$style.Content2">相談先</div>
+      <div :class="[$style.ContentBlock, $style.Content1]">相談の目安</div>
+      <div :class="[$style.ContentBlock, $style.Content2]">相談先</div>
       <div :class="[$style.CardBlock, $style.Contact]">
         <div :class="[$style.CardBlockInner]">
           <flow-pc-contact />
@@ -137,6 +137,16 @@ export default {
   &Large {
     @include font-size(28);
   }
+}
+
+.ContentBlock {
+    background: $green-2;
+    padding: 4px 10px;
+    text-align: center;
+    font-weight: bold;
+    border: solid 3px $green-1;
+    border-radius: 8px;
+    color: $white;
 }
 
 .CardBlock {
