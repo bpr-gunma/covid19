@@ -14,7 +14,7 @@
       <div :class="$style.AdvisoryContents">
         <div class="pt-4">
           <div :class="$style.AdvisoryContentsTitle2">
-            {{ $t('午前9時から午後9時')) }}
+            {{ $t('午前9時から午後9時') }}
           </div>
         </div>
         <div
@@ -65,7 +65,7 @@
         </div>
       </div>
       <div :class="$style.AdvisoryCenter">
-        <div :class="$style.AdvisoryCenterTitle">前橋市、高崎市に在住の方は居住地の保健所へ相談</div>
+        <div :class="$style.AdvisoryCenterTitle">前橋市、高崎市に在住の方は保健所へ相談</div>
         <div :class="$style.AdvisoryCenterContents">
           <div :class="$style.AdvisoryCenterContentsHelth">前橋市保健所</div>
           <div :class="$style.AdvisoryCenterContentsTime">【毎日】午前8時30分～午後9時</div>
@@ -80,7 +80,7 @@
               027-220-1151
             </a>
           </div>
-          <div :class="$style.AdvisoryCenterContentsTime">【上記以外の時間で緊急の場合】</div>
+          <div :class="$style.AdvisoryCenterContentsTime">【夜間】</div>
           <div :class="$style.AdvisoryCenterContentsTel">
             <a :class="$style.AdvisoryCenterContentsTelNumber" href="tel:0272241111">
               <img
@@ -105,7 +105,7 @@
               027-381-6112
             </a>
           </div>
-          <div :class="$style.AdvisoryCenterContentsTime">【上記以外の時間で緊急の場合】</div>
+          <div :class="$style.AdvisoryCenterContentsTime">【夜間、土、日、祝日】</div>
           <div :class="$style.AdvisoryCenterContentsTel">
             <a :class="$style.AdvisoryCenterContentsTelNumber" href="tel:0273816123">
               <img
