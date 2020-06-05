@@ -68,7 +68,6 @@
 
     &RowCheck {
       flex-basis: calc(28% - 20px);
-      justify-content: center;
       margin: 0 10px;
     }
 
@@ -114,7 +113,7 @@
     }
 
     &Condition {
-      flex-grow: 1;
+      flex-grow: 0;
       display: flex;
       align-items: center;
       justify-content: center;
