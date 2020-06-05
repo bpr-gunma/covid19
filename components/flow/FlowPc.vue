@@ -81,7 +81,7 @@ export default {
     grid-gap: $grid-gap;
     grid-template-columns: 70% 30%;
     -ms-grid-columns: 70% 12px 30%;
-    grid-template-rows: repeat(5), auto);
+    grid-template-rows: repeat(5, auto);
     -ms-grid-rows: auto 12px auto 12px auto 12px auto 12px auto;
 //    grid-template-rows: auto 1fr;
 //    -ms-grid-rows: auto 12px 1fr;
