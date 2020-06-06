@@ -77,7 +77,7 @@
       flex-grow: 0;
       display: flex;
       align-items: center;
-      padding: 0.5em 1em 0 0.5em;
+      padding: 0 1em 0 0.5em;
       justify-content: center;
 
       &General {
