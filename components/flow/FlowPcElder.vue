@@ -55,6 +55,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+//  padding: 1em 1em 0 1em;
   color: $gray-2;
 
   &Row {
@@ -67,6 +68,8 @@
 
     &RowCheck {
       flex-basis: calc(28% - 20px);
+      align-items: center;
+//      padding: 1em 1em 0 1em;
       margin: 0 10px;
     }
 
@@ -74,7 +77,7 @@
       flex-grow: 0;
       display: flex;
       align-items: center;
-      padding: 1em 1em 0 0;
+      padding: 0.5em 1em 0 0;
       justify-content: center;
 
       &General {
