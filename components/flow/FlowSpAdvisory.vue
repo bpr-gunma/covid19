@@ -1,7 +1,8 @@
 <template>
   <div :class="$style.container">
     <h4 id="consult" :class="[$style.heading, $style.fzXLarge]">
-      {{ $t('新型コロナ感染症コールセンター') }}
+      {{ $t('新型コロナ感染症') }}<br />
+      {{ $t('コールセンター') }}
     </h4>
     <dl>
       <div>
