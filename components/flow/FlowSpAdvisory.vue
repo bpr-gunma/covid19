@@ -8,7 +8,7 @@
         <dt>
           <ul :class="[$style.callcenter]">
             <li>
-              <span :class="[$style.fzMedium, $style.break, $style.mb7]">
+              <span :class="[$style.fzLarge, $style.break, $style.mb7]">
                 {{ $t('午前9時から午後9時') }}
               </span>
             </li>
@@ -36,7 +36,7 @@
         <dt>
           <ul :class="[$style.callcenter]">
             <li>
-              <span :class="[$style.fzMedium, $style.break, $style.mb7]">
+              <span :class="[$style.fzLarge, $style.break, $style.mb7]">
                 {{ $t('上記以外の時間') }}
               </span>
             </li>
@@ -159,7 +159,7 @@ export default {
 
   .title {
     background: $green-1;
-    padding: px2vw(7) px2vw(5);
+    padding: px2vw(7) px2vw(6);
     text-align: left;
     color: $white;
     font-weight: bold;
