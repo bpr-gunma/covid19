@@ -70,7 +70,7 @@
       flex-basis: calc(28% - 20px);
       justify-content: center;
       padding: 1em 1em 0 1em;
-//      margin: 0 10px;
+      margin: 0 10px;
     }
 
     &RowThree {
