@@ -9,9 +9,8 @@
           <ul :class="[$style.callcenter]">
             <li>
               <span :class="[$style.fzMedium, $style.break, $style.mb7]">
-                {{ $t('毎日（土日祝含む）') }}
+                {{ $t('午前9時から午後9時') }}
               </span>
-              {{ $t('午前9時から午後9時') }}<br />
             </li>
           </ul>
         </dt>
@@ -38,9 +37,8 @@
           <ul :class="[$style.callcenter]">
             <li>
               <span :class="[$style.fzMedium, $style.break, $style.mb7]">
-                {{ $t('夜間（土日祝含む）') }}
+                {{ $t('上記以外の時間') }}
               </span>
-              {{ $t('午後9時から翌朝午前9時') }}<br />
             </li>
           </ul>
         </dt>
@@ -63,7 +61,7 @@
       </div>
     </dl>
     <div :class="$style.center">
-      <div :class="[$style.title, $style.fzLarge]">前橋市、高崎市に在住の方は保健所へ相談</div>
+      <div :class="[$style.title, $style.fzLarge]">前橋市、高崎市に在住の方は居住地の保健所へ相談</div>
       <div :class="$style.contents">
         <dl>
           <dt :class="[$style.helth, $style.fzLarge]">前橋市保健所</dt>
@@ -78,7 +76,7 @@
                   <a href="tel:0272201151">027-220-1151</a>
                 </div>
               </li>
-              <li :class="[$style.fzRegular]">【夜間】</li>
+              <li :class="[$style.fzRegular]">【上記以外の時間で緊急の場合】</li>
               <li>
                 <div :class="[$style.phone, $style.centerphone, $style.fzXLarge]">
                   <span :class="$style.icon">
@@ -101,7 +99,7 @@
                   <a href="tel:0273816112">027-381-6112</a>
                 </div>
               </li>
-              <li :class="[$style.fzRegular]">【夜間、土、日、祝日】</li>
+              <li :class="[$style.fzRegular]">【上記以外の時間で緊急の場合】</li>
               <li>
                 <div :class="[$style.phone, $style.centerphone, $style.fzXLarge]">
                   <span :class="$style.icon">
