@@ -69,7 +69,7 @@
     &RowCheck {
       flex-basis: calc(28% - 20px);
       justify-content: center;
-      padding: 0.5em 1em 0 0.5em;
+      padding: 1em 1em 0 0.5em;
       margin-right: 10px;
     }
 
@@ -93,7 +93,7 @@
       }
 
       &CareTargetList {
-        margin: 16px 0;
+        margin: 1em 0;
         text-align: left;
         list-style: none;
 
