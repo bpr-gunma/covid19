@@ -150,8 +150,8 @@ export default {
 
 .center {
   margin-top: px2vw(40);
-  margin-left: px2vw(5);
-  margin-right: px2vw(5);
+  margin-left: px2vw(3);
+  margin-right: px2vw(3);
   background: $white;
   border: solid px2vw(3) $green-1;
   border-radius: px2vw(8);
@@ -219,8 +219,8 @@ export default {
 
   .center {
     margin-top: px2vw(40, $vw);
-    margin-left: px2vw(5, $vw);
-    margin-right: px2vw(5, $vw);
+    margin-left: px2vw(3, $vw);
+    margin-right: px2vw(3, $vw);
     border: solid px2vw(3, $vw) $green-1;
     border-radius: px2vw(8, $vw);
   
