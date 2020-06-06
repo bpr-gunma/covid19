@@ -41,7 +41,7 @@
   &Row {
     flex-grow: 1;
     flex-shrink: 0;
-    flex-basis: 15%;
+    flex-basis: 25%;
     display: flex;
     flex-direction: column;
     text-align: center;
