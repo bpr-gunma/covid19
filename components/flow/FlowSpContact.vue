@@ -45,12 +45,8 @@ export default {
   }
 }
 
-.solution {
-  margin-top: px2vw(30);
-  padding: px2vw(10) px2vw(10);
-  border-radius: px2vw(6);
-  border: px2vw(3) solid $gray-2;
-  text-align: left;
+.duration {
+  margin-top: px2vw(5);
 }
 
 @include largerThan($small) {
@@ -68,11 +64,8 @@ export default {
     }
   }
 
-  .solution {
-    margin-top: px2vw(30, $vw);
-    padding: px2vw(10, $vw) px2vw(10, $vw);
-    border-radius: px2vw(6, $vw);
-    border: px2vw(2, $vw) solid $gray-2;
+  .duration {
+    margin-top: px2vw(5, $vw);
   }
 }
 </style>
