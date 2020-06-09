@@ -98,6 +98,12 @@ export default Vue.extend({
           divider: true
         },
         {
+          icon: 'CovidIcon',
+          title: this.$t('新型コロナウイルス感染症について'),
+          link: 'https://www.pref.gunma.jp/02/d29g_00243.html',
+          divider: true
+        },
+        {
           title: this.$t('知事メッセージ'),
           link:
             'https://www.pref.gunma.jp/07/z87g_00028.html'
