@@ -99,9 +99,9 @@
 
         &Item {
           font-weight: bold;
-//          display: flex;
           display: list-item;
           margin-left: 1em;
+          margin-right: 0.5em;
           list-style: disc;
           align-items: left;
         }
