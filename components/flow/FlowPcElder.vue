@@ -100,8 +100,8 @@
         &Item {
           font-weight: bold;
           display: list-item;
-          margin-left: 1em;
-          margin-right: 0.5em;
+          margin-left: 0;
+          margin-right: 0;
           list-style: disc;
           align-items: left;
         }
