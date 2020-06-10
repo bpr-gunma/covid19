@@ -2,13 +2,13 @@
   <div :class="$style.container">
     <div :class="[$style.heading, $style.multi]">
       <span :class="[$style.item, $style.fzMedium]">
-        {{ $t('ご高齢な方') }}
+        {{ $t('・ご高齢な方') }}
       </span>
       <span :class="[$style.item, $style.fzMedium]">
-        {{ $t('基礎疾患のある方') }}
+        {{ $t('・妊娠中の方') }}
       </span>
       <span :class="[$style.item, $style.fzMedium]">
-        {{ $t('妊娠中の方') }}
+        {{ $t('・基礎疾患のある方（透析を受けている方、免疫抑制剤や抗がん剤を用いている方を含む）') }}
       </span>
     </div>
     <ul :class="[$style.rectContainer, $style.double]">
@@ -21,7 +21,7 @@
     </ul>
 
     <p :class="$style.duration">
-      いずれかの症状や風邪の様な症状があればすぐにご相談ください。
+      いずれかに該当する場合にはすぐにご相談ください。
     </p>
 
     <a
