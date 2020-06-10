@@ -91,10 +91,9 @@ export default {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-around;
-//      align-items: center;
 
       .item {
-        margin: px2vw(20) px2vw(20) 0;
+        margin: px2vw(25) px2vw(15) 0;
         text-align: left;
       }
     }
@@ -117,7 +116,7 @@ export default {
 
       > .list {
         .item {
-          margin: px2vw(20, $vw) px2vw(20, $vw) 0;
+          margin: px2vw(25, $vw) px2vw(15, $vw) 0;
         }
       }
     }
