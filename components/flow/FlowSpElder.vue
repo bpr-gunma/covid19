@@ -18,9 +18,10 @@
           {{ $t('妊娠中の方') }}
         </li>
         <li :class="$style.item">
-          {{ $t('基礎疾患のある方（透析を受け') }}<br />
+          {{ $t('基礎疾患のある方（透析を受けている方、免疫抑制剤や抗がん剤を用いている方を含む）') }}
+<!--          {{ $t('基礎疾患のある方（透析を受け') }}<br />
           {{ $t('ている方、免疫抑制剤や抗がん') }}<br />
-          {{ $t('剤を用いている方を含む）') }}
+          {{ $t('剤を用いている方を含む）') }}-->
         </li>
       </ul>
     </div>
@@ -94,9 +95,9 @@ export default {
       flex-wrap: wrap;
       justify-content: space-around;
 //      align-items: center;
-      margin: px2vw(20) px2vw(10) 0;
 
       .item {
+        margin: px2vw(20) px2vw(10) 0;
         align-items: left;
       }
     }
@@ -118,7 +119,9 @@ export default {
       }
 
       > .list {
-        margin: px2vw(20, $vw) px2vw(10, $vw) 0;
+        .item {
+          margin: px2vw(20, $vw) px2vw(10, $vw) 0;
+        }
       }
     }
   }
