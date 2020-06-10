@@ -93,7 +93,7 @@
       }
 
       &CareTargetList {
-        margin: 1em 0;
+//        margin: 1em 0;
         text-align: left;
         list-style-type: disc;
 //        list-style: none;
