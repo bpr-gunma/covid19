@@ -100,7 +100,7 @@
         &Item {
           font-weight: bold;
           display: list-item;
-          margin-left: 0;
+          margin-left: 0.5em;
           margin-right: 0;
           list-style: disc;
           align-items: left;
