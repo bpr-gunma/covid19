@@ -93,7 +93,7 @@ export default {
       justify-content: space-around;
 
       .item {
-        margin: px2vw(25) px2vw(15) 0;
+        margin: px2vw(25) px2vw(10) 0;
         text-align: left;
       }
     }
@@ -116,7 +116,7 @@ export default {
 
       > .list {
         .item {
-          margin: px2vw(25, $vw) px2vw(15, $vw) 0;
+          margin: px2vw(25, $vw) px2vw(10, $vw) 0;
         }
       }
     }
