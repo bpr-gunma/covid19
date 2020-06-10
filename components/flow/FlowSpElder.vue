@@ -1,7 +1,7 @@
 <template>
   <div :class="$style.container">
     <div :class="[$style.heading, $style.multi]">
-      <span :class="[$style.item, $style.fzMedium]">
+<!--      <span :class="[$style.item, $style.fzMedium]">
         {{ $t('・ご高齢な方') }}
       </span>
       <span :class="[$style.item, $style.fzMedium]">
@@ -9,7 +9,18 @@
       </span>
       <span :class="[$style.item, $style.fzMedium]">
         {{ $t('・基礎疾患のある方（透析を受けている方、免疫抑制剤や抗がん剤を用いている方を含む）') }}
-      </span>
+      </span>-->
+      <ul :class="[$style.item, $style.fzMedium]">
+        <li>
+          {{ $t('ご高齢な方') }}
+        </li>
+        <li>
+          {{ $t('基礎疾患のある方（透析を受けている方、免疫抑制剤や抗がん剤を用いている方を含む）') }}
+        </li>
+        <li>
+          {{ $t('妊娠中の方') }}
+        </li>
+      </ul>
     </div>
     <ul :class="[$style.rectContainer, $style.double]">
       <li :class="$style.symptom">
@@ -21,7 +32,7 @@
     </ul>
 
     <p :class="$style.duration">
-      いずれかに該当する場合にはすぐにご相談ください。
+      いずれかの症状や風邪の様な症状があればすぐにご相談ください。
     </p>
 
     <a
@@ -80,10 +91,6 @@ export default {
       display: flex;
       align-items: center;
       margin: px2vw(20) px2vw(10) 0;
-
-      svg {
-        margin-right: px2vw(5);
-      }
     }
   }
 }
@@ -104,10 +111,6 @@ export default {
 
       > .item {
         margin: px2vw(20, $vw) px2vw(10, $vw) 0;
-
-        svg {
-          margin-right: px2vw(5, $vw);
-        }
       }
     }
   }
