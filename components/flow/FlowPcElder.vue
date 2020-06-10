@@ -93,15 +93,15 @@
       }
 
       &CareTargetList {
-        margin: 1em 0 1em 1em;
+        margin: 1em 0;
         text-align: left;
-        display: list-item;
-        list-style: disc;
 //        list-style: none;
 
         &Item {
           font-weight: bold;
           display: flex;
+//          display: list-item;
+          list-style: disc;
           align-items: left;
 
           &Icon {
