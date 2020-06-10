@@ -92,7 +92,7 @@
       &CareTargetList {
         margin: 16px 0;
         text-align: left;
-//        list-style: none;
+        list-style: none;
 
         &Item {
           font-weight: bold;
