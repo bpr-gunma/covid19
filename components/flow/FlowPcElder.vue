@@ -36,7 +36,7 @@
       </div>
     </div>
     <h3 :class="$style.SectionTitle">
-      <i18n path="いずれかに症状や風邪の様な症状があれば {immediately} ご相談ください。" tag="p">
+      <i18n path="いずれかの症状や風邪の様な症状があれば {immediately} ご相談ください。" tag="p">
         <template v-slot:immediately>
           <strong>
             {{ $t('すぐに') }}
@@ -55,27 +55,30 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 1em 1em 0 1em;
+//  padding: 1em 1em 0 1em;
   color: $gray-2;
 
   &Row {
     flex-grow: 1;
     flex-shrink: 0;
-    flex-basis: 15%;
+    flex-basis: 25%;
     display: flex;
     flex-direction: column;
     text-align: center;
 
     &RowCheck {
       flex-basis: calc(28% - 20px);
-      margin: 0 10px;
+      justify-content: center;
+      padding: 1em 1em 0 0.5em;
+      margin-right: 10px;
     }
 
     &RowThree {
-      flex-grow: 1;
+      flex-grow: 0;
       display: flex;
       align-items: center;
       justify-content: center;
+      padding: 0 1em 0 0.5em;
 
       &General {
         font-size: medium;
@@ -90,9 +93,9 @@
       }
 
       &CareTargetList {
-        margin: 16px 0;
+        margin: 1em 0;
         text-align: left;
-        list-style: none;
+//        list-style: none;
 
         &Item {
           font-weight: bold;
@@ -107,13 +110,13 @@
         }
 
         &Item + &Item {
-          margin-top: 5px;
+          margin-top: 10px;
         }
       }
     }
 
     &Condition {
-      flex-grow: 1;
+      flex-grow: 0;
       display: flex;
       align-items: center;
       justify-content: center;
