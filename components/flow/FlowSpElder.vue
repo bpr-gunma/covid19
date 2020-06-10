@@ -91,6 +91,8 @@ export default {
 
     > .list {
       display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
       align-items: center;
       margin: px2vw(20) px2vw(10) 0;
 
