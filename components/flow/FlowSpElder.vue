@@ -10,14 +10,16 @@
       <span :class="[$style.item, $style.fzMedium]">
         {{ $t('・基礎疾患のある方（透析を受けている方、免疫抑制剤や抗がん剤を用いている方を含む）') }}
       </span>-->
-      <ul :class="[$style.item, $style.fzMedium]">
-        <li>
+      <ul :class="[$style.list, $style.fzMedium]">
+        <li :class="$style.item">
           {{ $t('ご高齢な方') }}
         </li>
-        <li>
-          {{ $t('基礎疾患のある方（透析を受けている方、免疫抑制剤や抗がん剤を用いている方を含む）') }}
+        <li :class="$style.item">
+          {{ $t('基礎疾患のある方（透析を受け') }}<br />
+          {{ $t('ている方、免疫抑制剤や抗がん') }}<br />
+          {{ $t('剤を用いている方を含む）') }}
         </li>
-        <li>
+        <li :class="$style.item">
           {{ $t('妊娠中の方') }}
         </li>
       </ul>
@@ -87,10 +89,14 @@ export default {
       height: px2vw(50);
     }
 
-    > .item {
+    > .list {
       display: flex;
       align-items: center;
       margin: px2vw(20) px2vw(10) 0;
+
+      .item {
+        align-items: left;
+      }
     }
   }
 }
@@ -109,7 +115,7 @@ export default {
         height: px2vw(50, $vw);
       }
 
-      > .item {
+      > .list {
         margin: px2vw(20, $vw) px2vw(10, $vw) 0;
       }
     }
