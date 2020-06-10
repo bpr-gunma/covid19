@@ -77,8 +77,8 @@
       flex-grow: 0;
       display: flex;
       align-items: center;
-      justify-content: center;
       padding: 0 1em 0 0.5em;
+      justify-content: center;
 
       &General {
         font-size: medium;
@@ -101,7 +101,7 @@
           font-weight: bold;
 //          display: flex;
           display: list-item;
-          margin-left: 0.5em;
+          margin-left: 1em;
           list-style: disc;
           align-items: left;
         }
