@@ -101,7 +101,7 @@
           font-weight: bold;
 //          display: flex;
           display: list-item;
-          margin-left: 1em;
+          margin-left: 0.5em;
           list-style: disc;
           align-items: left;
         }
