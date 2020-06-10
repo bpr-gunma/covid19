@@ -15,12 +15,12 @@
           {{ $t('ご高齢な方') }}
         </li>
         <li :class="$style.item">
+          {{ $t('妊娠中の方') }}
+        </li>
+        <li :class="$style.item">
           {{ $t('基礎疾患のある方（透析を受け') }}<br />
           {{ $t('ている方、免疫抑制剤や抗がん') }}<br />
           {{ $t('剤を用いている方を含む）') }}
-        </li>
-        <li :class="$style.item">
-          {{ $t('妊娠中の方') }}
         </li>
       </ul>
     </div>
@@ -93,7 +93,7 @@ export default {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-around;
-      align-items: center;
+//      align-items: center;
       margin: px2vw(20) px2vw(10) 0;
 
       .item {
