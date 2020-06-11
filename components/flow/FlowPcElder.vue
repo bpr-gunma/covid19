@@ -2,20 +2,31 @@
   <div :class="$style.Flow">
     <div :class="$style.FlowRow">
       <div :class="$style.FlowRowRowThree">
-        <div :class="$style.FlowRowRowThreeGeneral">
-          <img
-            :class="$style.FlowRowRowThreeGeneralIcon"
-            src="/flow/sentiment_very_dissatisfied-24px.svg"
-            aria-hidden="true"
-            alt=" "
-          />
-          {{ $t('不安に思う方') }}
-        </div>
+        <ul :class="$style.FlowRowRowThreeCareTargetList">
+          <li :class="$style.FlowRowRowThreeCareTargetListItem">
+            {{ $t('ご高齢な方') }}
+          </li>
+          <li :class="$style.FlowRowRowThreeCareTargetListItem">
+            {{ $t('基礎疾患のある方（透析を受けている方、免疫抑制剤や抗がん剤を用いている方を含む）') }}
+          </li>
+          <li :class="$style.FlowRowRowThreeCareTargetListItem">
+            {{ $t('妊娠中の方') }}
+          </li>
+        </ul>
       </div>
     </div>
     <div :class="[$style.FlowRow, $style.FlowRowRowCheck]">
       <div :class="$style.FlowRowCondition">
-        <p>{{ $t('感染の不安') }}</p>
+        <p>{{ $t('発熱がある') }}</p>
+        <img
+          :class="$style.FlowRowConditionIcon"
+          src="/flow/check_circle-24px.svg"
+          aria-hidden="true"
+          alt=" "
+        />
+      </div>
+      <div :class="$style.FlowRowCondition">
+        <p>{{ $t('咳が出る') }}</p>
         <img
           :class="$style.FlowRowConditionIcon"
           src="/flow/check_circle-24px.svg"
@@ -24,6 +35,15 @@
         />
       </div>
     </div>
+    <h3 :class="$style.SectionTitle">
+      <i18n path="いずれかの症状や風邪の様な症状があれば {immediately} ご相談ください。" tag="p">
+        <template v-slot:immediately>
+          <strong>
+            {{ $t('すぐに') }}
+          </strong>
+        </template>
+      </i18n>
+    </h3>
   </div>
 </template>
 
@@ -35,7 +55,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 1em 1em 0.5em 1em;
+//  padding: 1em 1em 0 1em;
   color: $gray-2;
 
   &Row {
@@ -48,13 +68,16 @@
 
     &RowCheck {
       flex-basis: calc(28% - 20px);
-      margin: 0 10px;
+      justify-content: center;
+      padding: 1em 1em 0 0.5em;
+      margin-right: 10px;
     }
 
     &RowThree {
       flex-grow: 0;
       display: flex;
       align-items: center;
+      padding: 0 1em 0 0;
       justify-content: center;
 
       &General {
@@ -68,6 +91,25 @@
           height: 44px;
         }
       }
+
+      &CareTargetList {
+        margin: 1em 0;
+        text-align: left;
+//        list-style: none;
+
+        &Item {
+          font-weight: bold;
+          display: list-item;
+          margin-left: 1em;
+          margin-right: 0;
+          list-style: disc;
+          align-items: left;
+        }
+
+        &Item + &Item {
+          margin-top: 10px;
+        }
+      }
     }
 
     &Condition {
@@ -75,6 +117,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      margin-bottom: 10px;
       padding: 10px;
       position: relative;
       border: 2px solid $green-1 !important;
@@ -122,6 +165,22 @@
         background-color: white;
         content: '';
       }
+    }
+  }
+
+  .SectionTitle {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    text-align: right;
+    width: 100%;
+
+    strong {
+      margin: 0 0.2em;
+      font-size: 24px;
+      font-weight: bold;
     }
   }
 }

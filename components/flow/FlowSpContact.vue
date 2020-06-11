@@ -1,17 +1,8 @@
 <template>
   <div :class="$style.container">
-    <p :class="$style.heading">
-      <span :class="[$style.icon, $style.top]">
-        <SentimentIcon aria-hidden="true" />
-      </span>
-      <span :class="$style.fzMedium">{{ $t('不安に思う方') }}</span>
+    <p :class="[$style.duration, $style.fzMedium]">
+      「新型コロナウイルス感染者」との濃厚接触が疑われる方
     </p>
-
-    <ul :class="[$style.rectContainer, $style.triple]">
-      <li :class="$style.symptom">
-        {{ $t('感染の不安') }}
-      </li>
-    </ul>
 
     <a
       v-scroll-to="{
@@ -30,10 +21,9 @@
 <script lang="ts">
 import { onDoneScroll } from '@/utils/vueScrollTo'
 import ArrowForwardIcon from '@/static/flow/responsive/arrow_forward.svg'
-import SentimentIcon from '@/static/flow/responsive/sentiment_very_dissatisfied.svg'
 
 export default {
-  components: { ArrowForwardIcon, SentimentIcon },
+  components: { ArrowForwardIcon },
   methods: { onDoneScroll }
 }
 </script>
@@ -55,12 +45,8 @@ export default {
   }
 }
 
-.solution {
-  margin-top: px2vw(30);
-  padding: px2vw(10) px2vw(10);
-  border-radius: px2vw(6);
-  border: px2vw(3) solid $gray-2;
-  text-align: left;
+.duration {
+  margin-top: px2vw(5);
 }
 
 @include largerThan($small) {
@@ -78,11 +64,8 @@ export default {
     }
   }
 
-  .solution {
-    margin-top: px2vw(30, $vw);
-    padding: px2vw(10, $vw) px2vw(10, $vw);
-    border-radius: px2vw(6, $vw);
-    border: px2vw(2, $vw) solid $gray-2;
+  .duration {
+    margin-top: px2vw(5, $vw);
   }
 }
 </style>

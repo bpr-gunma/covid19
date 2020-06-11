@@ -5,17 +5,53 @@
         <div :class="$style.FlowRowRowThreeGeneral">
           <img
             :class="$style.FlowRowRowThreeGeneralIcon"
-            src="/flow/sentiment_very_dissatisfied-24px.svg"
+            src="/flow/accessibility-24px.svg"
             aria-hidden="true"
             alt=" "
           />
-          {{ $t('不安に思う方') }}
+          {{ $t('一般の方') }}
         </div>
       </div>
     </div>
     <div :class="[$style.FlowRow, $style.FlowRowRowCheck]">
       <div :class="$style.FlowRowCondition">
-        <p>{{ $t('感染の不安') }}</p>
+        <p>{{ $t('高熱') }}</p>
+        <img
+          :class="$style.FlowRowConditionIcon"
+          src="/flow/check_circle-24px.svg"
+          aria-hidden="true"
+          alt=" "
+        />
+      </div>
+      <div :class="$style.FlowRowCondition">
+        <p>{{ $t('強いだるさ（倦怠感）') }}</p>
+        <img
+          :class="$style.FlowRowConditionIcon"
+          src="/flow/check_circle-24px.svg"
+          aria-hidden="true"
+          alt=" "
+        />
+      </div>
+      <div :class="$style.FlowRowCondition">
+        <p>{{ $t('息苦しさ（呼吸困難）') }}</p>
+        <img
+          :class="$style.FlowRowConditionIcon"
+          src="/flow/check_circle-24px.svg"
+          aria-hidden="true"
+          alt=" "
+        />
+      </div>
+      <div :class="$style.FlowRowCondition">
+        <p>{{ $t('発熱が続く') }}</p>
+        <img
+          :class="$style.FlowRowConditionIcon"
+          src="/flow/check_circle-24px.svg"
+          aria-hidden="true"
+          alt=" "
+        />
+      </div>
+      <div :class="$style.FlowRowCondition">
+        <p>{{ $t('咳が続く') }}</p>
         <img
           :class="$style.FlowRowConditionIcon"
           src="/flow/check_circle-24px.svg"
@@ -24,6 +60,15 @@
         />
       </div>
     </div>
+    <h3 :class="$style.SectionTitle">
+      <i18n path="いずれかの症状やその他強い症状があれば {immediately} ご相談ください。" tag="p">
+        <template v-slot:immediately>
+          <strong>
+            {{ $t('すぐに') }}
+          </strong>
+        </template>
+      </i18n>
+    </h3>
   </div>
 </template>
 
@@ -35,7 +80,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 1em 1em 0.5em 1em;
+  padding: 1em 1em 0 1em;
   color: $gray-2;
 
   &Row {
@@ -52,7 +97,7 @@
     }
 
     &RowThree {
-      flex-grow: 0;
+      flex-grow: 1;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -71,10 +116,11 @@
     }
 
     &Condition {
-      flex-grow: 0;
+      flex-grow: 1;
       display: flex;
       align-items: center;
       justify-content: center;
+      margin-bottom: 10px;
       padding: 10px;
       position: relative;
       border: 2px solid $green-1 !important;
@@ -122,6 +168,22 @@
         background-color: white;
         content: '';
       }
+    }
+  }
+
+  .SectionTitle {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    text-align: right;
+    width: 100%;
+
+    strong {
+      margin: 0 0.2em;
+      font-size: 24px;
+      font-weight: bold;
     }
   }
 }

@@ -1,74 +1,38 @@
 <template>
   <div :class="$style.container">
     <div :class="[$style.heading, $style.multi]">
-      <span :class="[$style.item, $style.fzMedium]">
-        <span :class="$style.icon">
-          <DirectionsWalkIcon aria-hidden="true" />
-        </span>
-        {{ $t('ご高齢な方') }}
+<!--      <span :class="[$style.item, $style.fzMedium]">
+        {{ $t('・ご高齢な方') }}
       </span>
       <span :class="[$style.item, $style.fzMedium]">
-        <span :class="$style.icon">
-          <AccessibleIcon aria-hidden="true" />
-        </span>
-        {{ $t('基礎疾患のある方') }}
+        {{ $t('・妊娠中の方') }}
       </span>
       <span :class="[$style.item, $style.fzMedium]">
-        <span :class="$style.icon">
-          <PregnantWomanIcon aria-hidden="true" />
-        </span>
-        {{ $t('妊娠中の方') }}
-      </span>
+        {{ $t('・基礎疾患のある方（透析を受けている方、免疫抑制剤や抗がん剤を用いている方を含む）') }}
+      </span>-->
+      <ul :class="[$style.list, $style.fzMedium]">
+        <li :class="$style.item">
+          {{ $t('ご高齢な方') }}
+        </li>
+        <li :class="$style.item">
+          {{ $t('妊娠中の方') }}
+        </li>
+        <li :class="$style.item">
+          {{ $t('基礎疾患のある方（透析を受けている方、免疫抑制剤や抗がん剤を用いている方を含む）') }}
+        </li>
+      </ul>
     </div>
     <ul :class="[$style.rectContainer, $style.double]">
       <li :class="$style.symptom">
-        <span>
-          <i18n path="{cold}のような症状">
-            <template v-slot:cold>
-              <span :class="$style.ConditionsItemLarger">
-                {{ $t('風邪') }}
-              </span>
-            </template>
-          </i18n>
-        </span>
+        {{ $t('発熱がある') }}
       </li>
       <li :class="$style.symptom">
-        <i18n tag="span" path="発熱{temperature}" :class="$style.fzSmall">
-          <template v-slot:temperature>
-            <i18n
-              tag="span"
-              path="{tempNum}以上"
-              :class="[$style.break, $style.fzRegular]"
-            >
-              <template v-slot:tempNum>
-                <span :class="$style.temp">{{ $t('37.5℃') }}</span>
-              </template>
-            </i18n>
-          </template>
-        </i18n>
-      </li>
-      <li :class="$style.symptom">
-        {{ $t('強いだるさ') }}
-      </li>
-      <li :class="$style.symptom">
-        {{ $t('息苦しさ') }}
+        {{ $t('咳が出る') }}
       </li>
     </ul>
 
     <p :class="$style.duration">
-      <i18n path="{duration}続いている">
-        <template v-slot:duration>
-          <i18n
-            :class="[$style.underline, $style.fzLarge]"
-            tag="span"
-            path="{day}日程度"
-          >
-            <template v-slot:day>
-              <strong :class="$style.fzNumeric">2</strong>
-            </template>
-          </i18n>
-        </template>
-      </i18n>
+      いずれかの症状や風邪の様な症状があればすぐにご相談ください。
     </p>
 
     <a
@@ -79,7 +43,7 @@
       href="#consult"
       :class="[$style.button, $style.clickable]"
     >
-      <span :class="$style.text">{{ $t('新型コロナ受診相談窓口へ') }}</span>
+      <span :class="$style.text">{{ $t('新型コロナ感染症コールセンターへ') }}</span>
       <ArrowForwardIcon :class="$style.icon" />
     </a>
   </div>
@@ -123,13 +87,14 @@ export default {
       height: px2vw(50);
     }
 
-    > .item {
+    > .list {
       display: flex;
-      align-items: center;
-      margin: px2vw(20) px2vw(10) 0;
+      flex-wrap: wrap;
+      justify-content: space-around;
 
-      svg {
-        margin-right: px2vw(5);
+      .item {
+        margin: px2vw(25) px2vw(10) 0;
+        text-align: left;
       }
     }
   }
@@ -149,11 +114,9 @@ export default {
         height: px2vw(50, $vw);
       }
 
-      > .item {
-        margin: px2vw(20, $vw) px2vw(10, $vw) 0;
-
-        svg {
-          margin-right: px2vw(5, $vw);
+      > .list {
+        .item {
+          margin: px2vw(25, $vw) px2vw(10, $vw) 0;
         }
       }
     }

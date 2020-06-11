@@ -3,65 +3,51 @@
     <div :class="$style.AdvisoryContainer">
       <div :class="$style.AdvisoryContents">
         <div>
-          <span :class="$style.AdvisoryContentsTitle">{{
-            $t('新型コロナ受診相談窓口（日本語のみ）')
-          }}</span>
-        </div>
-        <div :class="[$style.AdvisoryContentsColsSentense, 'mt-4']">
-          {{ $t('帰国者・接触者 電話相談センター') }}
-        </div>
-        <div>
-          <div :class="[$style.AdvisoryBoxContainer, $style.AdvisoryWhiteBox]">
-            <span :class="$style.AdvisoryWhiteBoxSentense">
-              {{ $t('24時間対応') }}
-            </span>
-          </div>
-        </div>
-      </div>
-
-      <div :class="$style.AdvisoryContents">
-        <div class="py-8">
-          <div :class="$style.AdvisoryContentsTitle2">
-            {{ $t('平日（日中）') }}
-          </div>
-          <div
-            :class="[
-              $style.AdvisoryLink,
-              $style.AdvisoryBlockCentering,
-              'mt-4'
-            ]"
-          >
-            <a
-              href="https://www.pref.gunma.jp/02/d29g_00243.html#hokenjo"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <span>{{ $t('各保健所の電話番号は保健予防課HPへ') }}</span>
-              <v-icon size="18">
-                mdi-open-in-new
-              </v-icon>
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <div :class="$style.AdvisoryContents">
-        <div class="pt-8">
-          <div :class="$style.AdvisoryContentsTitle2">
-            {{ $t('平日（夜間）') }}
-          </div>
-          <span>{{ $t('午後5時から翌朝午前9時') }}</span>
-        </div>
-        <div class="mt-1">
-          <span :class="$style.AdvisoryContentsSubTitle">
-            {{ $t('土日祝 終日') }}
+          <span :class="$style.AdvisoryContentsTitle">
+            {{ $t('新型コロナ感染症') }}
+          </span><br />
+          <span :class="$style.AdvisoryContentsTitle">
+            {{ $t('コールセンター') }}
           </span>
+        </div>
+      </div>
+      <div :class="$style.AdvisoryContents">
+        <div class="pt-4">
+          <div :class="$style.AdvisoryContentsTitle2">
+            {{ $t('午前9時から午後9時') }}
+          </div>
         </div>
         <div
           :class="[
             $style.AdvisoryTelephoneArea,
-            $style.AdvisoryBlockCentering,
-            'mt-1'
+            $style.AdvisoryBlockCentering
+          ]"
+        >
+          <a :class="$style.AdvisoryTelephone" href="tel:0570082820">
+            <img
+              :class="$style.AdvisoryTelephoneIcon"
+              src="/flow/phone-24px.svg"
+              aria-hidden="true"
+              :alt="$t('電話番号')"
+            />
+            0570-082-820
+          </a>
+        </div>
+        <div v-if="!['ja', 'ja-basic'].includes($i18n.locale)" class="pt-8">
+          <span>{{ $t('ひまわり') }}</span>
+        </div>
+      </div>
+      <hr :class="$style.AdvisoryLine"/>
+      <div :class="$style.AdvisoryContents">
+        <div class="pt-4">
+          <div :class="$style.AdvisoryContentsTitle2">
+            {{ $t('上記以外の時間') }}
+          </div>
+        </div>
+        <div
+          :class="[
+            $style.AdvisoryTelephoneArea,
+            $style.AdvisoryBlockCentering
           ]"
         >
           <a :class="$style.AdvisoryTelephone" href="tel:0272231111">
@@ -78,6 +64,61 @@
           <span>{{ $t('ひまわり') }}</span>
         </div>
       </div>
+      <div :class="$style.AdvisoryCenter">
+        <div :class="$style.AdvisoryCenterTitle">前橋市、高崎市に在住の方は<br />居住地の保健所へ相談</div>
+        <div :class="$style.AdvisoryCenterContents">
+          <div :class="$style.AdvisoryCenterContentsHelth">前橋市保健所</div>
+          <div :class="$style.AdvisoryCenterContentsTime">【毎日】午前8時30分～午後9時</div>
+          <div :class="$style.AdvisoryCenterContentsTel">
+            <a :class="$style.AdvisoryCenterContentsTelNumber" href="tel:0272201151">
+              <img
+                :class="$style.AdvisoryCenterContentsTelNumberIcon"
+                src="/flow/phone-24px.svg"
+                aria-hidden="true"
+                :alt="$t('電話番号')"
+              />
+              027-220-1151
+            </a>
+          </div>
+          <div :class="$style.AdvisoryCenterContentsTime">【上記以外の時間で緊急の場合】</div>
+          <div :class="$style.AdvisoryCenterContentsTel">
+            <a :class="$style.AdvisoryCenterContentsTelNumber" href="tel:0272241111">
+              <img
+                :class="$style.AdvisoryCenterContentsTelNumberIcon"
+                src="/flow/phone-24px.svg"
+                aria-hidden="true"
+                :alt="$t('電話番号')"
+              />
+              027-224-1111
+            </a>
+          </div>
+          <div :class="$style.AdvisoryCenterContentsHelth">高崎市保健所</div>
+          <div :class="$style.AdvisoryCenterContentsTime">【平日】午前8時30分～午後9時</div>
+          <div :class="$style.AdvisoryCenterContentsTel">
+            <a :class="$style.AdvisoryCenterContentsTelNumber" href="tel:0273816112">
+              <img
+                :class="$style.AdvisoryCenterContentsTelNumberIcon"
+                src="/flow/phone-24px.svg"
+                aria-hidden="true"
+                :alt="$t('電話番号')"
+              />
+              027-381-6112
+            </a>
+          </div>
+          <div :class="$style.AdvisoryCenterContentsTime">【上記以外の時間で緊急の場合】</div>
+          <div :class="$style.AdvisoryCenterContentsTel">
+            <a :class="$style.AdvisoryCenterContentsTelNumber" href="tel:0273816123">
+              <img
+                :class="$style.AdvisoryCenterContentsTelNumberIcon"
+                src="/flow/phone-24px.svg"
+                aria-hidden="true"
+                :alt="$t('電話番号')"
+              />
+              027-381-6123
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -91,24 +132,24 @@
   color: $gray-2;
 
   &Container {
-    background-color: $gray-5;
+    background-color: #e6e6fa;
     border-radius: 4px;
     height: 100%;
-    padding: 30px 20px 20px 20px;
-    margin-bottom: 10px;
+    padding: 20px 15px 20px 15px;
     text-align: center;
   }
 
   &Contents {
     font-weight: bold;
 
-    &:not(:first-child) {
-      border-top: 0.5px solid $gray-4;
-    }
+//    &:not(:first-child) {
+//      border-top: 0.5px solid $gray-4;
+//    }
 
     &Title {
-      font-size: 26px;
-      line-height: 28px;
+      font-size: 20px;
+      line-height: 22px;
+      margin: 10px auto;
     }
 
     &Title2 {
@@ -129,12 +170,18 @@
     justify-content: center;
   }
 
+  &Line {
+    border-width: 1px 0px 0px 0px;
+    border-style: dotted;
+    border-color: $green-1;
+  }
+
   &Link {
     line-height: 22px;
     text-align: left;
 
     a {
-      color: rgba(0, 0, 0, 0.87);
+      color: $green-2;
       text-decoration: none;
 
       &:hover {
@@ -150,8 +197,9 @@
   &Telephone {
     display: flex;
     align-items: center;
-    font-size: 27px;
+    font-size: 24px;
     font-weight: bold;
+    margin: 12px auto;
 
     &:link,
     &:visited,
@@ -175,7 +223,7 @@
     border-radius: 4px;
     text-align: center;
     padding: 20px 10px;
-    margin: 24px auto;
+    margin: 20px auto;
   }
 
   &WhiteBox {
@@ -187,6 +235,67 @@
       color: $green-1;
       font-size: 18px;
       font-weight: bold;
+    }
+  }
+
+  &Center {
+    margin-top: 10px;
+    background: $white;
+    border: solid 3px $green-1;
+    border-radius: 8px;
+    color: $gray-2;
+
+    &Title {
+      background: $green-1;
+      padding: 4px 10px;
+      text-align: center;
+      color: $white;
+      font-weight: bold;
+      letter-spacing: 0.05em;
+    }
+    
+    &Contents {
+      padding: 5px;
+      text-align: center;
+      border-radius: 0px 0px 8px 8px;
+
+      &Helth {
+        text-align: left;
+        font-weight: bold;
+      }
+      
+      &Time {
+        text-align: left;
+        font-size: 0.9em;
+      }
+
+      &Tel {
+        display: inline-flex;
+
+        &Number {
+          display: flex;
+          font-weight: bold;
+          align-items: center;
+          margin: 0 auto;
+
+          &:link,
+          &:visited,
+          &:hover,
+          &:active,
+          &:focus {
+            color: inherit;
+            text-decoration: none;
+            outline: 1px dotted $gray-3;
+          }
+
+          &Icon {
+            display: inline-block;
+            margin-right: 4px;
+            width: 15px;
+            height: 15px;
+          }
+        }
+      } 
     }
   }
 }
