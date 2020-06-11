@@ -46,6 +46,7 @@ export default {
 }
 
 .duration {
+  text-align: left;
   margin-top: px2vw(5);
 }
 
