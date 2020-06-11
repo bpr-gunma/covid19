@@ -93,6 +93,11 @@ export default Vue.extend({
         },
         {
           icon: 'CovidIcon',
+          title: this.$t('新型コロナウイルス感染症が心配なときに'),
+          link: this.localePath('/flow'),
+        },
+        {
+          icon: 'CovidIcon',
           title: this.$t('新型コロナウイルス感染症について'),
           link: 'https://www.pref.gunma.jp/02/d29g_00243.html',
           divider: true
