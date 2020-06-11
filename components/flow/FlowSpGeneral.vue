@@ -54,4 +54,8 @@ export default {
 
 <style module lang="scss">
 @import '@/components/flow/flow_sp.scss';
+
+.duration {
+  text-align: left;
+}
 </style>

@@ -1,15 +1,6 @@
 <template>
   <div :class="$style.container">
     <div :class="[$style.heading, $style.multi]">
-<!--      <span :class="[$style.item, $style.fzMedium]">
-        {{ $t('・ご高齢な方') }}
-      </span>
-      <span :class="[$style.item, $style.fzMedium]">
-        {{ $t('・妊娠中の方') }}
-      </span>
-      <span :class="[$style.item, $style.fzMedium]">
-        {{ $t('・基礎疾患のある方（透析を受けている方、免疫抑制剤や抗がん剤を用いている方を含む）') }}
-      </span>-->
       <ul :class="[$style.list, $style.fzMedium]">
         <li :class="$style.item">
           {{ $t('ご高齢な方') }}
@@ -98,6 +89,10 @@ export default {
       }
     }
   }
+}
+
+.duration {
+  text-align: left;
 }
 
 @include largerThan($small) {
