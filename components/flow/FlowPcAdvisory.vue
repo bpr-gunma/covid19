@@ -171,7 +171,7 @@
   }
 
   &Line {
-    border-width: 1px 0px 0px 0px;
+    border-width: 1px 0 0 0;
     border-style: dotted;
     border-color: $green-1;
   }
@@ -257,7 +257,7 @@
     &Contents {
       padding: 5px;
       text-align: center;
-      border-radius: 0px 0px 8px 8px;
+      border-radius: 0 0 8px 8px;
 
       &Helth {
         text-align: left;
