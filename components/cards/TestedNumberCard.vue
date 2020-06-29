@@ -6,6 +6,7 @@
       :chart-id="'time-stacked-bar-chart-inspections'"
       :chart-data="inspectionsGraph"
       :date="Data.inspections_summary.date"
+      :items="inspectionsItems"
       :labels="inspectionsLabels"
       :unit="$t('件.tested')"
       :data-labels="inspectionsDataLabels"
@@ -31,15 +32,15 @@ export default {
   data() {
     // 検査実施日別状況
     const inspectionsGraph = [
-      Data.inspections_summary.data['県内'],
-      Data.inspections_summary.data['その他']
+      Data.inspections_summary.data['PCR検査数'],
+      Data.inspections_summary.data['抗原検査数']
     ]
     const inspectionsItems = [
-      this.$t('県内発生（※1）'),
-      this.$t('その他（※2）')
+      this.$t('PCR検査数'),
+      this.$t('抗原検査数')
     ]
     const inspectionsLabels = Data.inspections_summary.labels
-    const inspectionsDataLabels = [this.$t('県内'), this.$t('その他.graph')]
+    const inspectionsDataLabels = [this.$t('PCR検査数'), this.$t('抗原検査数')]
 
     const data = {
       Data,

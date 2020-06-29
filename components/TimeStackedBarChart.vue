@@ -64,6 +64,7 @@ import DataView from '@/components/DataView.vue'
 import DataSelector from '@/components/DataSelector.vue'
 import DataViewBasicInfoPanel from '@/components/DataViewBasicInfoPanel.vue'
 import { double as colors } from '@/utils/colors'
+
 import OpenDataLink from '@/components/OpenDataLink.vue'
 
 interface HTMLElementEvent<T extends HTMLElement> extends Event {
@@ -218,7 +219,7 @@ const options: ThisTypedComponentOptionsWithRecordProps<
     displayData() {
       const borderColor = '#ffffff'
       const borderWidth = [
-        { left: 0, top: 1, right: 0, bottom: 0 },
+        { left: 0, top: 0, right: 0, bottom: 0 },
         { left: 0, top: 0, right: 0, bottom: 0 }
       ]
       if (this.dataKind === 'transition') {
@@ -308,7 +309,7 @@ const options: ThisTypedComponentOptionsWithRecordProps<
         responsive: true,
         maintainAspectRatio: false,
         legend: {
-          display: false,
+          display: true,
           onHover: (e: HTMLElementEvent<HTMLElement>): void => {
             e.currentTarget.style.cursor = 'pointer'
           },
