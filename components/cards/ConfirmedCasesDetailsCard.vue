@@ -6,6 +6,15 @@
       :date="Data.main_summary.date"
     >
       <template v-slot:button>
+        <ul :class="$style.GraphDesc">
+          <li>
+            {{
+              $t(
+                '（注）退院・退所等には、県外医療機関に入院された方が含まれます。'
+              )
+            }}
+          </li>
+        </ul>
       </template>
       <confirmed-cases-details-table
         :aria-label="$t('検査陽性者の状況')"
@@ -21,6 +30,17 @@
   margin-bottom: 0;
   font-size: 12px;
   color: $gray-3;
+}
+.Graph {
+  &Desc {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 0 !important;
+    padding-left: 0 !important;
+    font-size: 12px;
+    color: $gray-3;
+    list-style: none;
+  }
 }
 </style>
 
