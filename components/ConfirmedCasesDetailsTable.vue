@@ -44,7 +44,7 @@
         <li :class="[$style.box, $style.recovered]">
           <div :class="$style.pillar">
             <div :class="$style.content">
-              <span>{{ $t('退院・退所') }}</span>
+              <span>{{ $t('退院・退所等') }}</span>
               <span>
                 <strong>{{ 退院退所.toLocaleString() }}</strong>
                 <span :class="$style.unit">{{ $t('人') }}</span>
