@@ -9860,7 +9860,7 @@
     "main_summary": {
         "date": "2020\/09\/09 09:30",
         "attr": "総PCR検査件数",
-        "value": null,
+        "value": 16124,
         "children": [
             {
                 "attr": "陽性（県内感染者）",
