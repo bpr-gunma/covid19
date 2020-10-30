@@ -1,8 +1,7 @@
 <template>
   <div :class="$style.container">
     <h4 id="consult" :class="[$style.heading, $style.fzXLarge]">
-      {{ $t('新型コロナ感染症') }}<br />
-      {{ $t('コールセンター') }}
+     {{ $t('県受診・相談センター') }}
     </h4>
     <dl>
       <div>
@@ -10,7 +9,7 @@
           <ul :class="[$style.callcenter]">
             <li>
               <span :class="[$style.fzLarge, $style.break, $style.mb7]">
-                {{ $t('午前9時から午後9時') }}
+                {{ $t('【24時間対応】') }}
               </span>
             </li>
           </ul>
@@ -33,33 +32,6 @@
         </dd>
       </div>
       <hr :class="$style.line" />
-      <div>
-        <dt>
-          <ul :class="[$style.callcenter]">
-            <li>
-              <span :class="[$style.fzLarge, $style.break, $style.mb7]">
-                {{ $t('上記以外の時間') }}
-              </span>
-            </li>
-          </ul>
-        </dt>
-        <dd>
-          <div :class="[$style.phone, $style.fzNumeric]">
-            <span :class="$style.icon">
-              <PhoneIcon alt="Phone" />
-            </span>
-            <a href="tel:0272231111">027-223-1111</a>
-          </div>
-          <div
-            v-if="!['ja', 'ja-basic'].includes($i18n.locale)"
-            :class="[$style.phone, $style.fzNumeric]"
-          >
-            <span :class="[$style.fzMedium, $style.break, $style.mb7]">
-              {{ $t('ひまわり') }}
-            </span>
-          </div>
-        </dd>
-      </div>
     </dl>
     <div :class="$style.center">
       <div :class="[$style.title, $style.fzLarge]">前橋市、高崎市に在住の方は居住地の保健所へ相談</div>
@@ -77,13 +49,13 @@
                   <a href="tel:0272201151">027-220-1151</a>
                 </div>
               </li>
-              <li :class="[$style.fzRegular]">【上記以外の時間で緊急の場合】</li>
+              <li :class="[$style.fzRegular]">※上記以外の時間帯</li>
               <li>
                 <div :class="[$style.phone, $style.centerphone, $style.fzXLarge]">
                   <span :class="$style.icon">
                     <PhoneIcon alt="Phone" />
                   </span>
-                  <a href="tel:0272241111">027-224-1111</a>
+                  <a href="tel:0570082820">0570-082-820</a>
                 </div>
               </li>
             </ul>
@@ -91,7 +63,7 @@
           <dt :class="[$style.helth, $style.fzLarge]">高崎市保健所</dt>
           <dd>
             <ul>
-              <li :class="[$style.fzRegular]">【平日】午前8時30分～午後9時</li>
+              <li :class="[$style.fzRegular]">【平日】午前8時30分～午後5時30分</li>
               <li>
                 <div :class="[$style.phone, $style.centerphone, $style.fzXLarge]">
                   <span :class="$style.icon">
@@ -100,13 +72,13 @@
                   <a href="tel:0273816112">027-381-6112</a>
                 </div>
               </li>
-              <li :class="[$style.fzRegular]">【上記以外の時間で緊急の場合】</li>
+              <li :class="[$style.fzRegular]">※上記以外の時間帯</li>
               <li>
                 <div :class="[$style.phone, $style.centerphone, $style.fzXLarge]">
                   <span :class="$style.icon">
                     <PhoneIcon alt="Phone" />
                   </span>
-                  <a href="tel:0273816123">027-381-6123</a>
+                  <a href="tel:0570082820">0570-082-820</a>
                 </div>
               </li>
             </ul>
