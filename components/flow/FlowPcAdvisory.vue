@@ -255,7 +255,7 @@
         font-size: 0.9em;
       
         &Alert {
-          font-color: #f00;
+          color: #f00;
         }
       }
 
