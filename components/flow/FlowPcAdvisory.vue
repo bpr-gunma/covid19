@@ -4,17 +4,14 @@
       <div :class="$style.AdvisoryContents">
         <div>
           <span :class="$style.AdvisoryContentsTitle">
-            {{ $t('新型コロナ感染症') }}
-          </span><br />
-          <span :class="$style.AdvisoryContentsTitle">
-            {{ $t('コールセンター') }}
+            {{ $t('県受診・相談センター') }}
           </span>
         </div>
       </div>
       <div :class="$style.AdvisoryContents">
         <div class="pt-4">
           <div :class="$style.AdvisoryContentsTitle2">
-            {{ $t('午前9時から午後9時') }}
+            {{ $t('【24時間対応】') }}
           </div>
         </div>
         <div
@@ -38,32 +35,6 @@
         </div>
       </div>
       <hr :class="$style.AdvisoryLine"/>
-      <div :class="$style.AdvisoryContents">
-        <div class="pt-4">
-          <div :class="$style.AdvisoryContentsTitle2">
-            {{ $t('上記以外の時間') }}
-          </div>
-        </div>
-        <div
-          :class="[
-            $style.AdvisoryTelephoneArea,
-            $style.AdvisoryBlockCentering
-          ]"
-        >
-          <a :class="$style.AdvisoryTelephone" href="tel:0272231111">
-            <img
-              :class="$style.AdvisoryTelephoneIcon"
-              src="/flow/phone-24px.svg"
-              aria-hidden="true"
-              :alt="$t('電話番号')"
-            />
-            027-223-1111
-          </a>
-        </div>
-        <div v-if="!['ja', 'ja-basic'].includes($i18n.locale)" class="pt-8">
-          <span>{{ $t('ひまわり') }}</span>
-        </div>
-      </div>
       <div :class="$style.AdvisoryCenter">
         <div :class="$style.AdvisoryCenterTitle">前橋市、高崎市に在住の方は<br />居住地の保健所へ相談</div>
         <div :class="$style.AdvisoryCenterContents">
@@ -80,9 +51,10 @@
               027-220-1151
             </a>
           </div>
-          <div :class="$style.AdvisoryCenterContentsTime">【上記以外の時間で緊急の場合】</div>
+          <div :class="$style.AdvisoryCenterContentsTime">※上記以外の時間帯</div>
+          <div :class="$style.AdvisoryCenterContentsHelthEtc">県受診・相談センター</div>
           <div :class="$style.AdvisoryCenterContentsTel">
-            <a :class="$style.AdvisoryCenterContentsTelNumber" href="tel:0272241111">
+            <a :class="$style.AdvisoryCenterContentsTelNumber" href="tel:0570082820">
               <img
                 :class="$style.AdvisoryCenterContentsTelNumberIcon"
                 src="/flow/phone-24px.svg"
@@ -105,9 +77,10 @@
               027-381-6112
             </a>
           </div>
-          <div :class="$style.AdvisoryCenterContentsTime">【上記以外の時間で緊急の場合】</div>
+          <div :class="$style.AdvisoryCenterContentsTime">※上記以外の時間帯</div>
+          <div :class="$style.AdvisoryCenterContentsHelthEtc">県受診・相談センター</div>
           <div :class="$style.AdvisoryCenterContentsTel">
-            <a :class="$style.AdvisoryCenterContentsTelNumber" href="tel:0273816123">
+            <a :class="$style.AdvisoryCenterContentsTelNumber" href="tel:0570082820">
               <img
                 :class="$style.AdvisoryCenterContentsTelNumberIcon"
                 src="/flow/phone-24px.svg"
@@ -262,6 +235,12 @@
       &Helth {
         text-align: left;
         font-weight: bold;
+      }
+
+      &HelthEtc {
+        text-align: left;
+        font-size: 0.9em;
+        margin-left: 5px;
       }
       
       &Time {
