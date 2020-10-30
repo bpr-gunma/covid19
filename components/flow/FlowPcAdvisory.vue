@@ -78,7 +78,12 @@
               027-381-6112
             </a>
           </div>
-          <div :class="$style.AdvisoryCenterContentsTime">※上記以外の時間帯</div>
+          <div :class="$style.AdvisoryCenterContentsTime">
+            <span :class="$style.Alert">
+              {{ $t('※') }}
+            </span>
+            {{ $t('上記以外の時間帯') }}
+          </div>
           <div :class="$style.AdvisoryCenterContentsHelthEtc">県受診・相談センター</div>
           <div :class="$style.AdvisoryCenterContentsTel">
             <a :class="$style.AdvisoryCenterContentsTelNumber" href="tel:0570082820">
@@ -248,6 +253,10 @@
       &Time {
         text-align: left;
         font-size: 0.9em;
+      
+        Alert {
+          font-color: #f00;
+        }
       }
 
       &Tel {
