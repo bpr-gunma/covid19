@@ -64,6 +64,7 @@
               0570-082-820
             </a>
           </div>
+          <br /><br />
           <div :class="$style.AdvisoryCenterContentsHelth">高崎市保健所</div>
           <div :class="$style.AdvisoryCenterContentsTime">【平日】午前8時30分～午後5時15分</div>
           <div :class="$style.AdvisoryCenterContentsTel">
@@ -241,7 +242,7 @@
         text-align: left;
         font-size: 0.9em;
         font-weight: bold;
-        margin-left: 10px;
+        margin-left: 15px;
       }
       
       &Time {
