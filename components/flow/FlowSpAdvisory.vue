@@ -15,7 +15,7 @@
           </ul>
         </dt>
         <dd>
-          <div :class="[$style.phone, $style.fzNumeric]">
+          <div :class="$style.fzNumeric">
             <span :class="$style.icon">
               <PhoneIcon alt="Phone" />
             </span>
@@ -23,7 +23,7 @@
           </div>
           <div
             v-if="!['ja', 'ja-basic'].includes($i18n.locale)"
-            :class="[$style.phone, $style.fzNumeric]"
+            :class="$style.fzNumeric"
           >
             <span :class="[$style.fzMedium, $style.break, $style.mb7]">
               {{ $t('ひまわり') }}
@@ -40,9 +40,9 @@
           <dt :class="[$style.helth, $style.fzLarge]">前橋市保健所</dt>
           <dd>
             <ul>
-              <li :class="[$style.fzRegular]">【毎日】午前8時30分～午後9時</li>
+              <li :class="[$style.fzRegular]">【毎日】8時30分～21時</li>
               <li>
-                <div :class="[$style.phone, $style.centerphone, $style.fzXLarge]">
+                <div :class="[$style.centerphone, $style.fzXLarge]">
                   <span :class="$style.icon">
                     <PhoneIcon alt="Phone" />
                   </span>
@@ -52,7 +52,7 @@
               <li :class="[$style.fzRegular]">※上記以外の時間帯</li>
               <li :class="[$style.fzMedium]">県受診・相談センター</li>
               <li>
-                <div :class="[$style.phone, $style.centerphone, $style.fzLarge]">
+                <div :class="[$style.centerphone, $style.fzLarge]">
                   <span :class="$style.icon2">
                     <PhoneIcon alt="Phone" />
                   </span>
@@ -64,9 +64,9 @@
           <dt :class="[$style.helth, $style.fzLarge]">高崎市保健所</dt>
           <dd>
             <ul>
-              <li :class="[$style.fzRegular]">【平日】午前8時30分～午後5時30分</li>
+              <li :class="[$style.fzRegular]">【平日】8時30分～17時15分</li>
               <li>
-                <div :class="[$style.phone, $style.centerphone, $style.fzXLarge]">
+                <div :class="[$style.centerphone, $style.fzXLarge]">
                   <span :class="$style.icon">
                     <PhoneIcon alt="Phone" />
                   </span>
@@ -76,7 +76,7 @@
               <li :class="[$style.fzRegular]">※上記以外の時間帯</li>
               <li :class="[$style.fzMedium]">県受診・相談センター</li>
               <li>
-                <div :class="[$style.phone, $style.centerphone, $style.fzLarge]">
+                <div :class="[$style.centerphone, $style.fzLarge]">
                   <span :class="$style.icon2">
                     <PhoneIcon alt="Phone" />
                   </span>
@@ -173,6 +173,8 @@ export default {
     margin-right: px2vw(7);
   }
   .icon2 {
+    display: inline-block;
+    vertical-align: middle;
     width: px2vw(23);
     height: px2vw(23);
     margin-right: px2vw(5);
@@ -234,6 +236,8 @@ export default {
       margin-right: px2vw(7, $vw);
     }
     .icon2 {
+      display: inline-block;
+      vertical-align: middle;
       width: px2vw(23);
       height: px2vw(23);
       margin-right: px2vw(5);
