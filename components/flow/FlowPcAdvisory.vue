@@ -61,11 +61,11 @@
                 aria-hidden="true"
                 :alt="$t('電話番号')"
               />
-              027-224-1111
+              0570-082-820
             </a>
           </div>
           <div :class="$style.AdvisoryCenterContentsHelth">高崎市保健所</div>
-          <div :class="$style.AdvisoryCenterContentsTime">【平日】午前8時30分～午後9時</div>
+          <div :class="$style.AdvisoryCenterContentsTime">【平日】午前8時30分～午後5時15分</div>
           <div :class="$style.AdvisoryCenterContentsTel">
             <a :class="$style.AdvisoryCenterContentsTelNumber" href="tel:0273816112">
               <img
@@ -87,7 +87,7 @@
                 aria-hidden="true"
                 :alt="$t('電話番号')"
               />
-              027-381-6123
+              0570-082-820
             </a>
           </div>
         </div>
@@ -212,7 +212,7 @@
   }
 
   &Center {
-    margin-top: 10px;
+    margin-top: 20px;
     background: $white;
     border: solid 3px $green-1;
     border-radius: 8px;
@@ -240,7 +240,8 @@
       &HelthEtc {
         text-align: left;
         font-size: 0.9em;
-        margin-left: 5px;
+        font-weight: bold;
+        margin-left: 10px;
       }
       
       &Time {
