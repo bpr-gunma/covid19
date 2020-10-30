@@ -167,6 +167,9 @@ export default {
 }
 
 .centerphone {
+	display: inline-block;
+  vertical-align: middle;
+
   .icon {
     width: px2vw(27);
     height: px2vw(27);
@@ -175,7 +178,6 @@ export default {
   .icon2 {
     width: px2vw(23);
     height: px2vw(23);
-    margin-top: 0;
     margin-right: px2vw(5);
   }
 }
@@ -229,6 +231,9 @@ export default {
   }
 
   .centerphone {
+	  display: inline-block;
+    vertical-align: middle;
+
     .icon {
       width: px2vw(27, $vw);
       height: px2vw(27, $vw);
@@ -237,7 +242,6 @@ export default {
     .icon2 {
       width: px2vw(23);
       height: px2vw(23);
-      margin-top: 0;
       margin-right: px2vw(5);
     }
   }
