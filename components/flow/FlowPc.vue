@@ -4,9 +4,9 @@
     <div :class="[$style.Outer, $style.OuterUpper]">
       <div :class="[$style.ContentBlock, $style.Content1]">相談の目安</div>
       <div :class="[$style.ContentBlock, $style.Content2]">相談窓口</div>
-      <div :class="[$style.CardBlock, $style.Contact]">
+      <div :class="[$style.CardBlock, $style.Children]">
         <div :class="[$style.CardBlockInner]">
-          <flow-pc-contact />
+          <flow-pc-children />
         </div>
       </div>
       <div :class="[$style.CardBlock, $style.Elder]">
@@ -32,7 +32,7 @@
 </template>
 
 <script>
-import FlowPcContact from './FlowPcContact.vue'
+import FlowPcChildren from './FlowPcChildren.vue'
 import FlowPcElder from './FlowPcElder.vue'
 import FlowPcGeneral from './FlowPcGeneral.vue'
 import FlowPcSuspect from './FlowPcSuspect.vue'
@@ -40,7 +40,7 @@ import FlowPcAdvisory from './FlowPcAdvisory.vue'
 
 export default {
   components: {
-    FlowPcContact,
+    FlowPcChildren,
     FlowPcElder,
     FlowPcGeneral,
     FlowPcSuspect,
@@ -193,7 +193,7 @@ export default {
   grid-row: 1 / 2;
 }
 
-.Contact {
+.Children {
   grid-column: 1 / 2;
   grid-row: 2 / 3;
 }
