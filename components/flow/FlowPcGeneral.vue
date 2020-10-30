@@ -63,8 +63,7 @@
     <h3 :class="$style.SectionTitle">
       <p>
         {{ $t('かかりつけ医等の地域で身近な医療機関に「電話で相談」してください。') }}<br />
-        {{ $t('相談する医療機関に迷う場合は、居住地の「受診・相談センター」にお電話ください。') }}<br />
-        {{ $t('地域の医療機関をご案内します。') }}
+        {{ $t('相談する医療機関に迷う場合は、居住地の「受診・相談センター」にお電話ください。地域の医療機関をご案内します。') }}
       </p>
     </h3>
   </div>
@@ -175,7 +174,7 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: flex-end;
-    margin: 20px;
+    margin: 10px 20px 0 20px;
     text-align: left;
     width: 100%;
 
