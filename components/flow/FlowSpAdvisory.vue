@@ -50,9 +50,10 @@
                 </div>
               </li>
               <li :class="[$style.fzRegular]">※上記以外の時間帯</li>
+              <li :class="[$style.fzMedium]">県受診・相談センター</li>
               <li>
-                <div :class="[$style.phone, $style.centerphone, $style.fzXLarge]">
-                  <span :class="$style.icon">
+                <div :class="[$style.phone, $style.centerphone, $style.fzLarge]">
+                  <span :class="$style.icon2">
                     <PhoneIcon alt="Phone" />
                   </span>
                   <a href="tel:0570082820">0570-082-820</a>
@@ -73,9 +74,10 @@
                 </div>
               </li>
               <li :class="[$style.fzRegular]">※上記以外の時間帯</li>
+              <li :class="[$style.fzMedium]">県受診・相談センター</li>
               <li>
-                <div :class="[$style.phone, $style.centerphone, $style.fzXLarge]">
-                  <span :class="$style.icon">
+                <div :class="[$style.phone, $style.centerphone, $style.fzLarge]">
+                  <span :class="$style.icon2">
                     <PhoneIcon alt="Phone" />
                   </span>
                   <a href="tel:0570082820">0570-082-820</a>
@@ -170,6 +172,11 @@ export default {
     height: px2vw(27);
     margin-right: px2vw(7);
   }
+  .icon2 {
+    width: px2vw(23);
+    height: px2vw(23);
+    margin-right: px2vw(5);
+  }
 }
 
 @include largerThan($small) {
@@ -225,6 +232,11 @@ export default {
       width: px2vw(27, $vw);
       height: px2vw(27, $vw);
       margin-right: px2vw(7, $vw);
+    }
+    .icon2 {
+      width: px2vw(23);
+      height: px2vw(23);
+      margin-right: px2vw(5);
     }
   }
 }
