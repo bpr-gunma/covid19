@@ -50,7 +50,7 @@
               />
               027-220-1151
             </a>
-          </div>
+          </div><br />
           <div :class="$style.AdvisoryCenterContentsTime">※上記以外の時間帯</div>
           <div :class="$style.AdvisoryCenterContentsHelthEtc">県受診・相談センター</div>
           <div :class="$style.AdvisoryCenterContentsTel">
@@ -77,9 +77,9 @@
               />
               027-381-6112
             </a>
-          </div>
+          </div><br />
           <div :class="$style.AdvisoryCenterContentsTime">
-            <span :class="$style.Alert">
+            <span :class="$style.AdvisoryCenterContentsTimeAlert">
               {{ $t('※') }}
             </span>
             {{ $t('上記以外の時間帯') }}
@@ -254,7 +254,7 @@
         text-align: left;
         font-size: 0.9em;
       
-        Alert {
+        &Alert {
           font-color: #f00;
         }
       }
