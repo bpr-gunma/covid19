@@ -130,14 +130,14 @@
       }
     }
   }
-  
+
   .SectionTitle {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
     justify-content: flex-end;
-    margin: 10px 20px 0 20px;
+    margin: 20px 20px 0 20px;
     text-align: left;
     width: 100%;
   }

@@ -50,7 +50,7 @@
               />
               027-220-1151
             </a>
-          </div><br />
+          </div>
           <div :class="$style.AdvisoryCenterContentsTime">
             <span :class="$style.AdvisoryCenterContentsTimeAlert">
               {{ $t('※') }}
@@ -82,7 +82,7 @@
               />
               027-381-6112
             </a>
-          </div><br /><br />
+          </div>
           <div :class="$style.AdvisoryCenterContentsTime">
             <span :class="$style.AdvisoryCenterContentsTimeAlert">
               {{ $t('※') }}
