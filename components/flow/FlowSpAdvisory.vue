@@ -52,7 +52,7 @@
               <li :class="[$style.fzRegular]">※上記以外の時間帯</li>
               <li :class="[$style.fzMedium]">県受診・相談センター</li>
               <li>
-                <div :class="[$style.centerphone2, $style.fzLarge]">
+                <div :class="[$style.phone, $style.centerphone2, $style.fzLarge]">
                   <span :class="$style.icon">
                     <PhoneIcon alt="Phone" />
                   </span>
@@ -76,7 +76,7 @@
               <li :class="[$style.fzRegular]">※上記以外の時間帯</li>
               <li :class="[$style.fzMedium]">県受診・相談センター</li>
               <li>
-                <div :class="[$style.centerphone2, $style.fzLarge]">
+                <div :class="[$style.phone, $style.centerphone2, $style.fzLarge]">
                   <span :class="$style.icon">
                     <PhoneIcon alt="Phone" />
                   </span>
@@ -176,8 +176,8 @@ export default {
 
 .centerphone2 {
   .icon {
-    width: px2vw(23);
-    height: px2vw(23);
+    width: px2vw(25);
+    height: px2vw(25);
     margin-right: px2vw(5);
   }
 }
@@ -240,8 +240,8 @@ export default {
 
   .centerphone2 {
     .icon {
-      width: px2vw(23, $vw);
-      height: px2vw(23, $vw);
+      width: px2vw(25, $vw);
+      height: px2vw(25, $vw);
       margin-right: px2vw(5, $vw);
     }
   }
