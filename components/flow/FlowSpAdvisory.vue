@@ -52,7 +52,7 @@
               <li :class="[$style.fzRegular]">※上記以外の時間帯</li>
               <li :class="[$style.fzMedium]">県受診・相談センター</li>
               <li>
-                <div :class="[$style.phone, $style.centerphone2, $style.fzLarge]">
+                <div :class="[$style.centerphone2, $style.fzLarge]">
                   <span :class="$style.icon">
                     <PhoneIcon alt="Phone" />
                   </span>
@@ -76,7 +76,7 @@
               <li :class="[$style.fzRegular]">※上記以外の時間帯</li>
               <li :class="[$style.fzMedium]">県受診・相談センター</li>
               <li>
-                <div :class="[$style.phone, $style.centerphone2, $style.fzLarge]">
+                <div :class="[$style.centerphone2, $style.fzLarge]">
                   <span :class="$style.icon">
                     <PhoneIcon alt="Phone" />
                   </span>
