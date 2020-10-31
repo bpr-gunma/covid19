@@ -2,7 +2,7 @@
   <div :class="$style.container">
     <p :class="$style.heading">
       <span :class="[$style.icon, $style.top]" aria-hidden="true">
-        <HumanIcon />
+        <ChildrenIcon />
       </span>
       <span :class="$style.fzMedium">{{ $t('小児（15才未満）') }}</span>
     </p>
@@ -50,10 +50,10 @@
 
 <script lang="ts">
 import { onDoneScroll } from '@/utils/vueScrollTo'
-import HumanIcon from '@/static/flow/responsive/accessibility.svg'
+import ChildrenIcon from '@/static/flow/responsive/children.svg'
 import ArrowForwardIcon from '@/static/flow/responsive/arrow_forward.svg'
 export default {
-  components: { HumanIcon, ArrowForwardIcon },
+  components: { ChildrenIcon, ArrowForwardIcon },
   methods: { onDoneScroll }
 }
 </script>
