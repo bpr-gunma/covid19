@@ -145,6 +145,7 @@ export default {
     border-radius: 0 0 px2vw(8) px2vw(8);
 
     .helth {
+      display: table;
       margin: px2vw(15) 0;
     }
 
@@ -167,6 +168,8 @@ export default {
 }
 
 .centerphone {
+  display: table-cell;
+  vertical-align: middle;
   .icon {
     width: px2vw(27);
     height: px2vw(27);
