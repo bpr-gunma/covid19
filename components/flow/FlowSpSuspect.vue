@@ -13,6 +13,12 @@
       </li>
     </ul>
 
+    <p :class="$style.duration">
+      {{ $t('まずはかかりつけ医等の地域で身近な医療機関に「電話で相談」してください。') }}
+    </p>
+    <p :class="$style.duration">
+      {{ $t('相談する医療機関に迷う場合は、') }}
+    </p>
     <a
       v-scroll-to="{
         el: '#consult',
@@ -21,10 +27,12 @@
       href="#consult"
       :class="[$style.button, $style.clickable]"
     >
-      <span :class="$style.text">{{ $t('新型コロナ感染症コールセンターへ') }}</span>
+      <span :class="$style.text">{{ $t('居住地の「受診・相談センター」へ') }}</span>
       <ArrowForwardIcon :class="$style.icon" />
     </a>
-  </div>
+    <p :class="$style.duration">
+      {{ $t('地域の医療機関をご案内します。') }}
+    </p>  </div>
 </template>
 
 <script lang="ts">
