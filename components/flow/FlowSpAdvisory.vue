@@ -176,8 +176,8 @@ export default {
 
 .centerphone2 {
   .icon {
-    width: px2vw(25);
-    height: px2vw(25);
+    width: px2vw(24);
+    height: px2vw(24);
     margin-right: px2vw(5);
   }
 }
@@ -240,8 +240,8 @@ export default {
 
   .centerphone2 {
     .icon {
-      width: px2vw(25, $vw);
-      height: px2vw(25, $vw);
+      width: px2vw(24, $vw);
+      height: px2vw(24, $vw);
       margin-right: px2vw(5, $vw);
     }
   }
