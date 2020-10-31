@@ -28,6 +28,9 @@
     <p :class="$style.duration">
       {{ $t('かかりつけ医等の地域で身近な医療機関に「電話で相談」してください。') }}
     </p>
+    <p :class="$style.duration">
+      {{ $t('相談する医療機関に迷う場合は、') }}
+    </p>
     <a
       v-scroll-to="{
         el: '#consult',
@@ -36,7 +39,7 @@
       href="#consult"
       :class="[$style.button, $style.clickable]"
     >
-      <span :class="$style.text">{{ $t('相談する医療機関に迷う場合は、居住地の「受診・相談センター」へ') }}</span>
+      <span :class="$style.text">{{ $t('居住地の「受診・相談センター」へ') }}</span>
       <ArrowForwardIcon :class="$style.icon" />
     </a>
     <p :class="$style.duration">
