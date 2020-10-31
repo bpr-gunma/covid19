@@ -167,9 +167,6 @@ export default {
 }
 
 .centerphone {
-	display: inline-block;
-  vertical-align: middle;
-
   .icon {
     width: px2vw(27);
     height: px2vw(27);
@@ -231,9 +228,6 @@ export default {
   }
 
   .centerphone {
-	  display: inline-block;
-    vertical-align: middle;
-
     .icon {
       width: px2vw(27, $vw);
       height: px2vw(27, $vw);
