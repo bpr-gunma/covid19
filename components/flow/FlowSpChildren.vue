@@ -2,9 +2,9 @@
   <div :class="$style.container">
     <p :class="$style.heading">
       <span :class="[$style.icon, $style.top]" aria-hidden="true">
-        <HumanIcon />
+        <ChildrenIcon />
       </span>
-      <span :class="$style.fzMedium">{{ $t('一般の方') }}</span>
+      <span :class="$style.fzMedium">{{ $t('小児（15才未満）') }}</span>
     </p>
     <ul :class="[$style.rectContainer, $style.double]">
       <li :class="$style.symptom">
@@ -26,7 +26,7 @@
       </li>
     </ul>
     <p :class="$style.duration">
-      {{ $t('かかりつけ医等の地域で身近な医療機関に「電話で相談」してください。') }}
+      {{ $t('かかりつけ小児医療機関等の地域で身近な医療機関に「電話で相談」してください。') }}
     </p>
     <p :class="$style.duration">
       {{ $t('相談する医療機関に迷う場合は、') }}
@@ -50,10 +50,10 @@
 
 <script lang="ts">
 import { onDoneScroll } from '@/utils/vueScrollTo'
-import HumanIcon from '@/static/flow/responsive/accessibility.svg'
+import ChildrenIcon from '@/static/flow/responsive/children.svg'
 import ArrowForwardIcon from '@/static/flow/responsive/arrow_forward.svg'
 export default {
-  components: { HumanIcon, ArrowForwardIcon },
+  components: { ChildrenIcon, ArrowForwardIcon },
   methods: { onDoneScroll }
 }
 </script>

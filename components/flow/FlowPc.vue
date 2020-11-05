@@ -4,14 +4,9 @@
     <div :class="[$style.Outer, $style.OuterUpper]">
       <div :class="[$style.ContentBlock, $style.Content1]">相談の目安</div>
       <div :class="[$style.ContentBlock, $style.Content2]">相談窓口</div>
-      <div :class="[$style.CardBlock, $style.Contact]">
+      <div :class="[$style.CardBlock, $style.Children]">
         <div :class="[$style.CardBlockInner]">
-          <flow-pc-contact />
-        </div>
-      </div>
-      <div :class="[$style.CardBlock, $style.Elder]">
-        <div :class="[$style.CardBlockInner]">
-          <flow-pc-elder />
+          <flow-pc-children />
         </div>
       </div>
       <div :class="[$style.CardBlock, $style.General]">
@@ -32,16 +27,14 @@
 </template>
 
 <script>
-import FlowPcContact from './FlowPcContact.vue'
-import FlowPcElder from './FlowPcElder.vue'
+import FlowPcChildren from './FlowPcChildren.vue'
 import FlowPcGeneral from './FlowPcGeneral.vue'
 import FlowPcSuspect from './FlowPcSuspect.vue'
 import FlowPcAdvisory from './FlowPcAdvisory.vue'
 
 export default {
   components: {
-    FlowPcContact,
-    FlowPcElder,
+    FlowPcChildren,
     FlowPcGeneral,
     FlowPcSuspect,
     FlowPcAdvisory
@@ -81,8 +74,8 @@ export default {
     grid-gap: $grid-gap;
     grid-template-columns: 70% 30%;
     -ms-grid-columns: 70% 12px 30%;
-    grid-template-rows: repeat(5, auto);
-    -ms-grid-rows: auto 12px auto 12px auto 12px auto 12px auto;
+    grid-template-rows: repeat(4, auto);
+    -ms-grid-rows: auto 12px auto 12px auto 12px auto;
 //    grid-template-rows: auto 1fr;
 //    -ms-grid-rows: auto 12px 1fr;
     // HACK: IEでGridの順番がうまくいかない対応
@@ -106,21 +99,11 @@ export default {
       -ms-grid-column: 1;
       -ms-grid-row: 5;
     }
-    
-    & > *:nth-child(5) {
-      -ms-grid-column: 1;
-      -ms-grid-row: 7;
-    }
-    
-    & > *:nth-child(6) {
-      -ms-grid-column: 1;
-      -ms-grid-row: 9;
-    }
 
     & > *:nth-child(7) {
       -ms-grid-column: 3;
       -ms-grid-row: 3;
-      -ms-grid-row-span: 7;
+      -ms-grid-row-span: 5;
     }
   }
 }
@@ -193,29 +176,24 @@ export default {
   grid-row: 1 / 2;
 }
 
-.Contact {
+.Children {
   grid-column: 1 / 2;
   grid-row: 2 / 3;
 }
 
-.Elder {
+.General {
   grid-column: 1 / 2;
   grid-row: 3 / 4;
 }
 
-.General {
+.Suspect {
   grid-column: 1 / 2;
   grid-row: 4 / 5;
 }
 
-.Suspect {
-  grid-column: 1 / 2;
-  grid-row: 5 / 6;
-}
-
 .Advisory {
   grid-column: 2 / 3;
-  grid-row: 2 / 6;
+  grid-row: 2 / 5;
   position: relative;
 }
 </style>

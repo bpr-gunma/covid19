@@ -61,13 +61,10 @@
       </div>
     </div>
     <h3 :class="$style.SectionTitle">
-      <i18n path="いずれかの症状やその他強い症状があれば {immediately} ご相談ください。" tag="p">
-        <template v-slot:immediately>
-          <strong>
-            {{ $t('すぐに') }}
-          </strong>
-        </template>
-      </i18n>
+      <p>
+        {{ $t('かかりつけ医等の地域で身近な医療機関に「電話で相談」してください。') }}<br />
+        {{ $t('相談する医療機関に迷う場合は、居住地の「受診・相談センター」にお電話ください。地域の医療機関をご案内します。') }}
+      </p>
     </h3>
   </div>
 </template>
@@ -177,7 +174,8 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: flex-end;
-    text-align: right;
+    margin: 10px 20px 0 20px;
+    text-align: left;
     width: 100%;
 
     strong {

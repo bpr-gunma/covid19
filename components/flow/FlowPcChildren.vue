@@ -5,17 +5,53 @@
         <div :class="$style.FlowRowRowThreeGeneral">
           <img
             :class="$style.FlowRowRowThreeGeneralIcon"
-            src="/flow/sentiment_very_dissatisfied-24px.svg"
+            src="/flow/children-24px.svg"
             aria-hidden="true"
             alt=" "
           />
-          {{ $t('不安に思う方') }}
+          {{ $t('小児（15才未満）') }}
         </div>
       </div>
     </div>
     <div :class="[$style.FlowRow, $style.FlowRowRowCheck]">
       <div :class="$style.FlowRowCondition">
-        <p>{{ $t('感染の不安') }}</p>
+        <p>{{ $t('高熱') }}</p>
+        <img
+          :class="$style.FlowRowConditionIcon"
+          src="/flow/check_circle-24px.svg"
+          aria-hidden="true"
+          alt=" "
+        />
+      </div>
+      <div :class="$style.FlowRowCondition">
+        <p>{{ $t('強いだるさ（倦怠感）') }}</p>
+        <img
+          :class="$style.FlowRowConditionIcon"
+          src="/flow/check_circle-24px.svg"
+          aria-hidden="true"
+          alt=" "
+        />
+      </div>
+      <div :class="$style.FlowRowCondition">
+        <p>{{ $t('息苦しさ（呼吸困難）') }}</p>
+        <img
+          :class="$style.FlowRowConditionIcon"
+          src="/flow/check_circle-24px.svg"
+          aria-hidden="true"
+          alt=" "
+        />
+      </div>
+      <div :class="$style.FlowRowCondition">
+        <p>{{ $t('発熱が続く') }}</p>
+        <img
+          :class="$style.FlowRowConditionIcon"
+          src="/flow/check_circle-24px.svg"
+          aria-hidden="true"
+          alt=" "
+        />
+      </div>
+      <div :class="$style.FlowRowCondition">
+        <p>{{ $t('咳が続く') }}</p>
         <img
           :class="$style.FlowRowConditionIcon"
           src="/flow/check_circle-24px.svg"
@@ -26,7 +62,7 @@
     </div>
     <h3 :class="$style.SectionTitle">
       <p>
-        {{ $t('気になることがありましたら、まずはかかりつけ医等の地域で身近な医療機関に「電話で相談」してください。') }}<br />
+        {{ $t('かかりつけ小児医療機関等の地域で身近な医療機関に「電話で相談」してください。') }}<br />
         {{ $t('相談する医療機関に迷う場合は、居住地の「受診・相談センター」にお電話ください。地域の医療機関をご案内します。') }}
       </p>
     </h3>
@@ -41,7 +77,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 1em 1em 0.5em 1em;
+  padding: 1em 1em 0 1em;
   color: $gray-2;
 
   &Row {
@@ -58,7 +94,7 @@
     }
 
     &RowThree {
-      flex-grow: 0;
+      flex-grow: 1;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -77,10 +113,11 @@
     }
 
     &Condition {
-      flex-grow: 0;
+      flex-grow: 1;
       display: flex;
       align-items: center;
       justify-content: center;
+      margin-bottom: 10px;
       padding: 10px;
       position: relative;
       border: 2px solid $green-1 !important;
@@ -137,9 +174,15 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: flex-end;
-    margin: 20px 20px 0 20px;
+    margin: 10px 20px 0 20px;
     text-align: left;
     width: 100%;
+
+    strong {
+      margin: 0 0.2em;
+      font-size: 24px;
+      font-weight: bold;
+    }
   }
 }
 </style>
