@@ -297,7 +297,7 @@ const options: ThisTypedComponentOptionsWithRecordProps<
               type: 'time',
               time: {
                 unit: 'month',
-                parser: 'M/D',
+                parser: 'Y/M/D',
                 displayFormats: {
                   month: 'MMM'
                 }
