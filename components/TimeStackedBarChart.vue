@@ -328,39 +328,41 @@ const options: ThisTypedComponentOptionsWithRecordProps<
               ticks: {
                 fontSize: 9,
                 maxTicksLimit: 20,
-                fontColor: '#808080',
-                maxRotation: 0,
-                callback: (label: string) => {
-                  return label.split('/')[1]
-                }
+                fontColor: '#808080'
+                // fontColor: '#808080',
+                // maxRotation: 0,
+                // callback: (label: string) => {
+                //   return label.split('/')[1]
+                // }
               }
               // #2384: If you set "type" to "time", make sure that the bars at both ends are not hidden.
               // #2384: typeをtimeに設定する時はグラフの両端が見切れないか確認してください
-            },
-            {
-              id: 'month',
-              stacked: true,
-              gridLines: {
-                drawOnChartArea: false,
-                drawTicks: true,
-                drawBorder: false,
-                tickMarkLength: 10
-              },
-              ticks: {
-                fontSize: 11,
-                fontColor: '#808080',
-                padding: 3,
-                fontStyle: 'bold'
-              },
-              type: 'time',
-              time: {
-                unit: 'month',
-                parser: 'M/D',
-                displayFormats: {
-                  month: 'MMM'
-                }
-              }
             }
+            // },
+            // {
+            //   id: 'month',
+            //   stacked: true,
+            //   gridLines: {
+            //     drawOnChartArea: false,
+            //     drawTicks: true,
+            //     drawBorder: false,
+            //     tickMarkLength: 10
+            //   },
+            //   ticks: {
+            //     fontSize: 11,
+            //     fontColor: '#808080',
+            //     padding: 3,
+            //     fontStyle: 'bold'
+            //   },
+            //   type: 'time',
+            //   time: {
+            //     unit: 'month',
+            //     parser: 'M/D',
+            //     displayFormats: {
+            //       month: 'MMM'
+            //     }
+            //   }
+            // }
           ],
           yAxes: [
             {
