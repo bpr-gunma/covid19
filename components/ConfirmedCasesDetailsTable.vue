@@ -20,7 +20,10 @@
         <li :class="[$style.box, $style.hospitalized]">
           <div :class="$style.pillar">
             <div :class="$style.content">
-              <span>{{ $t('入院中') }}</span>
+              <span>
+                {{ $t('入院中') }}
+                <br />({{ $t('335床のうち') }})
+              </span>
               <span>
                 <strong>{{ 入院中.toLocaleString() }}</strong>
                 <span :class="$style.unit">{{ $t('人') }}</span>
@@ -32,7 +35,10 @@
         <li :class="[$style.box, $style.severe]">
           <div :class="$style.pillar">
             <div :class="$style.content">
-              <span>{{ $t('宿泊施設療養中') }}</span>
+              <span>
+                {{ $t('宿泊施設療養中') }}
+                <br />({{ $t('396床のうち') }})
+              </span>
               <span>
                 <strong>{{ 宿泊施設療養中.toLocaleString() }}</strong>
                 <span :class="$style.unit">{{ $t('人') }}</span>
