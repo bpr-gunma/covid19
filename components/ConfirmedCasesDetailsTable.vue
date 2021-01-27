@@ -37,7 +37,7 @@
             <div :class="$style.content">
               <span>
                 {{ $t('宿泊施設療養中') }}
-                <br />({{ $t('396室のうち') }})
+                <br />({{ $t('938室のうち') }})
               </span>
               <span>
                 <strong>{{ 宿泊施設療養中.toLocaleString() }}</strong>
