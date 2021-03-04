@@ -65477,23 +65477,23 @@
         "children": [
             {
                 "attr": "陽性（県内感染者）",
-                "value": "4,528 ",
+                "value": "4,545 ",
                 "children": [
                     {
                         "attr": "入院中",
-                        "value": "88 "
+                        "value": "87 "
                     },
                     {
                         "attr": "宿泊施設療養中",
-                        "value": "69 "
+                        "value": "66 "
                     },
                     {
                         "attr": "退院退所",
-                        "value": "4,405 "
+                        "value": "4,270 "
                     },
                     {
                         "attr": "入院調整中",
-                        "value": "40 "
+                        "value": "37 "
                     },
                     {
                         "attr": "死亡",
